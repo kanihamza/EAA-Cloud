@@ -1,6 +1,9 @@
-type: object
-properties:
-  Screens:
-    type: object
-required:
-  - Screens
+Screens:
+  - Name: Home
+    Controls:
+      - Type: Button
+        Name: Submit
+  - Name: Settings
+    Controls:
+      - Type: TextInput
+        Name: UserName
