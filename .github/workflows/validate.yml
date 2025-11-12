@@ -1,0 +1,31 @@
+name: PowerApps YAML Validation
+
+on:
+  push:
+    branches:
+      - feature/powerapps-validation
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install pyyaml jsonschema
+
+      - name: Validate YAML schema
+        run: |
+          echo "🧩 Validating against schema..."
+          python scripts/validate_yaml.py powerapps-schema.yaml
