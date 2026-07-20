@@ -1,0 +1,32 @@
+/* ============================================================
+   DGO · Select
+   ------------------------------------------------------------
+   Styled native <select>.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   3 · SELECT (native styled)
+   ============================================================ */
+.dgo-select { position: relative; display: block; }
+.dgo-select__field {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-inline-end: calc(var(--dgo-input-px) + 24px);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%235F5C5D' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right var(--dgo-s-3) center;
+}
+[dir="rtl"] .dgo-select__field {
+  background-position: left var(--dgo-s-3) center;
+}
+

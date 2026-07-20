@@ -1,0 +1,135 @@
+{
+  "schema": "source-feature-registry/v1",
+  "features": [
+    {
+      "featureId": "SRC-ASSIGN-SINGLE",
+      "type": "action",
+      "name": "Single assignment (with supporting assignee, CC, ack-due)",
+      "evidence": "SPA action='singleassignment'; fields SupportAssignedTo, CC recipient, acknowledgement due",
+      "materiality": "high",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-ASSIGN-BULK",
+      "type": "action",
+      "name": "Bulk assignment",
+      "evidence": "SPA action='bulkassignment' (NITDA hub, REGEN Bulk Assign Pro)",
+      "materiality": "high",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-REASSIGN",
+      "type": "action",
+      "name": "Reassignment",
+      "evidence": "REGEN action='reassign'; SPA assignment type",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-EMAIL-FETCH",
+      "type": "action",
+      "name": "Fetch emails",
+      "evidence": "SPA action='emailsfetch'",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-EMAIL-TO-TASK",
+      "type": "action",
+      "name": "Create task/assignment from email",
+      "evidence": "SPA action='emailtotaskassignment' / EmailToTask",
+      "materiality": "high",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-FLAG-DG",
+      "type": "action",
+      "name": "Flag: DG Attention / For Attention / For Review",
+      "evidence": "DAA flag modal (DGAttention); REGEN action='markDG'",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-FLAG-FOLLOWUP",
+      "type": "action",
+      "name": "Flag: Follow-Up / INT / UNC",
+      "evidence": "DAA flag modal actions",
+      "materiality": "low",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-REMINDER",
+      "type": "action",
+      "name": "Set reminder (datetime) on a task/document",
+      "evidence": "REGEN reminder modal -> SUBSIDIARY_ACTIONS action='setReminder', line ~5974",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-GETDOCS",
+      "type": "action",
+      "name": "Fetch documents / tasks / lookups",
+      "evidence": "SPA action='getDocs'/'getTasks'/'lookups'",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-PREVIEW",
+      "type": "security",
+      "name": "Payload preview before submit",
+      "evidence": "DAA preview-content table before submitAssignment",
+      "materiality": "high",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-TELEMETRY",
+      "type": "security",
+      "name": "Telemetry/audit log of actions",
+      "evidence": "logTelemetry() in all SPAs",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-TIMEOUT",
+      "type": "performance",
+      "name": "Request timeout + in-flight dedup",
+      "evidence": "callAPI AbortController + _fetching guard",
+      "materiality": "medium",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    },
+    {
+      "featureId": "SRC-ESCAPING",
+      "type": "security",
+      "name": "Output escaping",
+      "evidence": "escHtml/escAttr/escapeHtml helpers",
+      "materiality": "high",
+      "sourceFile": "(3 standalone SPAs)",
+      "requiredForParity": true,
+      "implementationSignals": []
+    }
+  ]
+}

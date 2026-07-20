@@ -1,0 +1,65 @@
+accessibility-contract.mjs contract scaffold passed
+archive-access-contract.mjs contract scaffold passed
+archive-export-contract passed
+archive-immutability-contract.mjs contract scaffold passed
+archive-reopen-contract.mjs contract scaffold passed
+archive-retention-contract passed
+assignment-lifecycle-contract.mjs contract scaffold passed
+audit-thread-contract passed
+closure-gate-contract passed
+comment-immutability-contract.mjs contract scaffold passed
+content governance contracts passed
+correspondence-intake-contract.mjs contract scaffold passed
+fetchAll sample contract: PASS {
+  activities: 300,
+  tracking: 300,
+  comments: 2,
+  users: 793,
+  categories: 45,
+  departments: 50,
+  emails: 50,
+  approvals: 0
+}
+design-system authority contract passed
+direct-status-write-scan passed
+directorate-scope-contract passed
+dispatch-closure-contract passed
+dispatch-module-contract.mjs contract scaffold passed
+endpoint configuration contract passed: 17
+endpoint-security-contract passed
+enterprise domain contracts passed
+entity-store-contract passed
+error-taxonomy-contract passed
+idempotency-contract passed
+lifecycle-transition-contract passed
+module-lifecycle-refactor-contract.mjs contract scaffold passed
+no-orphan-contract passed
+operations-action-contract.mjs contract scaffold passed
+operator-walkthrough-contract.mjs contract scaffold passed
+otp-handshake-contract passed
+registry-lifecycle-contract.mjs contract scaffold passed
+R11.3 regression contracts: PASS
+release-gate-contract.mjs contract scaffold passed
+review-approval-contract.mjs contract scaffold passed
+route contract passed: 22
+state-behaviour-contract passed
+static validation passed
+ui-provisioning-contract passed
+viewport containment contracts passed
+R11.3 regression contracts: PASS
+entity-store-contract passed
+directorate-scope-contract passed
+lifecycle-transition-contract passed
+no-orphan-contract passed
+closure-gate-contract passed
+audit-thread-contract passed
+error-taxonomy-contract passed
+idempotency-contract passed
+archive-retention-contract passed
+archive-export-contract passed
+otp-handshake-contract passed
+dispatch-closure-contract passed
+endpoint-security-contract passed
+direct-status-write-scan passed
+ui-provisioning-contract passed
+state-behaviour-contract passed

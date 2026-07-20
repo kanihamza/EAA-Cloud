@@ -1,0 +1,24 @@
+{
+  "schema": "boot-repair-trace/v3",
+  "generatedAt": "2026-07-20T06:06:21.483435+00:00",
+  "status": "PASS_WITH_REPAIR",
+  "rootCause": "modules/correspondence.js rendered \"Convert to Assignment\" while the enterprise-domain contract expected exact label \"Convert to assignment\".",
+  "changedFiles": [
+    {
+      "path": "modules/correspondence.js",
+      "size": 16491,
+      "sha256": "315abdcff47cb106587cbe30776a951b5333305328ded2d25b10aeabed52e7ef"
+    }
+  ],
+  "bootImportCheck": {
+    "command": "cd /mnt/data/current_runtime && node boot_import_check.mjs",
+    "returncode": 0,
+    "summary": "{\n  \"checked\": 23,\n  \"failed\": 0,\n  \"failedModules\": []\n}"
+  },
+  "validation": {
+    "command": "bash tests/run-all.sh",
+    "returncode": 0,
+    "passed": true
+  },
+  "packageIntegrity": "sha256sum -c and unzip -t passed after packaging"
+}

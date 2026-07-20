@@ -1,0 +1,63 @@
+/* ============================================================
+   DGO Design System v2.0 — Component Library
+   ============================================================
+   Organised by family; BEM under `.dgo-` namespace.
+   Every value references a token — no hard-coded hex/px/ms.
+   ------------------------------------------------------------
+   Index:
+   1.  Button             7.  Pill / Badge / Tag      13. Sidebar
+   2.  Input / Textarea   8.  Avatar                  14. Topbar
+   3.  Select             9.  Card                    15. Tabs
+   4.  Checkbox / Radio   10. Alert / Banner          16. Breadcrumb
+   5.  Switch             11. Toast                   17. Stepper / Pagination
+   6.  Search             12. Modal / Drawer          18. Table / Data grid
+                          19. Tooltip / Popover       20. Menu / Dropdown
+                          21. Empty / Error state     22. Progress / Spinner
+                          23. Skeleton                24. Metric / Stat
+                          25. Kbd / Code              26. Chip / Filter bar
+   ============================================================ */
+
+@layer dgo-reset, dgo-base, dgo-component, dgo-utility;
+
+/* ============================================================
+   DGO · Components Index (v2.1 split)
+   ------------------------------------------------------------
+   This file replaces the single-file components.css. The cascade
+   layer order is declared once above; each family is @imported
+   below into the dgo-component layer in the original v2.0 order.
+   Authors include only this file; tree-shake by removing imports
+   you don't need.
+   ============================================================ */
+
+@import url("./button.css") layer(dgo-component);
+@import url("./input.css") layer(dgo-component);
+@import url("./select.css") layer(dgo-component);
+@import url("./checkbox-radio.css") layer(dgo-component);
+@import url("./switch.css") layer(dgo-component);
+@import url("./search.css") layer(dgo-component);
+@import url("./badge.css") layer(dgo-component);
+@import url("./avatar.css") layer(dgo-component);
+@import url("./card.css") layer(dgo-component);
+@import url("./alert.css") layer(dgo-component);
+@import url("./toast.css") layer(dgo-component);
+@import url("./modal.css") layer(dgo-component);
+@import url("./sidebar.css") layer(dgo-component);
+@import url("./topbar.css") layer(dgo-component);
+@import url("./tabs.css") layer(dgo-component);
+@import url("./breadcrumb.css") layer(dgo-component);
+@import url("./stepper-pagination.css") layer(dgo-component);
+@import url("./table.css") layer(dgo-component);
+@import url("./tooltip-popover.css") layer(dgo-component);
+@import url("./menu.css") layer(dgo-component);
+@import url("./empty-state.css") layer(dgo-component);
+@import url("./progress.css") layer(dgo-component);
+@import url("./skeleton.css") layer(dgo-component);
+@import url("./metric.css") layer(dgo-component);
+@import url("./kbd-code.css") layer(dgo-component);
+@import url("./filter-bar.css") layer(dgo-component);
+@import url("./_utilities.css") layer(dgo-component);
+
+/* ------------------------------------------------------------
+   v2.1 worked-example component (spec only, no CSS shipped):
+   see docs/components/command-palette.md
+   ------------------------------------------------------------ */

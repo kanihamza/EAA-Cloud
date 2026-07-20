@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Primary Colors" subtitle="Deep Green primary + Smart Green accent" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primary Colors</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .swatch-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .swatch-color {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--dgo-radius-md);
+      border: 1px solid var(--dgo-border);
+    }
+    .swatch-info h3 {
+      margin: 0 0 4px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dgo-ink-900);
+    }
+    .swatch-info p {
+      margin: 0;
+      font-size: 11px;
+      color: var(--dgo-ink-500);
+      font-family: var(--dgo-font-mono);
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h2 style="margin: 0 0 16px 0; font-size: 18px;">Primary & Accent Colors</h2>
+  
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-primary);"></div>
+      <div class="swatch-info">
+        <h3>Deep Green (Primary)</h3>
+        <p>--dgo-primary</p>
+        <p>#05583B</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-primary-hover);"></div>
+      <div class="swatch-info">
+        <h3>Deep Green Hover</h3>
+        <p>--dgo-primary-hover</p>
+        <p>#033F2A</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-accent);"></div>
+      <div class="swatch-info">
+        <h3>Smart Green (Accent)</h3>
+        <p>--dgo-accent</p>
+        <p>#17B255</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-primary-soft);"></div>
+      <div class="swatch-info">
+        <h3>Primary Soft</h3>
+        <p>--dgo-primary-soft</p>
+        <p>#E6EEEB</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

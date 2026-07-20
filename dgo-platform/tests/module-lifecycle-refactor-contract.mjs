@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const t=JSON.parse(fs.readFileSync('certification/FINAL_UI_PROVISIONING_TRACE.json','utf8'));for(const m of t.modules){assert.ok(m.hydrated,`${m.module} not governance hydrated`);assert.ok(m.governance>0,`${m.module} not governance wired`);}console.log('module-lifecycle-refactor-contract passed');

@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('modules/correspondence.js','utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/data-(create|triage|convert|route|document)/);assert.match(s,/State\.get|Entities\.|governedTransition/);console.log('correspondence-intake-contract passed');

@@ -1,0 +1,48 @@
+/* ============================================================
+   DGO · Switch
+   ------------------------------------------------------------
+   Toggle control for instantly-applied settings.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   5 · SWITCH
+   ============================================================ */
+.dgo-switch {
+  position: relative;
+  display: inline-flex;
+  inline-size: 38px; block-size: 22px;
+  border-radius: var(--dgo-r-pill);
+  background: var(--dgo-ink-200);
+  cursor: pointer;
+  transition: background-color var(--dgo-motion-state);
+  flex-shrink: 0;
+}
+.dgo-switch::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 2px;
+  inset-block-start: 2px;
+  inline-size: 18px; block-size: 18px;
+  border-radius: 50%;
+  background: var(--dgo-color-surface-page);
+  box-shadow: var(--dgo-shadow-1);
+  transition: transform var(--dgo-motion-state);
+}
+.dgo-switch input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.dgo-switch:has(input:checked) { background: var(--dgo-color-action-primary); }
+.dgo-switch:has(input:checked)::before { transform: translateX(16px); }
+[dir="rtl"] .dgo-switch:has(input:checked)::before { transform: translateX(-16px); }
+.dgo-switch:has(input:focus-visible) {
+  outline: 2px solid var(--dgo-color-border-focus);
+  outline-offset: 2px;
+}
+

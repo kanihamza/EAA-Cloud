@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { ExportBundle } from '../core/export-bundle.js'; const b={ref:'R',archivedAt:new Date().toISOString(),records:{},auditThread:[]}; b.hash=await ExportBundle.createArchiveHash(b); const m=await ExportBundle.createArchiveManifest(b,'x'); assert.equal(m.ref,'R'); console.log('archive-export-contract passed');

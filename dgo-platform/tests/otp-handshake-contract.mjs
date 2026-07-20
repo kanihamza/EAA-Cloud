@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { OtpService } from '../core/otp-service.js'; assert.ok(OtpService.requestOtp); assert.ok(OtpService.verifyOtpAndExecute); console.log('otp-handshake-contract passed');

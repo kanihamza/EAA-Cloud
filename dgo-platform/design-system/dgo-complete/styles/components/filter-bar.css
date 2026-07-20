@@ -1,0 +1,35 @@
+/* ============================================================
+   DGO · Filter Bar & Bulk-Action Bar
+   ------------------------------------------------------------
+   Toolbar surfaces above tables and lists.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   26 · FILTER BAR / BULK-ACTION BAR
+   ============================================================ */
+.dgo-filter-bar {
+  display: flex; align-items: center; gap: var(--dgo-s-3); flex-wrap: wrap;
+  padding: var(--dgo-s-3) var(--dgo-s-4);
+  background: var(--dgo-color-surface-raised);
+  border: 1px solid var(--dgo-color-border-default);
+  border-radius: var(--dgo-radius-card);
+}
+.dgo-bulk-bar {
+  display: flex; align-items: center; gap: var(--dgo-s-3);
+  padding: var(--dgo-s-3) var(--dgo-s-4);
+  background: var(--dgo-color-action-primary);
+  color: var(--dgo-color-fg-on-brand);
+  border-radius: var(--dgo-radius-card);
+}
+.dgo-bulk-bar .dgo-btn--ghost { color: var(--dgo-color-fg-on-brand); }
+.dgo-bulk-bar .dgo-btn--ghost:hover { background: rgba(255,255,255,0.12); }
+

@@ -1,0 +1,4 @@
+import fs from 'node:fs'; import path from 'node:path';
+const root=process.cwd(); const fields=['status','dispatchStatus','assignmentStatus']; const banned=fields.flatMap(f=>[new RegExp(`\\.${f}\\s*=(?!=)`),new RegExp(`\\[["']${f}["']\\]\\s*=(?!=)`)]); const allow=new Set(['core/entity-store.js','core/lifecycle.js','tests/direct-status-write-scan.mjs']); let bad=[];
+function walk(d){ for(const f of fs.readdirSync(d)){ const p=path.join(d,f); const st=fs.statSync(p); if(st.isDirectory()&&!['node_modules','.git'].includes(f)) walk(p); else if(f.endsWith('.js')||f.endsWith('.mjs')){ const rel=path.relative(root,p).replaceAll('\\','/'); if(allow.has(rel)) continue; const s=fs.readFileSync(p,'utf8'); if(banned.some(r=>r.test(s))) bad.push(rel); } } }
+walk(path.join(root,'modules')); if(bad.length){ console.error('Direct status writes found:',bad); process.exit(1); } console.log('direct-status-write-scan passed');

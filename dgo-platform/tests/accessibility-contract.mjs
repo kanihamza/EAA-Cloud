@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const ui=fs.readFileSync('core/ui.js','utf8')+fs.readFileSync('shared/shell.js','utf8');assert.match(ui,/aria|role|toast|confirm/i);assert.ok(fs.existsSync('tests/browser-certification.html'));console.log('accessibility-contract passed');

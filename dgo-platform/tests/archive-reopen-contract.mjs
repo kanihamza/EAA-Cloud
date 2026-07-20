@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('core/archive.js','utf8');assert.match(s,/reopenArchive/);assert.match(s,/derivedFrom/);assert.match(s,/reopened-as-new-ref/);console.log('archive-reopen-contract passed');

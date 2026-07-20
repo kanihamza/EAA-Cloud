@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('modules/registry.js','utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/registry|movement|archive|close/i);assert.match(s,/State\.get|Entities\.|governedTransition/);console.log('registry-lifecycle-contract passed');

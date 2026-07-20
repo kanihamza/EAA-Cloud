@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Alerts" subtitle="Success, warning, danger, info with icons" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="stack">
+    <div class="dgo-alert dgo-alert-success">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <div>
+        <strong>Task completed successfully.</strong> The workflow has been updated.
+      </div>
+    </div>
+
+    <div class="dgo-alert dgo-alert-warning">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      <div>
+        <strong>Action required.</strong> 3 pending approvals need your attention.
+      </div>
+    </div>
+
+    <div class="dgo-alert dgo-alert-danger">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+      </svg>
+      <div>
+        <strong>Error occurred.</strong> Unable to submit the form. Please try again.
+      </div>
+    </div>
+
+    <div class="dgo-alert dgo-alert-info">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+      </svg>
+      <div>
+        <strong>System maintenance scheduled.</strong> Downtime expected on May 20, 2026.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

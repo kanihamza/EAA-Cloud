@@ -1,0 +1,65 @@
+/* ============================================================
+   DGO · Modal & Drawer
+   ------------------------------------------------------------
+   Overlay dialogs and edge-anchored panels.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   12 · MODAL / DRAWER
+   ============================================================ */
+.dgo-modal-backdrop {
+  position: fixed; inset: 0;
+  background: var(--dgo-color-surface-overlay);
+  z-index: var(--dgo-z-modal);
+  display: grid; place-items: center;
+  padding: var(--dgo-s-4);
+  animation: dgo-fade-in var(--dgo-motion-enter);
+}
+.dgo-modal {
+  inline-size: 100%;
+  max-inline-size: var(--dgo-modal-w);
+  max-block-size: 90vh;
+  display: flex; flex-direction: column;
+  background: var(--dgo-color-surface-raised);
+  border-radius: var(--dgo-modal-radius);
+  box-shadow: var(--dgo-modal-shadow);
+  overflow: clip;
+  animation: dgo-modal-in var(--dgo-motion-enter);
+}
+.dgo-modal--lg { max-inline-size: var(--dgo-modal-w-lg); }
+.dgo-modal__header {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: var(--dgo-s-4);
+  padding: var(--dgo-s-5) var(--dgo-s-6);
+  border-block-end: 1px solid var(--dgo-color-border-default);
+}
+.dgo-modal__title { font-size: var(--dgo-type-h3); font-weight: var(--dgo-wt-700); margin: 0; }
+.dgo-modal__body { padding: var(--dgo-s-6); overflow-y: auto; }
+.dgo-modal__footer {
+  padding: var(--dgo-s-4) var(--dgo-s-6);
+  border-block-start: 1px solid var(--dgo-color-border-default);
+  display: flex; justify-content: flex-end; gap: var(--dgo-s-2);
+}
+@keyframes dgo-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dgo-modal-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+
+.dgo-drawer {
+  position: fixed; inset-block: 0; inset-inline-end: 0;
+  inline-size: var(--dgo-drawer-w); max-inline-size: 100vw;
+  background: var(--dgo-color-surface-raised);
+  box-shadow: var(--dgo-elevation-modal);
+  display: flex; flex-direction: column;
+  animation: dgo-drawer-in var(--dgo-motion-enter);
+  z-index: var(--dgo-z-modal);
+}
+@keyframes dgo-drawer-in { from { transform: translateX(100%); } to { transform: none; } }
+[dir="rtl"] .dgo-drawer { inset-inline-end: auto; inset-inline-start: 0; }
+

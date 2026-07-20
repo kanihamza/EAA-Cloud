@@ -1,0 +1,67 @@
+/* ============================================================
+   DGO · Stepper & Pagination
+   ------------------------------------------------------------
+   Multi-step progress indicator and page-number navigation.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   17 · STEPPER / PAGINATION
+   ============================================================ */
+.dgo-stepper { display: flex; align-items: center; gap: var(--dgo-s-3); }
+.dgo-stepper__step {
+  display: flex; align-items: center; gap: var(--dgo-s-2);
+  color: var(--dgo-color-fg-muted);
+  font-size: var(--dgo-type-body-sm);
+}
+.dgo-stepper__bullet {
+  inline-size: 28px; block-size: 28px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--dgo-color-surface-sunken);
+  color: var(--dgo-color-fg-muted);
+  font-weight: var(--dgo-wt-600);
+  font-size: var(--dgo-type-body-sm);
+  border: 1px solid var(--dgo-color-border-default);
+}
+.dgo-stepper__step[data-state="current"] .dgo-stepper__bullet {
+  background: var(--dgo-color-action-primary);
+  color: var(--dgo-color-fg-on-brand);
+  border-color: var(--dgo-color-action-primary);
+}
+.dgo-stepper__step[data-state="done"] .dgo-stepper__bullet {
+  background: var(--dgo-color-action-accent);
+  color: var(--dgo-color-fg-on-accent);
+  border-color: var(--dgo-color-action-accent);
+}
+.dgo-stepper__step[data-state="current"], .dgo-stepper__step[data-state="done"] { color: var(--dgo-color-fg-default); }
+.dgo-stepper__line { flex: 1; block-size: 2px; background: var(--dgo-color-border-default); border-radius: 2px; }
+.dgo-stepper__step[data-state="done"] + .dgo-stepper__line { background: var(--dgo-color-action-accent); }
+
+.dgo-pagination { display: inline-flex; align-items: center; gap: var(--dgo-s-1); }
+.dgo-pagination__btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-inline-size: var(--dgo-pagination-h); block-size: var(--dgo-pagination-h);
+  padding-inline: var(--dgo-s-2);
+  border-radius: var(--dgo-pagination-radius);
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-500);
+  color: var(--dgo-color-fg-default);
+  background: transparent;
+  border: 1px solid transparent;
+}
+.dgo-pagination__btn:hover { background: var(--dgo-color-surface-sunken); }
+.dgo-pagination__btn[aria-current="page"] {
+  background: var(--dgo-color-action-primary);
+  color: var(--dgo-color-fg-on-brand);
+}
+.dgo-pagination__btn:disabled { color: var(--dgo-color-fg-disabled); cursor: not-allowed; }
+

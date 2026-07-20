@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Modals" subtitle="Header, body, footer with form fields" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modals</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--dgo-font-body);
+      background: var(--dgo-surface-overlay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="dgo-modal">
+    <div class="dgo-modal-header">
+      <h3 class="dgo-modal-title">Create New Task</h3>
+      <button class="dgo-btn dgo-btn-ghost dgo-btn-icon" style="padding: 4px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="dgo-modal-body">
+      <div class="dgo-field">
+        <label>Task Title</label>
+        <input type="text" class="dgo-input" placeholder="Enter task title">
+      </div>
+      <div class="dgo-field">
+        <label>Assign To</label>
+        <select class="dgo-select">
+          <option>Select team member</option>
+          <option>Finance Team</option>
+          <option>Operations Team</option>
+        </select>
+      </div>
+      <div class="dgo-field">
+        <label>Description</label>
+        <textarea class="dgo-textarea" placeholder="Enter task description" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="dgo-modal-footer">
+      <button class="dgo-btn dgo-btn-ghost">Cancel</button>
+      <button class="dgo-btn dgo-btn-primary">Create Task</button>
+    </div>
+  </div>
+</body>
+</html>

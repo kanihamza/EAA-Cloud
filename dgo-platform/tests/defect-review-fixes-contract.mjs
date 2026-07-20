@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { head, kpis } from '../core/ui.js';
+import { State } from '../core/state.js';
+import { AuditLog } from '../core/audit-log.js';
+const payload='<img src=x onerror=alert(1)>';
+assert.ok(head('T', payload).includes('&lt;img'));
+assert.ok(!head('T', payload).includes('<img'));
+assert.ok(kpis([[payload, payload]]).includes('&lt;img'));
+for (let i=0;i<1200;i++) State.patch({selectedId:'x'+i},{action:'test'});
+assert.equal(State.get().audit.length,1000);
+for (let i=0;i<5100;i++) AuditLog.record({event:'x'});
+assert.equal(AuditLog.snapshot().events.length,5000);
+console.log('defect-review-fixes-contract passed');

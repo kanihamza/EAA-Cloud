@@ -1,0 +1,25 @@
+{
+  "schema": "obsidian-final-completion-audit/v1",
+  "generatedAt": "2026-07-19T15:28:36+00:00",
+  "summary": {
+    "modules": 23,
+    "modulesWithMount": 23,
+    "modulesHydrated": 23,
+    "modulesWithGovernance": 23,
+    "modulesWithBackendInvokes": 7,
+    "modulesWithStatePatch": 15,
+    "modulesWithDirectStatusDot": 0,
+    "modulesWithUiSurfaceSignals": 23
+  },
+  "validationReturnCode": 0,
+  "validationPassed": true,
+  "noDeferralSourceAudit": {
+    "testsContainScaffold": false,
+    "modulesWithDirectStatusDot": 0,
+    "allModulesMounted": true,
+    "allModulesHydrated": true,
+    "allModulesGovernanceWired": true,
+    "allModulesHaveUiSignals": true
+  },
+  "remainingRuntimeBoundary": "No source/static/build deferrals detected. Live browser click-through and live Power Automate execution require an external browser/network environment; browser certification assets and route/operator contracts are included."
+}

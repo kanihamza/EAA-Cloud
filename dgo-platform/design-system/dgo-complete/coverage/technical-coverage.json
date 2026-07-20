@@ -1,0 +1,741 @@
+{
+  "schema": "dgo-technical-coverage/v1",
+  "version": "2.2.0-technical-complete",
+  "scope": [
+    "visual",
+    "interaction",
+    "accessibility",
+    "responsive",
+    "i18n",
+    "performance",
+    "integration"
+  ],
+  "components": [
+    {
+      "id": "alert",
+      "styles": "styles/components/alert.css",
+      "documentation": "docs/components/alert.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "avatar",
+      "styles": "styles/components/avatar.css",
+      "documentation": "docs/components/avatar.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "badge",
+      "styles": "styles/components/badge.css",
+      "documentation": "docs/components/badge.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "breadcrumb",
+      "styles": "styles/components/breadcrumb.css",
+      "documentation": "docs/components/breadcrumb.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "button",
+      "styles": "styles/components/button.css",
+      "documentation": "docs/components/button.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "card",
+      "styles": "styles/components/card.css",
+      "documentation": "docs/components/card.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "checkbox-radio",
+      "styles": "styles/components/checkbox-radio.css",
+      "documentation": "docs/components/checkbox-radio.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "command-palette",
+      "styles": "styles/components/command-palette.css",
+      "documentation": "docs/components/command-palette.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "empty-state",
+      "styles": "styles/components/empty-state.css",
+      "documentation": "docs/components/empty-state.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "filter-bar",
+      "styles": "styles/components/filter-bar.css",
+      "documentation": "docs/components/filter-bar.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "input",
+      "styles": "styles/components/input.css",
+      "documentation": "docs/components/input.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "kbd-code",
+      "styles": "styles/components/kbd-code.css",
+      "documentation": "docs/components/kbd-code.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "menu",
+      "styles": "styles/components/menu.css",
+      "documentation": "docs/components/menu.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "metric",
+      "styles": "styles/components/metric.css",
+      "documentation": "docs/components/metric.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "modal",
+      "styles": "styles/components/modal.css",
+      "documentation": "docs/components/modal.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "progress",
+      "styles": "styles/components/progress.css",
+      "documentation": "docs/components/progress.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "search",
+      "styles": "styles/components/search.css",
+      "documentation": "docs/components/search.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "select",
+      "styles": "styles/components/select.css",
+      "documentation": "docs/components/select.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "sidebar",
+      "styles": "styles/components/sidebar.css",
+      "documentation": "docs/components/sidebar.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "skeleton",
+      "styles": "styles/components/skeleton.css",
+      "documentation": "docs/components/skeleton.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "stepper-pagination",
+      "styles": "styles/components/stepper-pagination.css",
+      "documentation": "docs/components/stepper-pagination.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "switch",
+      "styles": "styles/components/switch.css",
+      "documentation": "docs/components/switch.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "table",
+      "styles": "styles/components/table.css",
+      "documentation": "docs/components/table.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "tabs",
+      "styles": "styles/components/tabs.css",
+      "documentation": "docs/components/tabs.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "toast",
+      "styles": "styles/components/toast.css",
+      "documentation": "docs/components/toast.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "tooltip-popover",
+      "styles": "styles/components/tooltip-popover.css",
+      "documentation": "docs/components/tooltip-popover.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "topbar",
+      "styles": "styles/components/topbar.css",
+      "documentation": "docs/components/topbar.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "accordion",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "segmented-control",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "file-upload",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "timeline",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "empty",
+        "loading",
+        "error"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "chart",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "empty",
+        "loading",
+        "error"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    },
+    {
+      "id": "actionbar",
+      "styles": "styles/enhancements.css",
+      "documentation": "docs/13-complete-implementation.md",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "modes": [
+        "light",
+        "dark",
+        "hc",
+        "forced-colors",
+        "reduced-motion",
+        "rtl",
+        "compact",
+        "comfortable"
+      ],
+      "status": "implemented"
+    }
+  ]
+}

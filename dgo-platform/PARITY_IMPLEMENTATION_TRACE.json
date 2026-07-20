@@ -1,0 +1,17 @@
+{
+  "changedFiles": [
+    "modules/orchestrator.js"
+  ],
+  "addedFiles": [
+    "tests/source-parity-reminder-contract.mjs"
+  ],
+  "featuresImplemented": [
+    "SRC-REMINDER (setReminder governed action activating DynamicActions.setReminder contract)"
+  ],
+  "testsAdded": [
+    "tests/source-parity-reminder-contract.mjs"
+  ],
+  "validationCommand": "bash tests/run-all.sh",
+  "validationReturnCode": 0,
+  "packageSha256": "PENDING"
+}

@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('core/archive.js','utf8')+fs.readFileSync('core/entity-store.js','utf8');assert.match(s,/Object\.freeze|deepFreeze/);assert.match(s,/immutable:true/);console.log('archive-immutability-contract passed');

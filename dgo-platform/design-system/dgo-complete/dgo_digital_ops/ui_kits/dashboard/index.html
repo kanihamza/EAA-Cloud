@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="DGO Dashboard Kit" subtitle="Full operational dashboard with sidebar, stats, tasks, activity" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGO Dashboard — Operational UI Kit</title>
+  <link rel="stylesheet" href="../../tokens.css">
+  <link rel="stylesheet" href="../../components.css">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--dgo-font-body); background: var(--dgo-surface-alt); }
+    
+    .app-layout {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .app-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .app-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: var(--dgo-space-6);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--dgo-space-4);
+      margin-bottom: var(--dgo-space-6);
+    }
+    
+    .stat-card {
+      background: white;
+      border: 1px solid var(--dgo-border);
+      border-radius: var(--dgo-radius-lg);
+      padding: var(--dgo-space-5);
+    }
+    
+    .stat-label {
+      font-size: var(--dgo-fs-caption);
+      color: var(--dgo-ink-500);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    
+    .stat-value {
+      font-family: var(--dgo-font-display);
+      font-size: 32px;
+      font-weight: var(--dgo-fw-bold);
+      color: var(--dgo-ink-900);
+      margin-bottom: 4px;
+    }
+    
+    .stat-change {
+      font-size: var(--dgo-fs-caption);
+      color: var(--dgo-success-text);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .stat-change.negative {
+      color: var(--dgo-danger-text);
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--dgo-space-4);
+    }
+    
+    .section-title {
+      font-family: var(--dgo-font-display);
+      font-size: var(--dgo-fs-h3);
+      font-weight: var(--dgo-fw-bold);
+      color: var(--dgo-ink-900);
+      margin: 0;
+    }
+    
+    .quick-actions {
+      display: flex;
+      gap: var(--dgo-space-2);
+      margin-bottom: var(--dgo-space-6);
+    }
+    
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--dgo-space-4);
+    }
+    
+    @media (max-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .recent-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .recent-item {
+      padding: var(--dgo-space-3) 0;
+      border-bottom: 1px solid var(--dgo-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--dgo-space-3);
+    }
+    
+    .recent-item:last-child {
+      border-bottom: none;
+    }
+    
+    .recent-meta {
+      font-size: var(--dgo-fs-caption);
+      color: var(--dgo-ink-500);
+      margin-top: 4px;
+    }
+  </style>
+  <template id="__bundler_thumbnail" data-bg-color="#FAF9F9">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#FAF9F9"/>
+      <!-- dark green sidebar -->
+      <rect x="0" y="0" width="280" height="800" fill="#0B2A1F"/>
+      <circle cx="62" cy="74" r="15" fill="none" stroke="#17B255" stroke-width="5"/>
+      <circle cx="62" cy="74" r="4.5" fill="#17B255"/>
+      <rect x="90" y="66" width="120" height="16" rx="4" fill="rgba(255,255,255,0.85)"/>
+      <g>
+        <rect x="32" y="170" width="216" height="38" rx="8" fill="#05583B"/>
+        <rect x="32" y="220" width="216" height="38" rx="8" fill="rgba(255,255,255,0.14)"/>
+        <rect x="32" y="270" width="216" height="38" rx="8" fill="rgba(255,255,255,0.14)"/>
+        <rect x="32" y="320" width="216" height="38" rx="8" fill="rgba(255,255,255,0.14)"/>
+      </g>
+      <!-- header -->
+      <rect x="280" y="0" width="920" height="92" fill="#FFFFFF"/>
+      <rect x="328" y="34" width="200" height="24" rx="6" fill="#1B1A1A"/>
+      <!-- stat cards row -->
+      <g fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2">
+        <rect x="328" y="132" width="196" height="110" rx="12"/>
+        <rect x="540" y="132" width="196" height="110" rx="12"/>
+        <rect x="752" y="132" width="196" height="110" rx="12"/>
+        <rect x="964" y="132" width="188" height="110" rx="12"/>
+      </g>
+      <g fill="#05583B">
+        <rect x="352" y="186" width="80" height="26" rx="5"/>
+        <rect x="564" y="186" width="80" height="26" rx="5"/>
+        <rect x="776" y="186" width="80" height="26" rx="5"/>
+        <rect x="988" y="186" width="80" height="26" rx="5"/>
+      </g>
+      <!-- content cards -->
+      <rect x="328" y="270" width="540" height="380" rx="12" fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2"/>
+      <rect x="884" y="270" width="268" height="380" rx="12" fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2"/>
+      <text x="744" y="730" text-anchor="middle" font-family="Outfit, system-ui, sans-serif" font-size="32" font-weight="800" fill="#05583B" letter-spacing="-0.5">DGO Dashboard</text>
+    </svg>
+  </template>
+</head>
+<body class="dgo">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    // DGO Logo Component
+    function DGOLogo({ inverse = false }) {
+      return (
+        <div className={`dgo-mark ${inverse ? 'on-dark' : ''}`}>
+          <div className="word">
+            DG
+            <span className="o-orbit">
+              <span className="dot"></span>
+            </span>
+          </div>
+          <div className="sub">DIGITAL OPS</div>
+        </div>
+      );
+    }
+
+    // Sidebar Component
+    function Sidebar() {
+      const [active, setActive] = useState('dashboard');
+      
+      const navItems = [
+        { id: 'dashboard', label: 'Dashboard', icon: 'layout-dashboard' },
+        { id: 'tasks', label: 'Tasks', icon: 'check-square' },
+        { id: 'messages', label: 'Messages', icon: 'mail', badge: '12' },
+        { id: 'reports', label: 'Reports', icon: 'file-text' },
+        { id: 'users', label: 'Users', icon: 'users' },
+        { id: 'settings', label: 'Settings', icon: 'settings' }
+      ];
+
+      return (
+        <div className="dgo-sidebar">
+          <div className="dgo-sidebar-brand">
+            <DGOLogo inverse />
+            <div className="dgo-endorse" style={{ marginTop: '12px', color: 'rgba(255,255,255,0.5)' }}>
+              An initiative of NITDA
+            </div>
+          </div>
+
+          <nav className="dgo-nav">
+            {navItems.map(item => (
+              <a
+                key={item.id}
+                href="#"
+                className={`dgo-nav-item ${active === item.id ? 'active' : ''}`}
+                onClick={(e) => { e.preventDefault(); setActive(item.id); }}
+              >
+                <i data-lucide={item.icon} style={{ width: 20, height: 20 }}></i>
+                <span>{item.label}</span>
+                {item.badge && (
+                  <span className="dgo-pill dgo-pill-danger" style={{ marginLeft: 'auto', fontSize: '10px' }}>
+                    {item.badge}
+                  </span>
+                )}
+              </a>
+            ))}
+          </nav>
+
+          <div style={{ marginTop: 'auto', paddingTop: 'var(--dgo-space-6)', borderTop: '1px solid var(--dgo-border-on-green)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontSize: '13px' }}>
+              <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--dgo-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600 }}>
+                AS
+              </div>
+              <div>
+                <div style={{ fontWeight: 600 }}>Admin User</div>
+                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>System Admin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Header Component
+    function Header() {
+      return (
+        <div className="dgo-header" style={{ borderBottom: '1px solid var(--dgo-border)' }}>
+          <div>
+            <h1 style={{ margin: 0, fontSize: 'var(--dgo-fs-h2)', fontFamily: 'var(--dgo-font-display)', fontWeight: 'var(--dgo-fw-bold)' }}>
+              Dashboard
+            </h1>
+            <p style={{ margin: '4px 0 0 0', fontSize: 'var(--dgo-fs-body-sm)', color: 'var(--dgo-ink-500)' }}>
+              Welcome back, here's what's happening today
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: 'var(--dgo-space-2)' }}>
+            <button className="dgo-btn dgo-btn-ghost dgo-btn-icon">
+              <i data-lucide="bell" style={{ width: 20, height: 20 }}></i>
+            </button>
+            <button className="dgo-btn dgo-btn-ghost dgo-btn-icon">
+              <i data-lucide="search" style={{ width: 20, height: 20 }}></i>
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Stats Component
+    function StatsGrid() {
+      const stats = [
+        { label: 'Total Tasks', value: '1,247', change: '+12%', positive: true },
+        { label: 'Pending', value: '89', change: '+5', positive: false },
+        { label: 'Completed Today', value: '34', change: '+8%', positive: true },
+        { label: 'Active Users', value: '156', change: '+23', positive: true }
+      ];
+
+      return (
+        <div className="stats-grid">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-card">
+              <div className="stat-label">{stat.label}</div>
+              <div className="stat-value">{stat.value}</div>
+              <div className={`stat-change ${!stat.positive ? 'negative' : ''}`}>
+                <i data-lucide={stat.positive ? 'trending-up' : 'trending-down'} style={{ width: 14, height: 14 }}></i>
+                {stat.change} from last week
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    // Recent Tasks Component
+    function RecentTasks() {
+      const tasks = [
+        { id: '00423', title: 'Review Q2 Budget Report', dept: 'Finance', status: 'pending', date: '2 hours ago' },
+        { id: '00422', title: 'Server Maintenance Schedule', dept: 'Technical', status: 'replied', date: '4 hours ago' },
+        { id: '00421', title: 'Update Security Policy', dept: 'Operations', status: 'action', date: '1 day ago' },
+        { id: '00420', title: 'Staff Training Request', dept: 'HR', status: 'routed', date: '2 days ago' }
+      ];
+
+      return (
+        <div className="dgo-card">
+          <div className="section-header">
+            <h3 className="section-title">Recent Tasks</h3>
+            <button className="dgo-btn dgo-btn-ghost dgo-btn-sm">View All</button>
+          </div>
+          
+          <ul className="recent-list">
+            {tasks.map(task => (
+              <li key={task.id} className="recent-item">
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontWeight: 600, color: 'var(--dgo-ink-900)', fontSize: '13px' }}>
+                    {task.title}
+                  </div>
+                  <div className="recent-meta">
+                    #{task.id} • {task.dept} • {task.date}
+                  </div>
+                </div>
+                <span className={`dgo-pill dgo-pill-${task.status}`}>
+                  <span className="dot"></span>
+                  {task.status === 'pending' ? 'Pending' : task.status === 'replied' ? 'Replied' : task.status === 'action' ? 'Action' : 'Routed'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    // Activity Feed Component
+    function ActivityFeed() {
+      const activities = [
+        { user: 'John Adebayo', action: 'completed task', target: '#00419', time: '5 min ago' },
+        { user: 'Sarah Okafor', action: 'commented on', target: '#00418', time: '12 min ago' },
+        { user: 'Admin', action: 'assigned', target: '#00423 to Finance', time: '1 hour ago' },
+        { user: 'Peter Nwosu', action: 'updated', target: '#00417', time: '2 hours ago' }
+      ];
+
+      return (
+        <div className="dgo-card">
+          <h3 className="section-title" style={{ marginBottom: 'var(--dgo-space-4)' }}>Recent Activity</h3>
+          
+          <ul className="recent-list">
+            {activities.map((activity, i) => (
+              <li key={i} className="recent-item">
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: '13px', color: 'var(--dgo-ink-700)' }}>
+                    <strong>{activity.user}</strong> {activity.action} <strong>{activity.target}</strong>
+                  </div>
+                  <div className="recent-meta">{activity.time}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    // Main App Component
+    function App() {
+      return (
+        <div className="app-layout">
+          <Sidebar />
+          <div className="app-main">
+            <Header />
+            <div className="app-content">
+              <div className="quick-actions">
+                <button className="dgo-btn dgo-btn-primary">
+                  <i data-lucide="plus" style={{ width: 16, height: 16 }}></i>
+                  New Task
+                </button>
+                <button className="dgo-btn dgo-btn-secondary">
+                  <i data-lucide="mail" style={{ width: 16, height: 16 }}></i>
+                  Send Bulk Message
+                </button>
+                <button className="dgo-btn dgo-btn-ghost">
+                  <i data-lucide="download" style={{ width: 16, height: 16 }}></i>
+                  Export Report
+                </button>
+              </div>
+
+              <StatsGrid />
+
+              <div className="content-grid">
+                <RecentTasks />
+                <ActivityFeed />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Render
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+
+    // Initialize Lucide icons after React has committed the DOM.
+    // React 18's concurrent render commits asynchronously, so a synchronous
+    // call here would run before the <i data-lucide> nodes exist. Defer past
+    // the commit (double rAF), with a timeout fallback for safety.
+    function initIcons() {
+      if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
+    }
+    requestAnimationFrame(() => requestAnimationFrame(initIcons));
+    setTimeout(initIcons, 300);
+  </script>
+</body>
+</html>

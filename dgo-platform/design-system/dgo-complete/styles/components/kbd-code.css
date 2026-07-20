@@ -1,0 +1,55 @@
+/* ============================================================
+   DGO · Kbd & Code
+   ------------------------------------------------------------
+   Inline keyboard chips and monospace code spans.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   25 · KBD / CODE
+   ============================================================ */
+.dgo-kbd {
+  display: inline-flex; align-items: center;
+  min-inline-size: 22px; block-size: 22px;
+  padding-inline: 6px;
+  font-family: var(--dgo-family-mono);
+  font-size: 11px;
+  font-weight: var(--dgo-wt-600);
+  background: var(--dgo-kbd-bg);
+  color: var(--dgo-color-fg-default);
+  border: 1px solid var(--dgo-kbd-border);
+  border-block-end-width: 2px;
+  border-radius: var(--dgo-r-4);
+}
+
+.dgo-code-block {
+  display: block;
+  font-family: var(--dgo-family-mono);
+  font-size: var(--dgo-type-body-sm);
+  line-height: var(--dgo-lh-150);
+  background: var(--dgo-code-bg);
+  color: var(--dgo-code-fg);
+  padding: var(--dgo-s-4);
+  border-radius: var(--dgo-radius-card);
+  border: 1px solid var(--dgo-color-border-default);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.dgo-inline-code {
+  font-family: var(--dgo-family-mono);
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: var(--dgo-r-4);
+  background: var(--dgo-code-bg);
+  color: var(--dgo-code-fg);
+}
+

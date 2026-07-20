@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { canTransition } from '../core/lifecycle.js'; assert.equal(canTransition('registered','triaged'),true); assert.equal(canTransition('registered','closed'),false); console.log('lifecycle-transition-contract passed');

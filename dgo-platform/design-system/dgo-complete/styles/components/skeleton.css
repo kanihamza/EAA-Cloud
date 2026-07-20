@@ -1,0 +1,36 @@
+/* ============================================================
+   DGO · Skeleton
+   ------------------------------------------------------------
+   Loading placeholders mirroring content shape.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   23 · SKELETON
+   ============================================================ */
+.dgo-skeleton {
+  display: block;
+  background:
+    linear-gradient(90deg,
+      var(--dgo-skeleton-base) 0%,
+      var(--dgo-skeleton-shine) 50%,
+      var(--dgo-skeleton-base) 100%);
+  background-size: 200% 100%;
+  border-radius: var(--dgo-r-6);
+  animation: dgo-skeleton 1.4s linear infinite;
+  min-block-size: 12px;
+}
+@keyframes dgo-skeleton {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+.dgo-skeleton--circle { border-radius: 50%; }
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Badges & Pills" subtitle="7 status + 4 semantic variants" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badges & Pills</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dgo-ink-900);
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h3>Status Pills</h3>
+  <div class="pill-row">
+    <span class="dgo-pill dgo-pill-pending"><span class="dot"></span>Pending</span>
+    <span class="dgo-pill dgo-pill-routed"><span class="dot"></span>Routed</span>
+    <span class="dgo-pill dgo-pill-replied"><span class="dot"></span>Replied</span>
+    <span class="dgo-pill dgo-pill-action"><span class="dot"></span>Action Required</span>
+    <span class="dgo-pill dgo-pill-draft"><span class="dot"></span>Draft</span>
+    <span class="dgo-pill dgo-pill-archived"><span class="dot"></span>Archived</span>
+    <span class="dgo-pill dgo-pill-escalated"><span class="dot"></span>Escalated</span>
+  </div>
+
+  <h3>Semantic Pills</h3>
+  <div class="pill-row">
+    <span class="dgo-pill dgo-pill-success"><span class="dot"></span>Success</span>
+    <span class="dgo-pill dgo-pill-warning"><span class="dot"></span>Warning</span>
+    <span class="dgo-pill dgo-pill-danger"><span class="dot"></span>Danger</span>
+    <span class="dgo-pill dgo-pill-info"><span class="dot"></span>Info</span>
+  </div>
+
+  <h3>Without Dots</h3>
+  <div class="pill-row">
+    <span class="dgo-pill dgo-pill-pending">Pending</span>
+    <span class="dgo-pill dgo-pill-success">Completed</span>
+    <span class="dgo-pill dgo-pill-danger">Urgent</span>
+  </div>
+</body>
+</html>

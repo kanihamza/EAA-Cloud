@@ -1,0 +1,67 @@
+DGO Design System
+=================
+
+Copyright (c) [NITDA legal: confirm copyright holder — National Information
+Technology Development Agency / Federal Republic of Nigeria / a specific
+project office] [NITDA legal: confirm year span, e.g. 2024–2026].
+
+License type:        [NITDA legal: confirm license — recommended candidates
+                     are MIT, Apache-2.0, or a bespoke "NITDA Public Use"
+                     license. The system has been authored against an
+                     OSS-shape contract; either of MIT or Apache-2.0 fits
+                     the codebase without modification.]
+
+Redistribution:      [NITDA legal: confirm redistribution scope. Internal-
+                     federal-only? Permitted to MDAs, sub-nationals, and
+                     contractors? Permitted to the general public? The
+                     /assets/logo/* lockups and the brand wordmark are a
+                     separate question from the code — see §Brand below.]
+
+Attribution:         [NITDA legal: confirm required attribution string.
+                     Suggested: "DGO Design System — An initiative of
+                     NITDA" rendered in a `dgo-overline`-styled credit on
+                     surfaces that consume the system at scale.]
+
+Patent grant:        [NITDA legal: confirm patent-grant stance. Apache-2.0
+                     includes one; MIT does not. If unclear, default to
+                     Apache-2.0 for the code.]
+
+Trademark:           The marks "NITDA", "DGO", "DGO Digital Ops", and the
+                     "An Initiative of NITDA" lockup are trademarks of the
+                     National Information Technology Development Agency.
+                     The trademark license is **separate** from any code
+                     license declared above. Use of the marks on third-
+                     party surfaces requires written endorsement from
+                     NITDA's brand office. See `docs/00-foundations.md` §
+                     "Brand boundaries".
+
+Brand:               The files in `assets/logo/` and `assets/icons/sprite.svg`
+                     remain governed by the NITDA Brand Guidelines (2020).
+                     They are bundled here for convenience of system
+                     consumers building NITDA-endorsed products. They are
+                     **not** sub-licensed for third-party brand use.
+
+Warranty:            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+                     ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+                     LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                     FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+                     EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+                     LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                     WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+                     ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                     SOFTWARE.
+
+---
+
+### Document status
+
+This file is a structural stub. The bracketed `[NITDA legal: …]` markers
+flag every place where the agency's legal office must confirm content
+before a public release. The scaffolding (sections, ordering, the
+trademark separation, the brand carve-out) is design-system work and is
+ready as-is. The legal text is not the system's to invent.
+
+Until those markers are resolved, this directory should be treated as
+internal-only and distribution should be limited to teams under direct
+NITDA programme oversight.

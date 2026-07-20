@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Semantic Colors" subtitle="Success, warning, danger, info" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Colors</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .swatch-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .swatch-color {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--dgo-radius-md);
+      border: 1px solid var(--dgo-border);
+    }
+    .swatch-info h3 {
+      margin: 0 0 4px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dgo-ink-900);
+    }
+    .swatch-info p {
+      margin: 0;
+      font-size: 11px;
+      color: var(--dgo-ink-500);
+      font-family: var(--dgo-font-mono);
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h2 style="margin: 0 0 16px 0; font-size: 18px;">Semantic Colors</h2>
+  
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-success);"></div>
+      <div class="swatch-info">
+        <h3>Success</h3>
+        <p>--dgo-success</p>
+        <p>#17B255</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-warning);"></div>
+      <div class="swatch-info">
+        <h3>Warning</h3>
+        <p>--dgo-warning</p>
+        <p>#E1A100</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-danger);"></div>
+      <div class="swatch-info">
+        <h3>Danger</h3>
+        <p>--dgo-danger</p>
+        <p>#C8102E</p>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dgo-info);"></div>
+      <div class="swatch-info">
+        <h3>Info</h3>
+        <p>--dgo-info</p>
+        <p>#0B6BB0</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

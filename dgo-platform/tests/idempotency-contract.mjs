@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { Idempotency } from '../core/idempotency.js'; const k=await Idempotency.key({operation:'A',ref:'R',actor:{email:'a@b'},payload:{x:1}}); Idempotency.remember(k); assert.equal(Idempotency.seen(k),true); console.log('idempotency-contract passed');

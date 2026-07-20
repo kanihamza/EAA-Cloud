@@ -1,0 +1,28 @@
+{
+  "schema": "route-map/v1",
+  "routes": [
+    "home",
+    "activities",
+    "correspondence",
+    "response-tracking",
+    "orchestrator",
+    "single-assignment",
+    "bulk-assignment",
+    "fasttrack",
+    "approvals",
+    "acknowledgment",
+    "dispatch",
+    "registry",
+    "comments",
+    "reports",
+    "statistics",
+    "executive",
+    "assistant",
+    "lookup",
+    "operator-hud",
+    "settings",
+    "diagnostics",
+    "user-admin",
+    "archive"
+  ]
+}

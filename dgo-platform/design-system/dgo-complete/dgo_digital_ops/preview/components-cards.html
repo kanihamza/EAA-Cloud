@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Cards" subtitle="Standard, hoverable, and frame variants" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="grid">
+    <div class="dgo-card">
+      <div class="dgo-card-header">
+        <div>
+          <h3 class="dgo-card-title">Simple Card</h3>
+          <p class="dgo-card-subtitle">Basic card with title and subtitle</p>
+        </div>
+      </div>
+      <div class="dgo-card-body">
+        This is a standard card layout with header, body, and optional footer sections.
+      </div>
+    </div>
+
+    <div class="dgo-card dgo-card-hover">
+      <div class="dgo-card-header">
+        <h3 class="dgo-card-title">Hoverable Card</h3>
+        <span class="dgo-pill dgo-pill-success">Active</span>
+      </div>
+      <div class="dgo-card-body">
+        This card shows an elevation increase on hover, useful for clickable items.
+      </div>
+      <div class="dgo-card-footer">
+        <button class="dgo-btn dgo-btn-primary dgo-btn-sm">View Details</button>
+        <button class="dgo-btn dgo-btn-ghost dgo-btn-sm">Archive</button>
+      </div>
+    </div>
+
+    <div class="dgo-frame" style="padding: 24px;">
+      <h3 style="margin: 0 0 8px 0; font-size: 16px;">Frame Container</h3>
+      <p style="margin: 0; font-size: 13px; color: var(--dgo-ink-500);">
+        Large containers use the .dgo-frame class with 18px radius.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

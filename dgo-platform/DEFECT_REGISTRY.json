@@ -1,0 +1,54 @@
+[
+  {
+    "defectId": "DGO-R11.7-000",
+    "file": "core/nitda-module-adapter.js",
+    "lineOrSignal": "lines 10-12 (workflowEndpointMap object literal)",
+    "category": "boot",
+    "severity": "critical",
+    "finding": "Three object-literal keys (818ec4053f1e4f0b87845114241d8b74, 37642ba3597f4cf58288cc71b5e6b519, 3931e2ff995242b6b2c920c8b2209797) were unquoted and start with a digit, which is invalid JavaScript grammar (the parser reads e.g. '818e...' as a malformed numeric-literal exponent and throws). Every other digit-leading key in the same object literal was correctly single-quoted; these three were not. Because core/boot.js statically imports this file, the syntax error blocked the entire module graph from executing, leaving the app stuck on the static 'Loading DGO Digital Operations...' placeholder forever, with no error screen ever shown.",
+    "evidence": "User-reported browser console error: 'Uncaught SyntaxError: Invalid or unexpected token' at nitda-module-adapter.js:10. Root-caused via node --input-type=module --check (forces true ES-module grammar, unlike plain node --check on a .js file). Fix confirmed via a real headless-Chromium boot: zero page/console errors, window.__DGO_BOOTED__===true, <dgo-shell> renders the full application shell, and the four previously-fixed route modules (orchestrator, dispatch, user-admin, approvals) all render without error.",
+    "impact": "Complete boot failure of the platform in every browser; the app never became usable. This defect was present in the original uploaded snapshot (confirmed via the pre-fix SHA-256 match against the manifest) and was NOT caught by the first pass of this forensic review. That pass's static-validation step relied on plain `node --check`, which has an undocumented blind spot: it silently skips full re-validation once a .js file's top-level `import` statement triggers Node's CommonJS/ESM auto-detection heuristic, producing a false 'no syntax error' result for exactly this class of bug. This is called out explicitly as a process failure, not just a code defect.",
+    "resolutionRequired": true,
+    "proposedResolution": "Quote the three offending keys, matching the pattern already used for every other digit-leading key in the same object literal. Replace the unreliable node --check static-syntax step in tests/run-all.sh with tests/syntax-integrity-contract.mjs, which forces true ES-module parsing (--input-type=module) for every core/config/modules/shared file. Independently verify the fix boots in a real headless-Chromium browser rather than relying solely on another static check, since static checks in this codebase were just shown to produce false passes.",
+    "implemented": true
+  },
+  {
+    "defectId": "DGO-R11.7-001",
+    "file": "modules/user-admin.js",
+    "lineOrSignal": "el.querySelectorAll('[data-disable]') handler (pre-fix line 40-43)",
+    "category": "governance",
+    "severity": "critical",
+    "finding": "The 'Disable user' action revoked platform access and called State.patch() with zero confirmation step, unlike every other comparable destructive action in the codebase (dispatch close, task completion, approval/rejection all call confirmAction() first).",
+    "evidence": "Original handler: `const u = s.users.find(x => x.id === b.dataset.disable); u[\"status\"] = 'disabled'; State.patch({ users: s.users }); toast(...)` — no confirmAction() call anywhere in the handler.",
+    "impact": "A single misclick on the Disable button silently and irreversibly (from the UI's perspective) revoked a user's access with no review step, breaking the platform's mandatory 'confirmation before write' governance rule.",
+    "resolutionRequired": true,
+    "proposedResolution": "Wrap the disable action in confirmAction({title:'Disable user', body:...}) before calling State.patch, matching the confirmation pattern used by dispatch.js/orchestrator.js/approvals.js.",
+    "implemented": true
+  },
+  {
+    "defectId": "DGO-R11.7-002",
+    "file": "modules/dispatch.js, modules/orchestrator.js, modules/approvals.js",
+    "lineOrSignal": "t[\"dispatchStatus\"]=, t[\"status\"]=, rec[\"status\"]= assignments",
+    "category": "governance",
+    "severity": "high",
+    "finding": "Three modules mutated live state objects in place via bracket-notation property assignment (t[\"status\"]='X') instead of the codebase's established immutable-update pattern (array.map(x => x.id===id ? {...x, status:'X'} : x)). This bracket-notation form also silently evaded the platform's own regression guard, tests/direct-status-write-scan.mjs, whose regex only matched dot-notation (`.status =`).",
+    "evidence": "dispatch.js: `t[\"dispatchStatus\"] = 'dispatched'` / `t[\"dispatchStatus\"] = 'closed'`; orchestrator.js: `t[\"status\"] = 'Completed'`; approvals.js: `rec[\"status\"] = kind==='approve'?'approved':'rejected'`. All three files import `governedTransition` and `actor` from core/governed-actions.js but never call them — dead imports, confirming the intended governed path was never wired in. Audit entries for these actions were also ad hoc objects (`{at, action:'Dispatched'}`) lacking the module/action/ref metadata the automatic State.patch audit trail (core/state.js buildPatchAudit) attaches to every other governed write.",
+    "impact": "Direct in-place mutation of state held by reference bypasses the platform's immutability contract (risk of stale-reference bugs and inconsistent listener notification), and the loophole meant the platform's own protective test suite could not detect this exact class of defect — a false sense of governance coverage.",
+    "resolutionRequired": true,
+    "proposedResolution": "Replace in-place bracket-notation mutation with non-mutating array.map() updates; pass structured {module, action, ref} meta to State.patch() so the automatic audit event carries specific action/ref data; drop the redundant ad hoc audit array construction. Strengthen tests/direct-status-write-scan.mjs to also flag bracket-notation assignment so this class of defect cannot silently recur.",
+    "implemented": true
+  },
+  {
+    "defectId": "DGO-R11.7-003",
+    "file": "modules/orchestrator.js, modules/dispatch.js, modules/user-admin.js",
+    "lineOrSignal": "table()/list rendering calls without RenderBudget capping",
+    "category": "performance",
+    "severity": "medium",
+    "finding": "Three modules render their full, uncapped state array (tracking table, dispatch queue, users table) directly into the DOM with no row limit, unlike activities.js, correspondence.js, registry.js, fasttrack.js, diagnostics.js and operator-hud.js, which all consistently cap rendered rows via core/render-budget.js's capRows()/RenderBudget constants.",
+    "evidence": "orchestrator.js rendered `table(cols, list, ...)` where list was the full filtered s.tracking array; dispatch.js rendered `list.map(...)` over the full queue; user-admin.js rendered `users.map(...)` over the full s.users array. core/render-budget.js defines RenderBudget.tableRows=120 / listRows=100 specifically to bound this class of render, but these three modules never imported it.",
+    "impact": "On realistic production datasets (hundreds+ of tracking records or users), these views render unbounded DOM nodes, degrading render performance and violating the platform's own render-budget contract that every other list/table view honors.",
+    "resolutionRequired": true,
+    "proposedResolution": "Import capRows/RenderBudget from core/render-budget.js and wrap the rendered row list (capRows(list, RenderBudget.tableRows) / capRows(list, RenderBudget.listRows)), matching the pattern already used elsewhere in the codebase.",
+    "implemented": true
+  }
+]

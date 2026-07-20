@@ -1,0 +1,36 @@
+/* ============================================================
+   DGO · Checkbox & Radio
+   ------------------------------------------------------------
+   Boolean and single-choice controls; shares the field reset.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   4 · CHECKBOX / RADIO
+   ============================================================ */
+.dgo-check, .dgo-radio {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-2);
+  cursor: pointer; user-select: none;
+  font-size: var(--dgo-type-body);
+}
+.dgo-check input[type="checkbox"],
+.dgo-radio input[type="radio"] {
+  inline-size: 18px; block-size: 18px;
+  margin: 0;
+  accent-color: var(--dgo-color-action-primary);
+  cursor: pointer;
+}
+.dgo-check input:focus-visible,
+.dgo-radio input:focus-visible {
+  outline: 2px solid var(--dgo-color-border-focus);
+  outline-offset: 2px;
+}
+

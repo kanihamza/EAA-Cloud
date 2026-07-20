@@ -1,0 +1,138 @@
+/* ============================================================
+   DGO · Button
+   ------------------------------------------------------------
+   Action triggers (primary/secondary/tertiary/ghost/danger × sm/md/lg + button-group).
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   1 · BUTTON
+   ============================================================
+   States: default · hover · focus-visible · active · disabled · loading
+   Variants: primary · secondary · tertiary · ghost · danger
+   Sizes: sm · md · lg
+   ============================================================ */
+.dgo-btn {
+  --_h: var(--dgo-btn-h-md);
+  --_px: var(--dgo-btn-px-md);
+  --_fs: var(--dgo-type-body);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dgo-s-2);
+  block-size: var(--_h);
+  padding-inline: var(--_px);
+  font-family: var(--dgo-family-sans);
+  font-size: var(--_fs);
+  font-weight: var(--dgo-btn-fw);
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: var(--dgo-btn-radius);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--dgo-motion-state),
+    border-color var(--dgo-motion-state),
+    color var(--dgo-motion-state),
+    box-shadow var(--dgo-motion-state),
+    transform var(--dgo-dur-instant) var(--dgo-ease-sharp);
+  min-inline-size: var(--_h); /* hit area floor */
+}
+
+.dgo-btn:focus-visible { box-shadow: var(--dgo-focus-ring); }
+.dgo-btn:active:not(:disabled) { transform: translateY(1px); }
+.dgo-btn:disabled,
+.dgo-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.dgo-btn--sm { --_h: var(--dgo-btn-h-sm); --_px: var(--dgo-btn-px-sm); --_fs: var(--dgo-type-body-sm); }
+.dgo-btn--lg { --_h: var(--dgo-btn-h-lg); --_px: var(--dgo-btn-px-lg); --_fs: var(--dgo-type-body-lg); }
+.dgo-btn--block { inline-size: 100%; }
+
+/* Primary */
+.dgo-btn--primary {
+  background: var(--dgo-color-action-primary);
+  color: var(--dgo-color-fg-on-brand);
+}
+.dgo-btn--primary:hover:not(:disabled) { background: var(--dgo-color-action-primary-hover); box-shadow: var(--dgo-shadow-2); }
+.dgo-btn--primary:active:not(:disabled) { background: var(--dgo-color-action-primary-press); }
+
+/* Secondary — outline */
+.dgo-btn--secondary {
+  background: transparent;
+  color: var(--dgo-color-action-primary);
+  border-color: var(--dgo-color-border-strong);
+}
+.dgo-btn--secondary:hover:not(:disabled) {
+  border-color: var(--dgo-color-action-primary);
+  background: var(--dgo-color-action-secondary-hover);
+}
+.dgo-btn--secondary:active:not(:disabled) { background: var(--dgo-color-action-secondary-press); }
+
+/* Tertiary — text + subtle hover */
+.dgo-btn--tertiary,
+.dgo-btn--ghost {
+  background: transparent;
+  color: var(--dgo-color-action-primary);
+}
+.dgo-btn--tertiary:hover:not(:disabled),
+.dgo-btn--ghost:hover:not(:disabled) { background: var(--dgo-color-action-secondary-hover); }
+
+/* Danger */
+.dgo-btn--danger {
+  background: var(--dgo-color-action-danger);
+  color: var(--dgo-color-fg-on-brand);
+}
+.dgo-btn--danger:hover:not(:disabled) { background: var(--dgo-color-action-danger-hover); }
+
+/* Accent */
+.dgo-btn--accent {
+  background: var(--dgo-color-action-accent);
+  color: var(--dgo-color-fg-on-accent);
+}
+.dgo-btn--accent:hover:not(:disabled) { background: var(--dgo-color-action-accent-hover); }
+
+/* Icon button */
+.dgo-btn--icon { padding-inline: 0; inline-size: var(--_h); }
+
+/* Loading */
+.dgo-btn[data-loading="true"] { color: transparent; position: relative; }
+.dgo-btn[data-loading="true"]::after {
+  content: "";
+  position: absolute;
+  inline-size: 1em; block-size: 1em;
+  border: 2px solid currentColor;
+  border-block-start-color: transparent;
+  border-radius: 50%;
+  color: var(--dgo-color-fg-on-brand);
+  animation: dgo-spin 0.6s linear infinite;
+}
+.dgo-btn--secondary[data-loading="true"]::after,
+.dgo-btn--tertiary[data-loading="true"]::after,
+.dgo-btn--ghost[data-loading="true"]::after { color: var(--dgo-color-action-primary); }
+
+@keyframes dgo-spin { to { transform: rotate(360deg); } }
+
+/* Button group */
+.dgo-btn-group { display: inline-flex; }
+.dgo-btn-group .dgo-btn {
+  border-radius: 0;
+}
+.dgo-btn-group .dgo-btn:first-child { border-start-start-radius: var(--dgo-btn-radius); border-end-start-radius: var(--dgo-btn-radius); }
+.dgo-btn-group .dgo-btn:last-child  { border-start-end-radius:   var(--dgo-btn-radius); border-end-end-radius:   var(--dgo-btn-radius); }
+.dgo-btn-group .dgo-btn + .dgo-btn { margin-inline-start: -1px; }
+

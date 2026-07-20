@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Border Radius" subtitle="8 radius tokens from 4px to pill" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Radius</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .radius-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+    }
+    .radius-item {
+      text-align: center;
+    }
+    .radius-visual {
+      width: 100%;
+      height: 80px;
+      background: var(--dgo-primary);
+      margin-bottom: 8px;
+    }
+    .radius-label {
+      font-size: 11px;
+      color: var(--dgo-ink-500);
+      font-family: var(--dgo-font-mono);
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h2 style="margin: 0 0 16px 0; font-size: 18px;">Border Radius</h2>
+  
+  <div class="radius-grid">
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-xs);"></div>
+      <div class="radius-label">xs (4px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-sm);"></div>
+      <div class="radius-label">sm (6px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-md);"></div>
+      <div class="radius-label">md (8px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-lg);"></div>
+      <div class="radius-label">lg (10px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-xl);"></div>
+      <div class="radius-label">xl (12px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-2xl);"></div>
+      <div class="radius-label">2xl (16px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-frame);"></div>
+      <div class="radius-label">frame (18px)</div>
+    </div>
+    <div class="radius-item">
+      <div class="radius-visual" style="border-radius: var(--dgo-radius-pill); width: 120px; margin: 0 auto 8px;"></div>
+      <div class="radius-label">pill (999px)</div>
+    </div>
+  </div>
+</body>
+</html>

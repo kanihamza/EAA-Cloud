@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';for(const f of ['modules/single-assignment.js','modules/bulk-assignment.js']){const s=fs.readFileSync(f,'utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/invoke|OtpService|Idempotency|State\.patch|governedTransition/);}console.log('assignment-lifecycle-contract passed');

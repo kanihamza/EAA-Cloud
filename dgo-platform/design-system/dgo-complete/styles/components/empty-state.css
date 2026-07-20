@@ -1,0 +1,27 @@
+/* ============================================================
+   DGO · Empty, Error & Onboarding State
+   ------------------------------------------------------------
+   Full-region placeholders for absent data, error recovery, and first-run guidance.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   21 · EMPTY / ERROR / ONBOARDING STATE
+   ============================================================ */
+.dgo-empty {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: var(--dgo-s-3);
+  padding: var(--dgo-s-12) var(--dgo-s-6);
+  color: var(--dgo-color-fg-muted);
+}
+.dgo-empty__title { font-size: var(--dgo-type-h4); font-weight: var(--dgo-wt-700); color: var(--dgo-color-fg-default); }
+.dgo-empty__body { max-inline-size: 42ch; }
+

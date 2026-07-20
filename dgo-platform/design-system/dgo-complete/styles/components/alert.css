@@ -1,0 +1,43 @@
+/* ============================================================
+   DGO · Alert & Banner
+   ------------------------------------------------------------
+   Inline informational, success, warning, and danger messaging.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   10 · ALERT / BANNER
+   ============================================================ */
+.dgo-alert {
+  display: flex; gap: var(--dgo-s-3); align-items: flex-start;
+  padding: var(--dgo-alert-pad);
+  border: var(--dgo-alert-border-w) solid;
+  border-radius: var(--dgo-alert-radius);
+  font-size: var(--dgo-type-body);
+  background: var(--dgo-color-surface-raised);
+}
+.dgo-alert__icon { flex-shrink: 0; margin-block-start: 2px; }
+.dgo-alert__title { font-weight: var(--dgo-wt-600); margin-block-end: 2px; }
+.dgo-alert__body  { color: var(--dgo-color-fg-default); }
+.dgo-alert--info    { background: var(--dgo-color-info-subtle-bg);    color: var(--dgo-color-info-subtle-fg);    border-color: color-mix(in srgb, var(--dgo-color-info-subtle-fg) 30%, transparent); }
+.dgo-alert--success { background: var(--dgo-color-success-subtle-bg); color: var(--dgo-color-success-subtle-fg); border-color: color-mix(in srgb, var(--dgo-color-success-subtle-fg) 30%, transparent); }
+.dgo-alert--warning { background: var(--dgo-color-warning-subtle-bg); color: var(--dgo-color-warning-subtle-fg); border-color: color-mix(in srgb, var(--dgo-color-warning-subtle-fg) 30%, transparent); }
+.dgo-alert--danger  { background: var(--dgo-color-danger-subtle-bg);  color: var(--dgo-color-danger-subtle-fg);  border-color: color-mix(in srgb, var(--dgo-color-danger-subtle-fg) 30%, transparent); }
+
+/* Banner — full-width page-level */
+.dgo-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--dgo-s-4);
+  padding: var(--dgo-s-3) var(--dgo-s-5);
+  background: var(--dgo-color-surface-brand);
+  color: var(--dgo-color-fg-on-brand);
+  font-size: var(--dgo-type-body-sm);
+}
+

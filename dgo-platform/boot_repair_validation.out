@@ -1,0 +1,121 @@
+accessibility-contract passed
+action-ownership-contract passed
+action-runtime-provisioning-contract passed
+action-surface-contract passed
+archive-access-contract passed
+archive-export-contract passed
+archive-immutability-contract passed
+archive-reopen-contract passed
+archive-retention-contract passed
+assignment-lifecycle-contract passed
+audit-thread-contract passed
+audited-state-patch-contract passed
+cache-policy-contract passed
+closure-gate-contract passed
+comment-immutability-contract passed
+content governance contracts passed
+correspondence-intake-contract passed
+fetchAll sample contract: PASS {
+  activities: 300,
+  tracking: 300,
+  comments: 2,
+  users: 793,
+  categories: 45,
+  departments: 50,
+  emails: 50,
+  approvals: 0
+}
+data-fetch-contract passed
+data-selectors-contract passed
+defect-review-fixes-contract passed
+design-system authority contract passed
+direct-status-write-scan passed
+directorate-scope-contract passed
+dispatch-closure-contract passed
+dispatch-module-contract passed
+endpoint configuration contract passed: 17
+endpoint-security-contract passed
+enterprise domain contracts passed
+entity-store-contract passed
+error-taxonomy-contract passed
+flow-confirmation-contract passed
+idempotency-contract passed
+lifecycle-transition-contract passed
+loading-state-contract passed
+module-boundary-contract passed
+module-lifecycle-refactor-contract passed
+mount-simulation-contract passed
+no-orphan-contract passed
+operations-action-contract passed
+operator-walkthrough-contract passed
+otp-handshake-contract passed
+performance-budget-contract passed
+performance-optimization-contract passed
+platform-provisioning-contract passed
+registry-lifecycle-contract passed
+R11.3 regression contracts: PASS
+release-gate-contract passed
+review-approval-contract passed
+route contract passed: 22
+router-host-retention-contract passed
+source-parity-hardening-contract passed
+source-parity-round2-contract passed
+source-parity-round3-contract passed
+source-parity-round4-contract passed
+state-behaviour-contract passed
+state-schema-provisioning-contract passed
+static validation passed
+ui-provisioning-contract passed
+ui-selection-contract passed
+viewport containment contracts passed
+write-manager-contract passed
+R11.3 regression contracts: PASS
+entity-store-contract passed
+directorate-scope-contract passed
+lifecycle-transition-contract passed
+no-orphan-contract passed
+closure-gate-contract passed
+audit-thread-contract passed
+error-taxonomy-contract passed
+idempotency-contract passed
+archive-retention-contract passed
+archive-export-contract passed
+otp-handshake-contract passed
+dispatch-closure-contract passed
+endpoint-security-contract passed
+direct-status-write-scan passed
+ui-provisioning-contract passed
+state-behaviour-contract passed
+module-lifecycle-refactor-contract passed
+correspondence-intake-contract passed
+registry-lifecycle-contract passed
+assignment-lifecycle-contract passed
+operations-action-contract passed
+review-approval-contract passed
+dispatch-module-contract passed
+comment-immutability-contract passed
+archive-immutability-contract passed
+archive-access-contract passed
+archive-reopen-contract passed
+accessibility-contract passed
+operator-walkthrough-contract passed
+release-gate-contract passed
+module-boundary-contract passed
+action-ownership-contract passed
+audited-state-patch-contract passed
+action-surface-contract passed
+platform-provisioning-contract passed
+state-schema-provisioning-contract passed
+action-runtime-provisioning-contract passed
+data-fetch-contract passed
+cache-policy-contract passed
+write-manager-contract passed
+loading-state-contract passed
+performance-budget-contract passed
+data-selectors-contract passed
+router-host-retention-contract passed
+flow-confirmation-contract passed
+ui-selection-contract passed
+mount-simulation-contract passed
+performance-optimization-contract passed
+defect-review-fixes-contract passed

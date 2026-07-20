@@ -1,0 +1,24 @@
+/* ============================================================
+   DGO · Breadcrumb
+   ------------------------------------------------------------
+   Hierarchical location trail.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   16 · BREADCRUMB
+   ============================================================ */
+.dgo-crumbs { display: flex; align-items: center; gap: var(--dgo-s-2); font-size: var(--dgo-type-body-sm); color: var(--dgo-color-fg-muted); }
+.dgo-crumbs__sep { color: var(--dgo-color-fg-subtle); }
+.dgo-crumbs a { color: var(--dgo-color-fg-muted); text-decoration: none; }
+.dgo-crumbs a:hover { color: var(--dgo-color-action-primary); }
+.dgo-crumbs__current { color: var(--dgo-color-fg-default); font-weight: var(--dgo-wt-600); }
+

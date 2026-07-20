@@ -1,0 +1,38 @@
+{
+  "changedFiles": [
+    "core/nitda-module-adapter.js",
+    "modules/orchestrator.js",
+    "modules/dispatch.js",
+    "modules/approvals.js",
+    "modules/user-admin.js",
+    "tests/direct-status-write-scan.mjs",
+    "tests/destructive-action-confirmation-contract.mjs",
+    "tests/syntax-integrity-contract.mjs",
+    "tests/run-all.sh"
+  ],
+  "defectsFixed": [
+    "DGO-R11.7-000",
+    "DGO-R11.7-001",
+    "DGO-R11.7-002",
+    "DGO-R11.7-003"
+  ],
+  "testsAddedOrUpdated": [
+    "tests/destructive-action-confirmation-contract.mjs (new)",
+    "tests/syntax-integrity-contract.mjs (new; replaces the unreliable plain `node --check` static-syntax line in run-all.sh with a forced-ESM-parse check)",
+    "tests/direct-status-write-scan.mjs (strengthened to detect bracket-notation status writes)",
+    "tests/run-all.sh (wired the new confirmation contract in; removed the unreliable `find ... | xargs node --check` line, superseded by syntax-integrity-contract.mjs which the existing tests/*.mjs loop already runs)"
+  ],
+  "validationCommand": "bash tests/run-all.sh",
+  "validationReturnCode": 0,
+  "bootImportCheckCommand": "node boot_import_check.mjs",
+  "bootImportCheckReturnCode": 0,
+  "independentBrowserBootCheck": {
+    "tool": "headless Chromium via Playwright",
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "bootedFlag": true,
+    "shellRendered": true
+  },
+  "correctionNote": "DGO-R11.7-000 was found only after the user reported a live boot failure following the first delivery of this pass. It was a real, pre-existing defect in the original snapshot that the first pass's syntax check (plain node --check) falsely reported as passing. Root-caused, fixed, and the unreliable check itself replaced so this class of false pass cannot recur; fix independently confirmed with a real browser rather than another static check alone.",
+  "packageSha256": "PENDING_FINAL_REPACKAGE"
+}

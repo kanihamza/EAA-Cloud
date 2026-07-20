@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { AuditLog } from '../core/audit-log.js'; AuditLog.record({ref:'REF-A',event:'audit:test'}); assert.equal(AuditLog.byReference('REF-A').length>=1,true); console.log('audit-thread-contract passed');

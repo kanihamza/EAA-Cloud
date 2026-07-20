@@ -1,0 +1,38 @@
+/* ============================================================
+   DGO · Tooltip & Popover
+   ------------------------------------------------------------
+   Hover/focus disclosure surfaces (tooltip) and click-triggered overlays (popover).
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   19 · TOOLTIP / POPOVER
+   ============================================================ */
+.dgo-tooltip {
+  display: inline-block;
+  padding: 6px 10px;
+  background: var(--dgo-tooltip-bg);
+  color: var(--dgo-tooltip-fg);
+  font-size: var(--dgo-type-caption);
+  font-weight: var(--dgo-wt-500);
+  border-radius: var(--dgo-tooltip-radius);
+  box-shadow: var(--dgo-shadow-3);
+  max-inline-size: 280px;
+}
+.dgo-popover {
+  background: var(--dgo-color-surface-raised);
+  border: 1px solid var(--dgo-color-border-default);
+  border-radius: var(--dgo-popover-radius);
+  padding: var(--dgo-popover-pad);
+  box-shadow: var(--dgo-popover-shadow);
+  min-inline-size: 220px;
+}
+

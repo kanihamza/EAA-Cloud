@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { Retention } from '../core/retention.js'; const r=Retention.calculate({}); assert.ok(r.retentionUntil); assert.ok(new Date(r.retentionUntil)>new Date()); console.log('archive-retention-contract passed');

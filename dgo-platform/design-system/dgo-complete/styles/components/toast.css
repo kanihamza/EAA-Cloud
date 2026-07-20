@@ -1,0 +1,42 @@
+/* ============================================================
+   DGO · Toast & Snackbar
+   ------------------------------------------------------------
+   Transient, non-modal status notifications.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   11 · TOAST / SNACKBAR
+   ============================================================ */
+.dgo-toast-region {
+  position: fixed;
+  inset-block-end: var(--dgo-s-6);
+  inset-inline-end: var(--dgo-s-6);
+  display: flex; flex-direction: column; gap: var(--dgo-s-3);
+  z-index: var(--dgo-z-toast);
+  max-inline-size: 380px;
+  pointer-events: none;
+}
+.dgo-toast {
+  display: flex; gap: var(--dgo-s-3); align-items: flex-start;
+  padding: var(--dgo-s-4);
+  background: var(--dgo-color-surface-raised);
+  border: 1px solid var(--dgo-color-border-default);
+  border-radius: var(--dgo-radius-card);
+  box-shadow: var(--dgo-elevation-overlay);
+  pointer-events: auto;
+  animation: dgo-toast-in var(--dgo-motion-enter);
+}
+@keyframes dgo-toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+

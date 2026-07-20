@@ -1,0 +1,79 @@
+/* ============================================================
+   DGO · Sidebar
+   ------------------------------------------------------------
+   Primary navigation rail; expanded and collapsed states.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   13 · SIDEBAR
+   ============================================================ */
+.dgo-sidebar {
+  display: flex; flex-direction: column; gap: var(--dgo-s-5);
+  padding: var(--dgo-s-5) var(--dgo-s-3);
+  background: var(--dgo-sidebar-bg);
+  color: var(--dgo-sidebar-fg);
+  block-size: 100vh;
+  position: sticky;
+  inset-block-start: 0;
+}
+.dgo-sidebar__brand { padding-inline: var(--dgo-s-2); padding-block-end: var(--dgo-s-4); border-block-end: 1px solid var(--dgo-color-border-on-brand); }
+.dgo-sidebar__nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.dgo-sidebar__group-label {
+  font-size: 10px;
+  font-weight: var(--dgo-wt-700);
+  letter-spacing: var(--dgo-tr-widest);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  padding-inline: var(--dgo-s-3);
+  padding-block: var(--dgo-s-3) var(--dgo-s-1);
+}
+
+.dgo-sidebar__item {
+  display: flex; align-items: center; gap: var(--dgo-s-3);
+  padding: var(--dgo-s-2) var(--dgo-s-3);
+  border-radius: var(--dgo-radius-control);
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-500);
+  transition: background var(--dgo-motion-state), color var(--dgo-motion-state);
+  position: relative;
+  min-block-size: 36px;
+}
+.dgo-sidebar__item:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.dgo-sidebar__item[aria-current="page"],
+.dgo-sidebar__item--active {
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+}
+.dgo-sidebar__item[aria-current="page"]::before,
+.dgo-sidebar__item--active::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block: 8px;
+  inline-size: 3px;
+  background: var(--dgo-color-action-accent);
+  border-radius: 2px;
+}
+.dgo-sidebar__count {
+  margin-inline-start: auto;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: var(--dgo-r-pill);
+  background: rgba(255,255,255,0.10);
+}
+.dgo-sidebar__footer {
+  padding-block-start: var(--dgo-s-4);
+  border-block-start: 1px solid var(--dgo-color-border-on-brand);
+}
+

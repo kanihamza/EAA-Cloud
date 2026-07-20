@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { Entities } from '../core/entity-store.js'; Entities.hydrateFromState({comments:[{id:'C1',body:'orphan'}]}); assert.ok(Entities.lookupQuarantine().length>=1); console.log('no-orphan-contract passed');

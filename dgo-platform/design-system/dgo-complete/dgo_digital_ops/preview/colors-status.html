@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Status Colors" subtitle="7 operational status variants" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Colors</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h2 style="margin: 0 0 16px 0; font-size: 18px;">Status Pills</h2>
+  
+  <div class="pill-grid">
+    <span class="dgo-pill dgo-pill-pending">
+      <span class="dot"></span>
+      Pending
+    </span>
+    <span class="dgo-pill dgo-pill-routed">
+      <span class="dot"></span>
+      Routed
+    </span>
+    <span class="dgo-pill dgo-pill-replied">
+      <span class="dot"></span>
+      Replied
+    </span>
+    <span class="dgo-pill dgo-pill-action">
+      <span class="dot"></span>
+      Action Required
+    </span>
+    <span class="dgo-pill dgo-pill-draft">
+      <span class="dot"></span>
+      Draft
+    </span>
+    <span class="dgo-pill dgo-pill-archived">
+      <span class="dot"></span>
+      Archived
+    </span>
+    <span class="dgo-pill dgo-pill-escalated">
+      <span class="dot"></span>
+      Escalated
+    </span>
+  </div>
+</body>
+</html>

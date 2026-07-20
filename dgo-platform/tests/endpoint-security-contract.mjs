@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { ObsidianActionAliases } from '../core/api.js'; assert.equal(ObsidianActionAliases.REQUEST_OTP.endpoint,'OTP_GENERATE'); console.log('endpoint-security-contract passed');

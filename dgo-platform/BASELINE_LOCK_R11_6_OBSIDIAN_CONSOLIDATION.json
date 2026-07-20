@@ -1,0 +1,18 @@
+{
+  "schema": "baseline-lock/r11.6-obsidian/v1",
+  "generatedAt": "2026-07-20T04:59:36.178983Z",
+  "noDeferrals": true,
+  "source": "reconstructed from supplied forensic state and regenerated for release-gate continuity",
+  "routes": 23,
+  "endpointContracts": 17,
+  "stateKeys": 36,
+  "guardrails": [
+    "flow confirmation",
+    "payload preview",
+    "action ownership",
+    "module boundaries",
+    "audit cap",
+    "render budget",
+    "endpoint contracts"
+  ]
+}

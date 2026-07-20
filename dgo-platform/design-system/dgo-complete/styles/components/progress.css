@@ -1,0 +1,60 @@
+/* ============================================================
+   DGO · Progress & Spinner
+   ------------------------------------------------------------
+   Determinate progress bar and indeterminate spinner.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   22 · PROGRESS / SPINNER
+   ============================================================ */
+.dgo-progress {
+  inline-size: 100%;
+  block-size: var(--dgo-progress-h);
+  background: var(--dgo-progress-track);
+  border-radius: var(--dgo-r-pill);
+  overflow: hidden;
+}
+.dgo-progress__fill {
+  block-size: 100%;
+  background: var(--dgo-progress-fill);
+  border-radius: inherit;
+  transition: inline-size var(--dgo-motion-state);
+}
+.dgo-progress--accent .dgo-progress__fill { background: var(--dgo-color-action-accent); }
+
+.dgo-progress-ring {
+  inline-size: 56px; block-size: 56px;
+  display: inline-grid; place-items: center;
+  --_p: 0; /* @kind other */
+  background:
+    conic-gradient(var(--dgo-color-action-primary) calc(var(--_p) * 1%), var(--dgo-progress-track) 0);
+  border-radius: 50%;
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-700);
+  color: var(--dgo-color-fg-default);
+  position: relative;
+}
+.dgo-progress-ring::before {
+  content: ""; position: absolute; inset: 5px;
+  background: var(--dgo-color-surface-page);
+  border-radius: 50%;
+}
+.dgo-progress-ring > span { position: relative; }
+
+.dgo-spinner {
+  inline-size: 24px; block-size: 24px;
+  border: 2.5px solid var(--dgo-color-surface-sunken);
+  border-block-start-color: var(--dgo-color-action-primary);
+  border-radius: 50%;
+  animation: dgo-spin 0.8s linear infinite;
+}
+

@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';for(const f of ['modules/approvals.js','modules/executive.js']){const s=fs.readFileSync(f,'utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/approv|review|executive|State\.get|governedTransition/i);}console.log('review-approval-contract passed');

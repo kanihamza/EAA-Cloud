@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Tables" subtitle="Compact, hover states, status pills" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h3 style="margin: 0 0 12px 0; font-size: 14px;">Compact Data Table</h3>
+  <table class="dgo-table dgo-table-compact">
+    <thead>
+      <tr>
+        <th>Task ID</th>
+        <th>Title</th>
+        <th>Department</th>
+        <th>Status</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#00423</td>
+        <td>Review Q2 Budget</td>
+        <td>Finance</td>
+        <td><span class="dgo-pill dgo-pill-pending"><span class="dot"></span>Pending</span></td>
+        <td>May 14, 2026</td>
+      </tr>
+      <tr>
+        <td>#00422</td>
+        <td>Server Maintenance</td>
+        <td>Technical</td>
+        <td><span class="dgo-pill dgo-pill-replied"><span class="dot"></span>Replied</span></td>
+        <td>May 13, 2026</td>
+      </tr>
+      <tr>
+        <td>#00421</td>
+        <td>Policy Update</td>
+        <td>Operations</td>
+        <td><span class="dgo-pill dgo-pill-action"><span class="dot"></span>Action Required</span></td>
+        <td>May 12, 2026</td>
+      </tr>
+      <tr>
+        <td>#00420</td>
+        <td>Staff Training</td>
+        <td>HR</td>
+        <td><span class="dgo-pill dgo-pill-routed"><span class="dot"></span>Routed</span></td>
+        <td>May 11, 2026</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

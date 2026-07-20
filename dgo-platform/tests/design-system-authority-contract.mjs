@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const need=['design-system/dgo-complete/coverage/technical-coverage.json','styles/revised-dgo/tokens.primitive.css','styles/revised-dgo/tokens.semantic.css','styles/revised-dgo/tokens.component.css','styles/revised-dgo/tokens.enhanced.css','styles/revised-dgo/platform-authority.css'];
+for (const f of need) if (!fs.existsSync(new URL('../'+f, import.meta.url))) throw new Error('Missing revised design-system asset '+f);
+const index=fs.readFileSync(new URL('../index.html', import.meta.url),'utf8');
+if (!index.includes('styles/revised-dgo/platform-authority.css')) throw new Error('platform authority CSS not loaded');
+const css=fs.readFileSync(new URL('../styles/revised-dgo/platform-authority.css', import.meta.url),'utf8');
+for (const x of ['--dgo-color-action-primary','.btn','.panel','.tablewrap','.kpi','forced-colors','prefers-reduced-motion','@media print']) if (!css.includes(x)) throw new Error('Missing authority rule '+x);
+const ui=fs.readFileSync(new URL('../core/ui.js', import.meta.url),'utf8');
+for (const x of ['dgo-dashboard__metrics','dgo-metric','dgo-pill','dgo-empty','dgo-table-wrap','dgo-table']) if (!ui.includes(x)) throw new Error('Missing canonical helper class '+x);
+console.log('design-system authority contract passed');

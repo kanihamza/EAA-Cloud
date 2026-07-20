@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('core/archive.js','utf8');assert.match(s,/canAccessArchive/);assert.match(s,/archive-accessed|unauthorized-access-attempt/);console.log('archive-access-contract passed');

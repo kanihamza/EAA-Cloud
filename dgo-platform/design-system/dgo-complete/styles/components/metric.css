@@ -1,0 +1,49 @@
+/* ============================================================
+   DGO · Metric & Stat Tile
+   ------------------------------------------------------------
+   Numeric KPI tiles with delta and trend.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   24 · METRIC / STAT TILE
+   ============================================================ */
+.dgo-metric {
+  background: var(--dgo-card-bg);
+  border: 1px solid var(--dgo-card-border);
+  border-radius: var(--dgo-card-radius);
+  padding: var(--dgo-card-pad);
+  display: flex; flex-direction: column; gap: var(--dgo-s-2);
+}
+.dgo-metric__label {
+  font-size: var(--dgo-type-caption);
+  font-weight: var(--dgo-wt-600);
+  letter-spacing: var(--dgo-tr-wide);
+  text-transform: uppercase;
+  color: var(--dgo-color-fg-muted);
+}
+.dgo-metric__value {
+  font-family: var(--dgo-family-display);
+  font-size: var(--dgo-type-h1);
+  font-weight: var(--dgo-wt-700);
+  letter-spacing: var(--dgo-tr-tightest);
+  line-height: var(--dgo-lh-110);
+  font-variant-numeric: tabular-nums;
+  color: var(--dgo-color-fg-strong);
+}
+.dgo-metric__delta {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1);
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-600);
+}
+.dgo-metric__delta--up { color: var(--dgo-color-success-subtle-fg); }
+.dgo-metric__delta--down { color: var(--dgo-color-danger-subtle-fg); }
+

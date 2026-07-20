@@ -1,0 +1,22 @@
+/* ============================================================
+   DGO · Utilities
+   ------------------------------------------------------------
+   Cross-component helpers (divider, tabular-nums). Kept inside dgo-component for cascade parity with the pre-split file.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+.dgo-divider { block-size: 1px; background: var(--dgo-color-border-default); border: 0; margin-block: var(--dgo-s-5); }
+
+/* Tabular numerals helper */
+.dgo-tnum { font-variant-numeric: tabular-nums; }

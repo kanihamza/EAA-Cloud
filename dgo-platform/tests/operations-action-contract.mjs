@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';for(const f of ['modules/orchestrator.js','modules/response-tracking.js','modules/acknowledgment.js']){const s=fs.readFileSync(f,'utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/data-|State\.get|governedTransition|Entities\./);}console.log('operations-action-contract passed');

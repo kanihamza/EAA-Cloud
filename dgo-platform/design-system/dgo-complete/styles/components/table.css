@@ -1,0 +1,59 @@
+/* ============================================================
+   DGO · Table & Data Grid
+   ------------------------------------------------------------
+   Tabular data; sortable headers, row hover, dense and comfortable densities.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   18 · TABLE / DATA GRID
+   ============================================================ */
+.dgo-table-wrap {
+  border: 1px solid var(--dgo-table-border);
+  border-radius: var(--dgo-radius-card);
+  overflow: clip;
+  background: var(--dgo-color-surface-raised);
+}
+.dgo-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-size: var(--dgo-type-body-sm);
+}
+.dgo-table thead { background: var(--dgo-table-header-bg); }
+.dgo-table th {
+  text-align: start;
+  padding: 0 var(--dgo-table-cell-px);
+  block-size: var(--dgo-table-row-h);
+  font-size: var(--dgo-type-caption);
+  font-weight: var(--dgo-wt-600);
+  letter-spacing: var(--dgo-tr-wide);
+  text-transform: uppercase;
+  color: var(--dgo-table-header-fg);
+  border-block-end: 1px solid var(--dgo-table-border);
+  white-space: nowrap;
+}
+.dgo-table td {
+  padding: 0 var(--dgo-table-cell-px);
+  block-size: var(--dgo-table-row-h);
+  color: var(--dgo-color-fg-default);
+  border-block-end: 1px solid var(--dgo-table-border);
+  vertical-align: middle;
+}
+.dgo-table tbody tr:hover td { background: var(--dgo-table-row-hover); }
+.dgo-table tbody tr:last-child td { border-block-end: 0; }
+.dgo-table--striped tbody tr:nth-child(even) td { background: var(--dgo-color-surface-sunken); }
+
+.dgo-table__num { text-align: end; font-variant-numeric: tabular-nums; }
+.dgo-table__sort {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1);
+  color: inherit; cursor: pointer;
+}
+

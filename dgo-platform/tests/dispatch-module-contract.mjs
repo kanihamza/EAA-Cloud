@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('modules/dispatch.js','utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/dispatch|close|receipt/i);assert.doesNotMatch(s,/\.dispatchStatus\s*=(?!=)/);console.log('dispatch-module-contract passed');

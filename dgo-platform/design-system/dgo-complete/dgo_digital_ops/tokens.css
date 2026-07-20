@@ -1,0 +1,300 @@
+/* ============================================
+   DGO Digital Ops — Complete Design Tokens
+   Standalone system (does NOT import NITDA)
+   ============================================ */
+
+/* Google Fonts: Outfit for display/headings */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
+
+:root {
+  /* ============= Color Palette ============= */
+  
+  /* Primary */
+  --dgo-primary:           #05583B;
+  --dgo-primary-hover:     #033F2A;
+  --dgo-primary-deep:      #022819;
+  --dgo-primary-soft:      #E6EEEB;
+  --dgo-primary-10:        #F2F7F5;
+  --dgo-primary-20:        #D9E8E1;
+  --dgo-primary-40:        #99C2B3;
+  --dgo-primary-80:        #4D957B;
+  
+  /* Accent (Smart Green) */
+  --dgo-accent:            #17B255;
+  --dgo-accent-hover:      #119143;
+  --dgo-accent-soft:       #E6F7ED;
+  --dgo-accent-40:         #8BD9A9;
+  --dgo-accent-80:         #45C578;
+  
+  /* Neutrals / Ink */
+  --dgo-ink-900:           #1B1A1A;
+  --dgo-ink-800:           #2D2C2C;
+  --dgo-ink-700:           #373435;
+  --dgo-ink-600:           #4A4849;
+  --dgo-ink-500:           #5F5C5D;
+  --dgo-ink-400:           #807D7E;
+  --dgo-ink-300:           #A09E9F;
+  --dgo-ink-200:           #C4C3C3;
+  --dgo-ink-100:           #E0DFDF;
+  --dgo-ink-50:            #F5F5F5;
+  
+  /* Surfaces */
+  --dgo-surface:           #FFFFFF;
+  --dgo-surface-alt:       #FAF9F9;
+  --dgo-surface-muted:     #F5F4F4;
+  --dgo-surface-inverse:   #0B2A1F;
+  --dgo-surface-overlay:   rgba(27, 26, 26, 0.6);
+  
+  /* Borders */
+  --dgo-border:            #E8E6E7;
+  --dgo-border-strong:     #C4C3C3;
+  --dgo-border-on-green:   rgba(255, 255, 255, 0.2);
+  
+  /* Semantic */
+  --dgo-success:           #17B255;
+  --dgo-success-bg:        rgba(23, 178, 85, 0.15);
+  --dgo-success-text:      #119143;
+  
+  --dgo-warning:           #E1A100;
+  --dgo-warning-bg:        rgba(225, 161, 0, 0.15);
+  --dgo-warning-text:      #7A5800;
+  
+  --dgo-danger:            #C8102E;
+  --dgo-danger-bg:         rgba(200, 16, 46, 0.12);
+  --dgo-danger-text:       #A30D26;
+  
+  --dgo-info:              #0B6BB0;
+  --dgo-info-bg:           rgba(11, 107, 176, 0.12);
+  --dgo-info-text:         #0B6BB0;
+  
+  /* Status colors (extended) */
+  --dgo-status-pending-bg:       rgba(225, 161, 0, 0.15);
+  --dgo-status-pending-text:     #7A5800;
+  --dgo-status-routed-bg:        rgba(11, 107, 176, 0.12);
+  --dgo-status-routed-text:      #0B6BB0;
+  --dgo-status-replied-bg:       rgba(23, 178, 85, 0.15);
+  --dgo-status-replied-text:     #119143;
+  --dgo-status-action-bg:        rgba(200, 16, 46, 0.12);
+  --dgo-status-action-text:      #A30D26;
+  --dgo-status-draft-bg:         var(--dgo-primary-soft);
+  --dgo-status-draft-text:       var(--dgo-primary);
+  --dgo-status-archived-bg:      rgba(95, 92, 93, 0.1);
+  --dgo-status-archived-text:    #5F5C5D;
+  --dgo-status-escalated-bg:     rgba(200, 16, 46, 0.18);
+  --dgo-status-escalated-text:   #780820;
+  
+  /* Data visualization — categorical (8 colors) */
+  --dgo-viz-1:             #05583B;
+  --dgo-viz-2:             #17B255;
+  --dgo-viz-3:             #0B6BB0;
+  --dgo-viz-4:             #E1A100;
+  --dgo-viz-5:             #C8102E;
+  --dgo-viz-6:             #4538D9;
+  --dgo-viz-7:             #7A5800;
+  --dgo-viz-8:             #A30D26;
+  
+  /* Data visualization — sequential (5-step green) */
+  --dgo-viz-seq-1:         #E6EEEB;
+  --dgo-viz-seq-2:         #99C2B3;
+  --dgo-viz-seq-3:         #4D957B;
+  --dgo-viz-seq-4:         #05583B;
+  --dgo-viz-seq-5:         #033F2A;
+  
+  /* ============= Typography ============= */
+  
+  /* Font families */
+  --dgo-font-display:      'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --dgo-font-sans:         'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --dgo-font-body:         Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  --dgo-font-mono:         'SF Mono', Consolas, 'Courier New', monospace;
+  
+  /* Font sizes */
+  --dgo-fs-display:        42px;
+  --dgo-fs-display-sm:     36px;
+  --dgo-fs-h1:             32px;
+  --dgo-fs-h2:             24px;
+  --dgo-fs-h3:             18px;
+  --dgo-fs-h4:             16px;
+  --dgo-fs-body:           14px;
+  --dgo-fs-body-sm:        13px;
+  --dgo-fs-caption:        11px;
+  --dgo-fs-overline:       10px;
+  
+  /* Font weights */
+  --dgo-fw-regular:        400; /* @kind font */
+  --dgo-fw-medium:         500; /* @kind font */
+  --dgo-fw-semibold:       600; /* @kind font */
+  --dgo-fw-bold:           700; /* @kind font */
+  --dgo-fw-black:          800; /* @kind font */
+  
+  /* Line heights */
+  --dgo-lh-tight:          1.2; /* @kind font */
+  --dgo-lh-snug:           1.4; /* @kind font */
+  --dgo-lh-normal:         1.5; /* @kind font */
+  --dgo-lh-relaxed:        1.7; /* @kind font */
+  
+  /* Letter spacing */
+  --dgo-ls-tight:          -0.02em; /* @kind font */
+  --dgo-ls-normal:         0; /* @kind font */
+  --dgo-ls-wide:           0.12em; /* @kind font */
+  --dgo-ls-extra-wide:     0.18em; /* @kind font */
+  
+  /* ============= Spacing ============= */
+  
+  --dgo-space-1:           4px;
+  --dgo-space-2:           8px;
+  --dgo-space-3:           12px;
+  --dgo-space-4:           16px;
+  --dgo-space-5:           20px;
+  --dgo-space-6:           24px;
+  --dgo-space-7:           32px;
+  --dgo-space-8:           40px;
+  --dgo-space-9:           48px;
+  --dgo-space-10:          64px;
+  --dgo-space-11:          80px;
+  --dgo-space-12:          96px;
+  
+  /* Density modes */
+  --dgo-density-pad:       8px;    /* compact */
+  --dgo-density-row:       40px;   /* compact row height */
+  --dgo-density-gap:       12px;   /* default gap */
+  
+  /* ============= Border Radius ============= */
+  
+  --dgo-radius-xs:         4px;
+  --dgo-radius-sm:         6px;
+  --dgo-radius-md:         8px;
+  --dgo-radius-lg:         10px;
+  --dgo-radius-xl:         12px;
+  --dgo-radius-2xl:        16px;
+  --dgo-radius-pill:       999px;
+  --dgo-radius-frame:      18px;   /* large containers */
+  
+  /* ============= Elevation (Shadows) ============= */
+  
+  --dgo-shadow-xs:         0 1px 2px rgba(5, 88, 59, 0.05);
+  --dgo-shadow-sm:         0 1px 3px rgba(5, 88, 59, 0.08);
+  --dgo-shadow-md:         0 4px 6px rgba(5, 88, 59, 0.1);
+  --dgo-shadow-lg:         0 10px 15px rgba(5, 88, 59, 0.12);
+  --dgo-shadow-xl:         0 20px 25px rgba(5, 88, 59, 0.15);
+  --dgo-shadow-focus:      0 0 0 3px rgba(23, 178, 85, 0.3);
+  
+  /* ============= Motion ============= */
+  
+  --dgo-ease-standard:     cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --dgo-ease-emphasis:     cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --dgo-ease-in:           cubic-bezier(0.4, 0, 1, 1); /* @kind other */
+  --dgo-ease-out:          cubic-bezier(0, 0, 0.2, 1); /* @kind other */
+  
+  --dgo-dur-fast:          150ms; /* @kind other */
+  --dgo-dur-base:          200ms; /* @kind other */
+  --dgo-dur-slow:          300ms; /* @kind other */
+  
+  /* ============= Z-index Scale ============= */
+  
+  --dgo-z-base:            1; /* @kind other */
+  --dgo-z-dropdown:        1000; /* @kind other */
+  --dgo-z-sticky:          1020; /* @kind other */
+  --dgo-z-fixed:           1030; /* @kind other */
+  --dgo-z-modal-backdrop:  1040; /* @kind other */
+  --dgo-z-modal:           1050; /* @kind other */
+  --dgo-z-popover:         1060; /* @kind other */
+  --dgo-z-tooltip:         1070; /* @kind other */
+}
+
+/* ============= Density Mode Overrides ============= */
+
+[data-dgo-density="comfortable"] {
+  --dgo-density-pad:       14px;
+  --dgo-density-row:       52px;
+  --dgo-density-gap:       16px;
+}
+
+/* ============= Reduced Motion ============= */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dgo-dur-fast:        0ms; /* @kind other */
+    --dgo-dur-base:        0ms; /* @kind other */
+    --dgo-dur-slow:        0ms; /* @kind other */
+  }
+}
+
+/* ============= Base Styles ============= */
+
+.dgo {
+  font-family: var(--dgo-font-body);
+  font-size: var(--dgo-fs-body);
+  line-height: var(--dgo-lh-normal);
+  color: var(--dgo-ink-700);
+  background: var(--dgo-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dgo h1, .dgo h2, .dgo h3, .dgo h4, .dgo h5, .dgo h6 {
+  font-family: var(--dgo-font-display);
+  font-weight: var(--dgo-fw-bold);
+  line-height: var(--dgo-lh-tight);
+  color: var(--dgo-ink-900);
+  margin: 0;
+}
+
+.dgo h1 { font-size: var(--dgo-fs-h1); }
+.dgo h2 { font-size: var(--dgo-fs-h2); }
+.dgo h3 { font-size: var(--dgo-fs-h3); }
+.dgo h4 { font-size: var(--dgo-fs-h4); }
+
+.dgo p {
+  margin: 0 0 var(--dgo-space-4) 0;
+}
+
+.dgo a {
+  color: var(--dgo-primary);
+  text-decoration: none;
+  transition: color var(--dgo-dur-fast) var(--dgo-ease-standard);
+}
+
+.dgo a:hover {
+  color: var(--dgo-accent);
+}
+
+.dgo strong, .dgo b {
+  font-weight: var(--dgo-fw-semibold);
+}
+
+.dgo small {
+  font-size: var(--dgo-fs-caption);
+  color: var(--dgo-ink-500);
+}
+
+/* ============= Utility Classes ============= */
+
+.dgo-text-muted { color: var(--dgo-ink-500); }
+.dgo-text-subtle { color: var(--dgo-ink-400); }
+.dgo-text-primary { color: var(--dgo-primary); }
+.dgo-text-accent { color: var(--dgo-accent); }
+.dgo-text-success { color: var(--dgo-success-text); }
+.dgo-text-warning { color: var(--dgo-warning-text); }
+.dgo-text-danger { color: var(--dgo-danger-text); }
+
+.dgo-bg-surface { background: var(--dgo-surface); }
+.dgo-bg-alt { background: var(--dgo-surface-alt); }
+.dgo-bg-muted { background: var(--dgo-surface-muted); }
+
+.dgo-border { border: 1px solid var(--dgo-border); }
+.dgo-border-t { border-top: 1px solid var(--dgo-border); }
+.dgo-border-b { border-bottom: 1px solid var(--dgo-border); }
+.dgo-border-l { border-left: 1px solid var(--dgo-border); }
+.dgo-border-r { border-right: 1px solid var(--dgo-border); }
+
+.dgo-rounded-sm { border-radius: var(--dgo-radius-sm); }
+.dgo-rounded { border-radius: var(--dgo-radius-md); }
+.dgo-rounded-lg { border-radius: var(--dgo-radius-lg); }
+.dgo-rounded-xl { border-radius: var(--dgo-radius-xl); }
+.dgo-rounded-pill { border-radius: var(--dgo-radius-pill); }
+
+.dgo-shadow-sm { box-shadow: var(--dgo-shadow-sm); }
+.dgo-shadow { box-shadow: var(--dgo-shadow-md); }
+.dgo-shadow-lg { box-shadow: var(--dgo-shadow-lg); }
+.dgo-shadow-xl { box-shadow: var(--dgo-shadow-xl); }

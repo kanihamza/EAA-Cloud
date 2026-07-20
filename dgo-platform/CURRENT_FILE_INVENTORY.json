@@ -1,0 +1,4565 @@
+{
+  "schema": "current-file-inventory/v1",
+  "generatedAt": "2026-07-20T00:00:00Z",
+  "root": "DGO_R11_6_OBSIDIAN_BASELINE_REPAIRED_RUNTIME",
+  "totalFiles": 348,
+  "totalBytes": 7197095,
+  "files": {
+    "PARITY_IMPLEMENTATION_TRACE.json": {
+      "path": "PARITY_IMPLEMENTATION_TRACE.json",
+      "size": 1079,
+      "sha256": "ed5e819d2e08974939ff84f069d695f73e26a6c7144c6a038843c6522a69e9a7",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "boot_import_check.out": {
+      "path": "boot_import_check.out",
+      "size": 58,
+      "sha256": "d1fbca27d953348e0495f3f384e2f433168efa294a0bb9a1653ecff22dc70f27",
+      "extension": ".out",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "boot_repair_validation.out": {
+      "path": "boot_repair_validation.out",
+      "size": 3890,
+      "sha256": "6d648a6646791ba7d654f267e471e777d9dc67faa677c9e3d6b27a283ff0dc25",
+      "extension": ".out",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "BASELINE_LOCK_R11_6_OBSIDIAN_CONSOLIDATION.json": {
+      "path": "BASELINE_LOCK_R11_6_OBSIDIAN_CONSOLIDATION.json",
+      "size": 467,
+      "sha256": "18be51f52d2f3208bdd8f056c218fcecb387b721f152552018e7de6722536362",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PARITY_ASSESSMENT_MATRIX.md": {
+      "path": "PARITY_ASSESSMENT_MATRIX.md",
+      "size": 2538,
+      "sha256": "1e489474bbbf5374fa1cf1dd59b14a569a90f897da6ffa345edcd7e99403810a",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "boot_repair_validation.rc": {
+      "path": "boot_repair_validation.rc",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "extension": ".rc",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "SOURCE_TO_CURRENT_PARITY_MATRIX.json": {
+      "path": "SOURCE_TO_CURRENT_PARITY_MATRIX.json",
+      "size": 6968,
+      "sha256": "6a063a5009948868829efb9f4f7deb8af36d4cbd7aa8ad08ae8439556de51363",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "SOURCE_FEATURE_REGISTRY.json": {
+      "path": "SOURCE_FEATURE_REGISTRY.json",
+      "size": 4262,
+      "sha256": "675a8d9d508c0737acdecf8ebe8aa9ad724ee58724d6b41ceb8de01192d11281",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "FORENSIC_STATE.json": {
+      "path": "FORENSIC_STATE.json",
+      "size": 187606,
+      "sha256": "133468e61a37bebd1bae412d6c448f8685fcdbb8c4bb0164f716dda644733e23",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "boot_import_check.mjs": {
+      "path": "boot_import_check.mjs",
+      "size": 1690,
+      "sha256": "7f22cf4678beb4cb30a8b3ec1bfd31cfcfc48972084c36b9afdfd77cfc62dfcc",
+      "extension": ".mjs",
+      "imports": [
+        "./core/router.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "BOOT_HEALTH_REPORT.md": {
+      "path": "BOOT_HEALTH_REPORT.md",
+      "size": 945,
+      "sha256": "cf06cc927dcbaf0fc5b098288069e9958fcd05f9e37955900feea8d725521be8",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "round5_validation.rc": {
+      "path": "round5_validation.rc",
+      "size": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "extension": ".rc",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "index.html": {
+      "path": "index.html",
+      "size": 1419,
+      "sha256": "aaf229014665c204800b8fb4b36a278b739c8a531e48a095360fba67307713e3",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "route-map.json": {
+      "path": "route-map.json",
+      "size": 466,
+      "sha256": "72b82ce858f8ff2e13e0c884d0eb224a7fc9ba1b3712479b00590093e74b2988",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "round5_validation.out": {
+      "path": "round5_validation.out",
+      "size": 3890,
+      "sha256": "6d648a6646791ba7d654f267e471e777d9dc67faa677c9e3d6b27a283ff0dc25",
+      "extension": ".out",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "VALIDATION_RESULTS.json": {
+      "path": "VALIDATION_RESULTS.json",
+      "size": 2400,
+      "sha256": "da73741842d431e0da86c5ad7826f6e157388838b6a87ef8b3a89d425fbc246c",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PARITY_IMPLEMENTATION_REPORT.md": {
+      "path": "PARITY_IMPLEMENTATION_REPORT.md",
+      "size": 1737,
+      "sha256": "75ac013e8c7bab23e2720a9959e76cc4609f879ca6640d80770c2748b8b5e246",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "DEFECT_REGISTRY.json": {
+      "path": "DEFECT_REGISTRY.json",
+      "size": 4987,
+      "sha256": "935b92b88fd49e02944b88ddca4bc663d94103e5f985f8cd7a60391e8a45fc05",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "BOOT_REPAIR_REPORT.md": {
+      "path": "BOOT_REPAIR_REPORT.md",
+      "size": 1215,
+      "sha256": "9fa01973f1072feae16e916f4ab0c35ee4ca3da52f6bfbd6371733002a034c35",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "boot_import_check.rc": {
+      "path": "boot_import_check.rc",
+      "size": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "extension": ".rc",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PACKAGE_INTEGRITY_REPORT.json": {
+      "path": "PACKAGE_INTEGRITY_REPORT.json",
+      "size": 931,
+      "sha256": "898d6386f1e75f60f87f673506aec9135f6026e199493709573a169b9512351a",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "IMPLEMENTATION_TRACE.json": {
+      "path": "IMPLEMENTATION_TRACE.json",
+      "size": 806,
+      "sha256": "a5e4c1f7e2dfbc9fc39b2baf1d2c3e7ea173534c5b4efcb7cd750657d4deb0b0",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "IMPLEMENTATION_REPORT.md": {
+      "path": "IMPLEMENTATION_REPORT.md",
+      "size": 8552,
+      "sha256": "feae3cf48c79cd3501b3714c2ff3300c43b8132259876fe1a262dc2e8e6bf029",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "CURRENT_INVENTORY.json": {
+      "path": "CURRENT_INVENTORY.json",
+      "size": 59729,
+      "sha256": "9bd6a46bcce0731632c4ed15de02d68246fa3351b477c2a1923cccb7433df473",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "endpoint-contract-map.json": {
+      "path": "endpoint-contract-map.json",
+      "size": 443,
+      "sha256": "35032dd418c38563e91180ce307975c6a9e2636381b99f8624ab16fcb603a21e",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "BOOT_REPAIR_TRACE.json": {
+      "path": "BOOT_REPAIR_TRACE.json",
+      "size": 859,
+      "sha256": "7085fd58bbf7de9c7a7a1348c3b8d98dae6527b0f28971e07561b9d60abb96a8",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "precision_auditor_v4_forensic.py": {
+      "path": "precision_auditor_v4_forensic.py",
+      "size": 30591,
+      "sha256": "523aa6f27ce5c039ce1fd8428cca5b9304aff5e6acfe3ea13d93a89eea9d0f72",
+      "extension": ".py",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PARITY_ASSESSMENT_MATRIX.json": {
+      "path": "PARITY_ASSESSMENT_MATRIX.json",
+      "size": 6968,
+      "sha256": "6a063a5009948868829efb9f4f7deb8af36d4cbd7aa8ad08ae8439556de51363",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PARITY_VALIDATION_RESULTS.json": {
+      "path": "PARITY_VALIDATION_RESULTS.json",
+      "size": 4184,
+      "sha256": "024f82f6bf7318a50cc8a335af014878d8892600d41a556cb9f6f2dc2b54604c",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "CURRENT_CAPABILITY_REGISTRY.json": {
+      "path": "CURRENT_CAPABILITY_REGISTRY.json",
+      "size": 5795,
+      "sha256": "9bd848a556d0cf8a0e3cf62e6f9b162400d69168b58a67c3e089b2148f32f0e7",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "BOOT_REPAIR_VALIDATION_RESULTS.json": {
+      "path": "BOOT_REPAIR_VALIDATION_RESULTS.json",
+      "size": 4436,
+      "sha256": "bc5a19517cab4637493decd62f460ec3f8dd248aa62bfaf861a76e7aa49b62ec",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "state-to-fabric-map.json": {
+      "path": "state-to-fabric-map.json",
+      "size": 673,
+      "sha256": "5fb60fe04e70c5e23678fb6cdb1bf7367d44f682a7facd0b5fe66ac185fb065c",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "PARITY_FORENSIC_STATE.json": {
+      "path": "PARITY_FORENSIC_STATE.json",
+      "size": 82995,
+      "sha256": "a30431945963b8647d2fed56ba8fc91dc4528075614c88edfb5d4517b7c671ab",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "DEFECT_REGISTRY.md": {
+      "path": "DEFECT_REGISTRY.md",
+      "size": 3434,
+      "sha256": "897afcec0c4b49726653cf9dd40a303e9ecda927153740dda0a78a72786208ff",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "CURRENT_FILE_INVENTORY.json": {
+      "path": "CURRENT_FILE_INVENTORY.json",
+      "size": 146953,
+      "sha256": "1b59e1531e9829dcfce22a1ad1480e709c10ac298030fa9cd3d7e1ca87a1129b",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "SOURCE_TO_CURRENT_PARITY_MATRIX.md": {
+      "path": "SOURCE_TO_CURRENT_PARITY_MATRIX.md",
+      "size": 2538,
+      "sha256": "1e489474bbbf5374fa1cf1dd59b14a569a90f897da6ffa345edcd7e99403810a",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "SOURCE_INVENTORY.json": {
+      "path": "SOURCE_INVENTORY.json",
+      "size": 17632,
+      "sha256": "5882279bfa64a494b4307a047b215e8ec799702765c74b64f19c5c5a1ca87274",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "modules/dispatch.js": {
+      "path": "modules/dispatch.js",
+      "size": 3198,
+      "sha256": "2b93958b5d82757190cda91567bb2df13ef16fea3b0d0aee3628b9b81116dd64",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js",
+        "../core/render-budget.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/user-admin.js": {
+      "path": "modules/user-admin.js",
+      "size": 4608,
+      "sha256": "b4ef5c37256e5ecf025cc6eafedcf809f758ce8a9c406de49385bbfc2b80ffa7",
+      "extension": ".js",
+      "imports": [
+        "../config/rbac.config.js",
+        "../core/governed-actions.js",
+        "../core/render-budget.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/approvals.js": {
+      "path": "modules/approvals.js",
+      "size": 4621,
+      "sha256": "0c533317d17593a7b00692407bce5a0849d5b788d38a01d9cf17daf20ae56c8c",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/fasttrack.js": {
+      "path": "modules/fasttrack.js",
+      "size": 7598,
+      "sha256": "25ad4f9096b6d1fcb4a96a8f313df543076e821d06ed38ce81b3500b95bbc182",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/response-tracking.js": {
+      "path": "modules/response-tracking.js",
+      "size": 9505,
+      "sha256": "99934fa5e6f39df6afb15d57498ac0e0d231eb784523b3452561cc637161538f",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/assistant.js": {
+      "path": "modules/assistant.js",
+      "size": 2436,
+      "sha256": "51fca7d3e2359248b1c3fbf292df810140f37a7d936d877ccaefe8ac825407a4",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/governed-actions.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/orchestrator.js": {
+      "path": "modules/orchestrator.js",
+      "size": 3502,
+      "sha256": "3d58b38e819927a49f3a0235346d35f4b76c8085811f1128c8d90084c929e2f0",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js",
+        "../core/render-budget.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/settings.js": {
+      "path": "modules/settings.js",
+      "size": 5872,
+      "sha256": "5673a084868c9fe9f349daf1a03bb8092447dcd382b2d3249685624de83ce2fa",
+      "extension": ".js",
+      "imports": [
+        "../config/app.config.js",
+        "../config/endpoints.config.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/activities.js": {
+      "path": "modules/activities.js",
+      "size": 8711,
+      "sha256": "ace90e93a37be3a121bb8619b813c5da36172715ceb7602f10afd1a0042f9c40",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/statistics.js": {
+      "path": "modules/statistics.js",
+      "size": 9636,
+      "sha256": "97eeb589a27f038f70c5e5641448449034932628305d3304b9ae3f38ec99e867",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/operator-hud.js": {
+      "path": "modules/operator-hud.js",
+      "size": 2236,
+      "sha256": "b3f4f7e83c0874fe7411d5ea37fef508ff301c042ba418c813c65e6c44951f3f",
+      "extension": ".js",
+      "imports": [
+        "../core/cache-manager.js",
+        "../core/data-loader.js",
+        "../core/governed-actions.js",
+        "../core/loading-state.js",
+        "../core/pending-queue.js",
+        "../core/render-budget.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount",
+        "operatorDataOpsSummary"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/diagnostics.js": {
+      "path": "modules/diagnostics.js",
+      "size": 3554,
+      "sha256": "455757c7468162928bdeaa2e7c2425e6c0a3582cece29aa363f41158a279efe5",
+      "extension": ".js",
+      "imports": [
+        "../config/browser-certification.config.js",
+        "../config/endpoints.config.js",
+        "../core/cache-manager.js",
+        "../core/data-loader.js",
+        "../core/governed-actions.js",
+        "../core/loading-state.js",
+        "../core/pending-queue.js",
+        "../core/performance-monitor.js",
+        "../core/platform-provisioner.js",
+        "../core/render-budget.js",
+        "../core/router.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "DataOpsHealth",
+        "mount",
+        "obsidianGovernanceHealth",
+        "provisioningHealth"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/archive.js": {
+      "path": "modules/archive.js",
+      "size": 2592,
+      "sha256": "605f849b0bc44146372190c10239b51ed3a5060f432dd30d850e19f9bef94e29",
+      "extension": ".js",
+      "imports": [
+        "../core/archive.js",
+        "../core/entity-store.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "archiveReference",
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/comments.js": {
+      "path": "modules/comments.js",
+      "size": 2517,
+      "sha256": "c89174658591886bd4926ad5b806ec5474bf1b31c1b8bfa22a681758682970ca",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/correspondence.js": {
+      "path": "modules/correspondence.js",
+      "size": 16491,
+      "sha256": "315abdcff47cb106587cbe30776a951b5333305328ded2d25b10aeabed52e7ef",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/enterprise-domain.js",
+        "../core/governed-actions.js",
+        "../core/render-budget.js",
+        "../core/state.js",
+        "../core/ui-state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount",
+        "openCreate"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/executive.js": {
+      "path": "modules/executive.js",
+      "size": 11347,
+      "sha256": "d6d3c7363d60b709e98186c57c1e24efa10f19381216c8abce4be0a0155bd147",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/lookup.js": {
+      "path": "modules/lookup.js",
+      "size": 11252,
+      "sha256": "d02bb7103c4f36d8cfbd0b3a34c741b94ebe498964e4d17ed209ddee3132f0d5",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/acknowledgment.js": {
+      "path": "modules/acknowledgment.js",
+      "size": 3492,
+      "sha256": "ded0ddff1045c8da9006bcbb46421baf4a4f0dbd674f0f04aa633dd67f9183b3",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/reports.js": {
+      "path": "modules/reports.js",
+      "size": 9102,
+      "sha256": "0e269ce93ae8b9d9b9cc6d0137b34d206842eacd452c06a457ab62c2656c63eb",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/bulk-assignment.js": {
+      "path": "modules/bulk-assignment.js",
+      "size": 1912,
+      "sha256": "14031f84d942de9d89c6f0bb6fde8c0752d8ce4b70c3404f47f712aeb321ec37",
+      "extension": ".js",
+      "imports": [
+        "../config/app.config.js",
+        "../core/api.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/home.js": {
+      "path": "modules/home.js",
+      "size": 2837,
+      "sha256": "3044c55d4982537117ab49a9e80c82c086c39a377658a6caa02e3099faeaee58",
+      "extension": ".js",
+      "imports": [
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/single-assignment.js": {
+      "path": "modules/single-assignment.js",
+      "size": 4047,
+      "sha256": "2cdaa4b0411284facd7d356d1f79787f6a5de5e0d3fe6813de17d2c6f746d2a1",
+      "extension": ".js",
+      "imports": [
+        "../core/api.js",
+        "../core/domain.js",
+        "../core/governed-actions.js",
+        "../core/router.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "modules/registry.js": {
+      "path": "modules/registry.js",
+      "size": 9534,
+      "sha256": "49f65fd3d82a9f2e8baa78022f70f194b0c5b3d47d3f4fc170235b8343624845",
+      "extension": ".js",
+      "imports": [
+        "../core/governed-actions.js"
+      ],
+      "exports": [
+        "mount"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": true,
+      "hasMountExport": true
+    },
+    "shared/shell.js": {
+      "path": "shared/shell.js",
+      "size": 9539,
+      "sha256": "17d7dbaa733c988002a50a190926a42cf68e58c6a381cf9a2a90f6e76f4a4a64",
+      "extension": ".js",
+      "imports": [
+        "../config/nav.config.js",
+        "../config/rbac.config.js",
+        "../config/routes.config.js",
+        "../core/router.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "shared/generic-module.js": {
+      "path": "shared/generic-module.js",
+      "size": 569,
+      "sha256": "7ff67d7af3183dabc39a57b06e96f40b3c5ef0bb567ddf7d5acb4044948102d6",
+      "extension": ".js",
+      "imports": [
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [
+        "generic"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/loading-policy.config.js": {
+      "path": "config/loading-policy.config.js",
+      "size": 322,
+      "sha256": "623ca97e3022916b08bedb9c5dd1a56547863b32deab6b5e607a6d65b29e2028",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "LoadingPolicy"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/rbac.config.js": {
+      "path": "config/rbac.config.js",
+      "size": 2491,
+      "sha256": "032e3e0be4a5c0e05d2e97f8f1a95339552f28033b8a09dbbdfa6acccc004c57",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "Permissions",
+        "PersonaScopes",
+        "Personas",
+        "RoleList",
+        "Roles",
+        "canAccess"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/action-ownership.config.js": {
+      "path": "config/action-ownership.config.js",
+      "size": 2235,
+      "sha256": "13dd315b163852e501e57dee68f37b98aa26420347bb58b9e80e12260097788c",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "ActionOwnership",
+        "actionOwner",
+        "actionSpec"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/module-boundaries.config.js": {
+      "path": "config/module-boundaries.config.js",
+      "size": 5250,
+      "sha256": "d396c5bb666b4a1d564c1d5832447be0dde666408b885cdfd1a46aeccf0b6a63",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "ModuleBoundaries",
+        "boundaryFor",
+        "moduleRole",
+        "ownsAction"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/nav.config.js": {
+      "path": "config/nav.config.js",
+      "size": 669,
+      "sha256": "bf9b9903f9b2b2aad3e409fdb30b9df6e1c0ff5cd46685a532b4228be2fb74d3",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "NavGroups"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/browser-certification.config.js": {
+      "path": "config/browser-certification.config.js",
+      "size": 463,
+      "sha256": "a84e4406a1910dee1191fdb4d1af1db34f8f530175bd4a05c638af0ba5e124ba",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "BrowserCertification"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/app.config.js": {
+      "path": "config/app.config.js",
+      "size": 420,
+      "sha256": "2781ba5e39ddc7888b55eacc58e0e8f49527909a5111c823ceccb4a235fc5714",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "AppConfig"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/endpoints.config.js": {
+      "path": "config/endpoints.config.js",
+      "size": 9128,
+      "sha256": "60637b4402770ddb30be211ecdb2b0baeb2f3364afea1c378b49580c5cf759dd",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "ConfiguredEndpointKeys",
+        "DefaultEndpointSettings",
+        "EndpointContracts",
+        "EndpointKeys",
+        "EndpointUrls",
+        "endpointContract",
+        "endpointUrl"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/cache-policy.config.js": {
+      "path": "config/cache-policy.config.js",
+      "size": 725,
+      "sha256": "ed775ba95d4ebbaed18457c30fa5a725b4768ffb0f08eb40e2df36ba1fe1ac8c",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "CachePolicy",
+        "cachePolicyFor"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/platform-provisioning.config.js": {
+      "path": "config/platform-provisioning.config.js",
+      "size": 15458,
+      "sha256": "5a8cddaaca6ba986fc6182be9e6ff1d174a723dc6722da9cf5ae30d41069fbc4",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "PlatformProvisioning",
+        "ProvisioningVersion"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/fetch-policy.config.js": {
+      "path": "config/fetch-policy.config.js",
+      "size": 1056,
+      "sha256": "822695bb58332fc6581a2d7407f6af24923849322cf1207f5cfc1f8ca97ed48c",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "FetchPolicy",
+        "fetchPolicyFor"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/routes.config.js": {
+      "path": "config/routes.config.js",
+      "size": 3129,
+      "sha256": "fc1e319e541c72b36381e99487ca9a90f1b0fc48f35e90492874bd964cce2163",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "Routes"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/behaviour-provisioning.config.js": {
+      "path": "config/behaviour-provisioning.config.js",
+      "size": 690,
+      "sha256": "667e1deee506f4089b81f303925f0797ab52bf14a8fb0551210adca15f0cda62",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "BehaviourProvisioning"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/state-schema.config.js": {
+      "path": "config/state-schema.config.js",
+      "size": 739,
+      "sha256": "25be5d267bdcef5b7a38697bbacdfe75efc7c7315339f97c53699b82b6a31017",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "CollectionDefaults",
+        "RequiredStateCollections",
+        "RequiredStateObjects",
+        "normalizePlatformState"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/dynamic-actions.config.js": {
+      "path": "config/dynamic-actions.config.js",
+      "size": 1514,
+      "sha256": "44777231781a7cc8fe38652b1939bc6823d1f155582b81db81b88b4c94172245",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "DynamicActions",
+        "dynamicActionContract"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "config/performance-budget.config.js": {
+      "path": "config/performance-budget.config.js",
+      "size": 284,
+      "sha256": "2d21cc60cf588677206635c990a062daec95a2f51ead996fd7bdd70bfd3338c9",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "PerformanceBudget"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/README.md": {
+      "path": "design-system/dgo-complete/README.md",
+      "size": 10894,
+      "sha256": "31733da43ff517aa5ebdaff129e71c7b03e6a5606d965b693ba523311541cb02",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/index.html": {
+      "path": "design-system/dgo-complete/index.html",
+      "size": 141736,
+      "sha256": "aa9ca9dda53b1121564ff9f286c941dd0afa3c008735aa6715d076efafaf5444",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/LICENSE": {
+      "path": "design-system/dgo-complete/LICENSE",
+      "size": 3590,
+      "sha256": "dc928c8cd38866386420f3aa3959249e2eb0a19b5ee8092e7589414333233034",
+      "extension": "",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/MIGRATION.md": {
+      "path": "design-system/dgo-complete/MIGRATION.md",
+      "size": 5829,
+      "sha256": "1dce4e6568413df691827de24c392c2aeb5f3d7637f84301529d09e7eab4e449",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/GOVERNANCE.md": {
+      "path": "design-system/dgo-complete/GOVERNANCE.md",
+      "size": 9438,
+      "sha256": "982493d5d9a611daad95c005c86981e3ff7c7a60a5e40147b1e8c7f786fb8929",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/DGO Design System v2.1 - Standalone.html": {
+      "path": "design-system/dgo-complete/DGO Design System v2.1 - Standalone.html",
+      "size": 261758,
+      "sha256": "000156f5069e5997e829e24396c17b7224003a779fac071656c849217900fb3a",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/CHANGELOG.md": {
+      "path": "design-system/dgo-complete/CHANGELOG.md",
+      "size": 6606,
+      "sha256": "edf295a6b417b2bdca47cb428318b3f5c90ba1683cb4c1e1d4b292e73ccb7d88",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/precision_auditor_v4_forensic.py": {
+      "path": "design-system/dgo-complete/precision_auditor_v4_forensic.py",
+      "size": 30591,
+      "sha256": "523aa6f27ce5c039ce1fd8428cca5b9304aff5e6acfe3ea13d93a89eea9d0f72",
+      "extension": ".py",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/INTEGRATION.md": {
+      "path": "design-system/dgo-complete/INTEGRATION.md",
+      "size": 23805,
+      "sha256": "f973e08a43673f428059fd09f95d235908cc6678fc81363fe7303c85eb8d1046",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/CONTRIBUTING.md": {
+      "path": "design-system/dgo-complete/CONTRIBUTING.md",
+      "size": 12608,
+      "sha256": "1a4eadcad215bab99c7cf1d083016e33d28050d4f8a1e6e078aec9cbaa19861b",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/components.css": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/components.css",
+      "size": 16982,
+      "sha256": "5bf942140941bc081a6b5d5f422f145c53927a1df62baad924acfe00aa37ede1",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/tokens.css": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/tokens.css",
+      "size": 10226,
+      "sha256": "1be35479f691e38c1dbce23a1918b6c0f745cfe7e76fcb65ef79442b6c2c8b51",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/README.md": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/README.md",
+      "size": 5213,
+      "sha256": "cf151f72c5cb1032c7f721a22ce2caadbe692c68a555869828787edc29c0f6a5",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/INDEX.md": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/INDEX.md",
+      "size": 6183,
+      "sha256": "597b29dd60297da89de18da1a5b67eb7f5d76d387db40e6139e745f1c32e2b26",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/precision_auditor_v4_forensic.py": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/precision_auditor_v4_forensic.py",
+      "size": 30591,
+      "sha256": "523aa6f27ce5c039ce1fd8428cca5b9304aff5e6acfe3ea13d93a89eea9d0f72",
+      "extension": ".py",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/GUIDELINES.md": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/GUIDELINES.md",
+      "size": 11352,
+      "sha256": "9011cbd5a52918d2a4e3bb0101a1415ee03b58258862a2937ba093f37d9c12f0",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/ui_kits/dashboard/design-canvas.jsx": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/ui_kits/dashboard/design-canvas.jsx",
+      "size": 49653,
+      "sha256": "fb642362a04da7aa9f782a95f13c1fb4f14bd1fae877025eb853296cb665b57f",
+      "extension": ".jsx",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/ui_kits/dashboard/index.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/ui_kits/dashboard/index.html",
+      "size": 15442,
+      "sha256": "a1be5ff4c32b57731d59c024a4b45c754a3c4a174e300cdd6d5188a744a6b940",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/ui_kits/email_templates/index.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/ui_kits/email_templates/index.html",
+      "size": 10212,
+      "sha256": "6797be7840dd820eec1105c13e890c83208e61d833576a8879c0132a542c5d1f",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/logos.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/logos.html",
+      "size": 6703,
+      "sha256": "e3fc18ed2fcef544074ec9890c00b61f40f1d8e7ec342f6dac1ad32851a11a9d",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/endorsement.svg": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/endorsement.svg",
+      "size": 316,
+      "sha256": "67d1f3c596305b82540f29d1e0984353ab77d712b2ce0e418b213908acec2093",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/logo-mark.svg": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/logo-mark.svg",
+      "size": 248,
+      "sha256": "c3c34c286f11b3ed02009c4ffcd9cbf9229d1b07d6f1cca51b4613f0c8b422c5",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/logo-stacked.svg": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/logo-stacked.svg",
+      "size": 530,
+      "sha256": "80043528196dcd662bd82543ea0a9975e27628ff7fccda21a3909ed9eccbe5c4",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/logo-horizontal.svg": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/logo-horizontal.svg",
+      "size": 531,
+      "sha256": "e02ced413df2e2f2ad8bfa22dfaa1a45e48e649778aa7b9d385a773bc7980d1c",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/assets/logo-white-out.svg": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/assets/logo-white-out.svg",
+      "size": 545,
+      "sha256": "29d8a64af17de60c10fbbcc1e00e7fb16f6f86ec51cb0d671222cafa37223e69",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/examples/app-shell.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/examples/app-shell.html",
+      "size": 13970,
+      "sha256": "e8f81bd206d5c174a71db1085698d1b0768fec555b4ea308f38144109f2a0701",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/elevation.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/elevation.html",
+      "size": 2259,
+      "sha256": "b4aa053ddb3622fc003acd1ec870035e836131d38c777c94d89622715ca34554",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/radius.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/radius.html",
+      "size": 2477,
+      "sha256": "3bf91b72d4b7e234b877a7c526488fd0d7b74de1c5ae73c62a55a430269e5532",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-alerts.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-alerts.html",
+      "size": 2382,
+      "sha256": "c279490106966ab278a5858c59c05bfa96a70a61781b48f86a7b2e991ac014f3",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/colors-semantic.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/colors-semantic.html",
+      "size": 2122,
+      "sha256": "bfab563344c2d19612bee5ace82e31fdba87d0c155b0464dd0a9890b20911dd8",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-cards.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-cards.html",
+      "size": 1876,
+      "sha256": "84627f17c2b3b3915e7042bce03b39b1eec859f489f82c15cd7f0b16e5ac1358",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-tables.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-tables.html",
+      "size": 1797,
+      "sha256": "179af2c747eefb799ad2dd5a7ac566e89784d0a3ed28925f2dec09e313a67700",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-navigation.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-navigation.html",
+      "size": 2590,
+      "sha256": "a3ad808df909cf87d40984f698430a58525139869cd12efef9dceb97bb7151cb",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/typography.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/typography.html",
+      "size": 2036,
+      "sha256": "8f6bc55092ef6e89c498768d0129b3488e40fd22382c474c3410db73d7ac09e4",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-inputs.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-inputs.html",
+      "size": 1769,
+      "sha256": "ac6839c745a7043d1d3d0274eeb8208ba2ebdd577b910bf6babfad784194de0a",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-modals.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-modals.html",
+      "size": 1905,
+      "sha256": "b770996696bfe60b56dac6c2b54854f85f10a229a6aa522f02a2eeb34a1f9fcc",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-badges.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-badges.html",
+      "size": 2055,
+      "sha256": "475f96a71d64d19b64bf968b7a9c5d305f3078800fa31ea99f3400a5b43e1a0c",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/colors-status.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/colors-status.html",
+      "size": 1463,
+      "sha256": "dffab5aa700ab8964bb9b3783367351f6976a7e71bc6b740ad8f0758cb5e045d",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/spacing.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/spacing.html",
+      "size": 2446,
+      "sha256": "aba52a9729e2779c40d05ac8b5ad73497cb7fb8e0ed4578b7621fb9a56a1aee4",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/colors-primary.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/colors-primary.html",
+      "size": 2209,
+      "sha256": "8845f375a899e0aa4d2d9087174c4eabc88e6198c2b81f1c29d7c2a59c3a3e58",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/brand-logo.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/brand-logo.html",
+      "size": 3388,
+      "sha256": "ec2c6e1d6c9fc026261f3d5bcd030aa4c287d8b51cbc96b7554bc89d737d1e47",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/dgo_digital_ops/preview/components-buttons.html": {
+      "path": "design-system/dgo-complete/dgo_digital_ops/preview/components-buttons.html",
+      "size": 2153,
+      "sha256": "fb7d82ebe2ee1deea16aea2076ad1df2d20ffe8e267ad8aabbdd56bf936b2e2b",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/logo/white-out.svg": {
+      "path": "design-system/dgo-complete/assets/logo/white-out.svg",
+      "size": 761,
+      "sha256": "00e12961cf9b1b89a2426d944c1e1eec052d1113f668fbbf2cc4d05eee2701bd",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/logo/nitda-endorsed.svg": {
+      "path": "design-system/dgo-complete/assets/logo/nitda-endorsed.svg",
+      "size": 890,
+      "sha256": "3f65c5b9180b34b2bf346d5a284273554e1026642cf556a0fab3211dfbeee33b",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/logo/horizontal.svg": {
+      "path": "design-system/dgo-complete/assets/logo/horizontal.svg",
+      "size": 751,
+      "sha256": "1cc9e9da494c508d932e1732943c09ecb503cf97f0a811807cac73c35e24c42e",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/logo/mark.svg": {
+      "path": "design-system/dgo-complete/assets/logo/mark.svg",
+      "size": 363,
+      "sha256": "8350259865b168f67579fca3ad5aa1c82e19d373b51d15cd3f28d3931d7c0ac3",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/logo/stacked.svg": {
+      "path": "design-system/dgo-complete/assets/logo/stacked.svg",
+      "size": 694,
+      "sha256": "13a53e0082de461836c91d16ac7b78f83ae882ef6ef7703da8bb3f83bd8a633e",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/assets/icons/sprite.svg": {
+      "path": "design-system/dgo-complete/assets/icons/sprite.svg",
+      "size": 8017,
+      "sha256": "becd80d4fb0a9a94cf11997c7eb538ae082d37e0be143c8d5a1b47a67b838a22",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/scripts/dgo-runtime.js": {
+      "path": "design-system/dgo-complete/scripts/dgo-runtime.js",
+      "size": 7667,
+      "sha256": "7db622432694571ae1676b361e878adbe4cd7e4b215e7d1b843bd445dee267ff",
+      "extension": ".js",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/base.css": {
+      "path": "design-system/dgo-complete/styles/base.css",
+      "size": 4566,
+      "sha256": "fca1de68e642c17ee14863421ca0e57b8f8bb2886e772698c1f58b334e6a7a60",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components.css": {
+      "path": "design-system/dgo-complete/styles/components.css",
+      "size": 39333,
+      "sha256": "f0c9e0e641e04fa7bf545e8bbfec22a871aad7ebbfc67467f7b755f2494dc2b9",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/enhancements.css": {
+      "path": "design-system/dgo-complete/styles/enhancements.css",
+      "size": 9416,
+      "sha256": "580bc53611474aff2e1e0a3484d194ccbd2e3803f85e2f46f301c367a9cd0dc5",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/layout.css": {
+      "path": "design-system/dgo-complete/styles/layout.css",
+      "size": 3252,
+      "sha256": "84a3c4686b0a53666fcde3eceb7861c224c8a1af9ac8e6f1da6df13f30ba4b08",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/reset.css": {
+      "path": "design-system/dgo-complete/styles/reset.css",
+      "size": 1152,
+      "sha256": "4378b202f44bc05f69abbff5cc20cf6f3f1b18551f6c0df5fdcd49f35dafae49",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/search.css": {
+      "path": "design-system/dgo-complete/styles/components/search.css",
+      "size": 1454,
+      "sha256": "eb4c160f5375b1df9eacdcf4e86290f9b67b58a18058364de2d7c12e405050ce",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/topbar.css": {
+      "path": "design-system/dgo-complete/styles/components/topbar.css",
+      "size": 1060,
+      "sha256": "f253b1974c6ba45b089236d77a68f9093d501fcca8ea6ba96aaff9f237be2dea",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/command-palette.css": {
+      "path": "design-system/dgo-complete/styles/components/command-palette.css",
+      "size": 11685,
+      "sha256": "ff6cddd59c2ed09f16ea6a5fb56d064ebf037bded89085d5513f16ffebe57179",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/stepper-pagination.css": {
+      "path": "design-system/dgo-complete/styles/components/stepper-pagination.css",
+      "size": 2940,
+      "sha256": "8e99dc375627133228fe89b6d77df10277d6b3f838636eb17687e15eae731088",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/breadcrumb.css": {
+      "path": "design-system/dgo-complete/styles/components/breadcrumb.css",
+      "size": 1177,
+      "sha256": "643691a501352a2b17c6ded0c1a931e643c8a8c4e9451b21bb504d94983f9374",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/empty-state.css": {
+      "path": "design-system/dgo-complete/styles/components/empty-state.css",
+      "size": 1206,
+      "sha256": "1e8f2e7ae22c18335987485c21235599988b9b0bd20d188cc4d4310125cdd024",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/_utilities.css": {
+      "path": "design-system/dgo-complete/styles/components/_utilities.css",
+      "size": 1028,
+      "sha256": "f9d3d32ebb1f653358532703fe960cb79a7c278356241a285be4aea1b4ebc7b2",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/badge.css": {
+      "path": "design-system/dgo-complete/styles/components/badge.css",
+      "size": 4161,
+      "sha256": "7d566752b5b1cd3afc2020604d58109c22014354acf1cc6694720bf7b2e6af55",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/select.css": {
+      "path": "design-system/dgo-complete/styles/components/select.css",
+      "size": 1384,
+      "sha256": "e886443672882eb9a5f48b2429e7cf4ac0702c5ed6e857fc29ecfff6c7ae7b96",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/sidebar.css": {
+      "path": "design-system/dgo-complete/styles/components/sidebar.css",
+      "size": 2705,
+      "sha256": "cb64ca43b8a68f30884faf2c7119d54fe4c97f8f47656fda387a852fd12d9816",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/skeleton.css": {
+      "path": "design-system/dgo-complete/styles/components/skeleton.css",
+      "size": 1234,
+      "sha256": "4cc5dfb4b0a03d4191fe7272e8790289e59c58288924e30f7da1227dfa54f758",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/table.css": {
+      "path": "design-system/dgo-complete/styles/components/table.css",
+      "size": 2151,
+      "sha256": "35352ebe8b03d84cd459c7bef735cbcc8666c00cd6df3c9796c1f199cc6caa89",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/checkbox-radio.css": {
+      "path": "design-system/dgo-complete/styles/components/checkbox-radio.css",
+      "size": 1286,
+      "sha256": "0ac22442a1b08209903f21a414223ef93be004dd39460cebb2acae296567975b",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/tabs.css": {
+      "path": "design-system/dgo-complete/styles/components/tabs.css",
+      "size": 1651,
+      "sha256": "9d4e05975f9f6d38e350774f0b40f27301ae9cacbe211d7c77fcc5bd493493c6",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/toast.css": {
+      "path": "design-system/dgo-complete/styles/components/toast.css",
+      "size": 1509,
+      "sha256": "fa136a63b3960d3df09714f85b724cff2bf80bbc5c38c87190d7719579e91a2b",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/button.css": {
+      "path": "design-system/dgo-complete/styles/components/button.css",
+      "size": 4974,
+      "sha256": "fe69fdd12f9f7f1227adaaefe7d19ccb2a32c18be2cc253abaeea3e122b8bbc7",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/alert.css": {
+      "path": "design-system/dgo-complete/styles/components/alert.css",
+      "size": 2378,
+      "sha256": "67ad0005dba5bf8e9f27578982fe47e543f33180d62056116516e6f4275a5684",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/filter-bar.css": {
+      "path": "design-system/dgo-complete/styles/components/filter-bar.css",
+      "size": 1466,
+      "sha256": "5e2d8c520e787f5587742aac82e950652223cae39394e23603c9aa74e28c91fd",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/tooltip-popover.css": {
+      "path": "design-system/dgo-complete/styles/components/tooltip-popover.css",
+      "size": 1385,
+      "sha256": "9d75c5bd6c8dc90f0ae744ff8265c2abfabef469a5fa16a9f3cd716b3a22df11",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/switch.css": {
+      "path": "design-system/dgo-complete/styles/components/switch.css",
+      "size": 1757,
+      "sha256": "96b62dc50b51d209cadad05612f3d167adb06e95315229c2ba670df762c032c6",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/modal.css": {
+      "path": "design-system/dgo-complete/styles/components/modal.css",
+      "size": 2692,
+      "sha256": "66a43a8a50a2c6d6e7437efa1ed9fb896933c83265dd8e39c4516f60c25bfe05",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/kbd-code.css": {
+      "path": "design-system/dgo-complete/styles/components/kbd-code.css",
+      "size": 1731,
+      "sha256": "7919796da74e0fe568b4d5d997e324df6ce27efa2c5768a47410dd930c4481a0",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/menu.css": {
+      "path": "design-system/dgo-complete/styles/components/menu.css",
+      "size": 1874,
+      "sha256": "b12a74f081a4f37abc95f2cd03fb22a6dee5eace4ccf22a7ee99a06de4b46808",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/metric.css": {
+      "path": "design-system/dgo-complete/styles/components/metric.css",
+      "size": 1785,
+      "sha256": "8aef676add02aec661b5e6a82f7e1ec9ba5873b2d92506ed40e17f67f6db4a62",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/progress.css": {
+      "path": "design-system/dgo-complete/styles/components/progress.css",
+      "size": 2051,
+      "sha256": "72b345af9090e27b2462c946b2dc30cf157366a01804af9b5b6ff545c69e27f3",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/_index.css": {
+      "path": "design-system/dgo-complete/styles/components/_index.css",
+      "size": 3352,
+      "sha256": "e246fecb10ac49ce0cd74254ad77ff9a978bb3711561ee3ffb3d38ea74371e64",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/avatar.css": {
+      "path": "design-system/dgo-complete/styles/components/avatar.css",
+      "size": 1703,
+      "sha256": "3c427a33ddeb2c93c13f8be61117e1033f51b61381ee4b5bbeff7cda831b7c1a",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/card.css": {
+      "path": "design-system/dgo-complete/styles/components/card.css",
+      "size": 2325,
+      "sha256": "02640ef50825312239dd40b78e3cbe5a0a444f7af494184452d0924ce6cf38d2",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/styles/components/input.css": {
+      "path": "design-system/dgo-complete/styles/components/input.css",
+      "size": 3797,
+      "sha256": "d73ecd40c3a8a2dcc693abf49cba0e8fe291bc6d6d4899b16900a210625cc4e2",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/coverage/technical-coverage.json": {
+      "path": "design-system/dgo-complete/coverage/technical-coverage.json",
+      "size": 15328,
+      "sha256": "b5e98ecfdee55878c28d2d1ac14af4c912608eba621a19a7dc184c0233745e7a",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tools/validate_technical.py": {
+      "path": "design-system/dgo-complete/tools/validate_technical.py",
+      "size": 934,
+      "sha256": "fcda64761ca2567d633aaab9bb992e9d43a0f174965057fbee5c68e2fe600c39",
+      "extension": ".py",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.theme-dark.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.theme-dark.css",
+      "size": 3096,
+      "sha256": "e5eed11e51d14bc2a20a00cde3feca1527733af3877924afd72971d86a1ca2bc",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.theme-light.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.theme-light.css",
+      "size": 753,
+      "sha256": "fd0c6c1fb18d32fad05aeb639193d241791790451d6ed97ce1516aa6e144addf",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.component.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.component.css",
+      "size": 5786,
+      "sha256": "d94ae4a79888097afb71a4ffe5433a115b04b8d720ef0ecbeea76823fa327d35",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.primitive.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.primitive.css",
+      "size": 8731,
+      "sha256": "2832cde866d657df070570deb1a6e3b57e5687d9f380f979f1fc86676da05dc2",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.density.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.density.css",
+      "size": 1285,
+      "sha256": "9fc3ded4c2802878c7292f08233a98e54def2c43ef016c3873b841bb1dfd7d8a",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.enhanced.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.enhanced.css",
+      "size": 1094,
+      "sha256": "77f3e301ea8222726947db3fd5305bfebaf47ca817b2ebacde0de5e0f453c102",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.theme-hc.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.theme-hc.css",
+      "size": 2597,
+      "sha256": "2b9a572e68eb3ce1b721749b213c98a592b7f016c92d509c4b7d8de0d33aed4f",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/tokens/tokens.semantic.css": {
+      "path": "design-system/dgo-complete/tokens/tokens.semantic.css",
+      "size": 6781,
+      "sha256": "4bae3911a11c09f529ebaec9bffb75778bbc58ade4234cab94711f8555f8dfc8",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/01-tokens.md": {
+      "path": "design-system/dgo-complete/docs/01-tokens.md",
+      "size": 11638,
+      "sha256": "c3b3133ecdf355dfe1396f8ea71927f67c4ff12669a5a291ee73a7da804813e2",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/00-foundations.md": {
+      "path": "design-system/dgo-complete/docs/00-foundations.md",
+      "size": 15445,
+      "sha256": "018e036329c63992b3c001604358211db39b7b2f6d3eb126aa41ba6d137dd106",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/07-elevation.md": {
+      "path": "design-system/dgo-complete/docs/07-elevation.md",
+      "size": 10594,
+      "sha256": "b63cd7d5a9e407b006a9f4c35b53c77dc5616aed931393f55270a14a7c55dd6b",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/03-typography.md": {
+      "path": "design-system/dgo-complete/docs/03-typography.md",
+      "size": 12473,
+      "sha256": "e83a02008c47ad56364f3f4826b2cb7c2cf327afb3b6fb215c927d97288ac62b",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/08-accessibility.md": {
+      "path": "design-system/dgo-complete/docs/08-accessibility.md",
+      "size": 25561,
+      "sha256": "a093acae33719da8c47405f7fd669a75bc45994bcd82846bfc829cd23b764551",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/13-complete-implementation.md": {
+      "path": "design-system/dgo-complete/docs/13-complete-implementation.md",
+      "size": 2302,
+      "sha256": "9737c0b8a0c4a3b1579979b293a7df928d5e616e50182a6c9dc06817385f02d9",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/09-i18n-rtl.md": {
+      "path": "design-system/dgo-complete/docs/09-i18n-rtl.md",
+      "size": 18443,
+      "sha256": "23ec184e4698d3552394ab6411b0b0f6908b5633e045f07337eca301a6bae30f",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/05-iconography.md": {
+      "path": "design-system/dgo-complete/docs/05-iconography.md",
+      "size": 8080,
+      "sha256": "84082d2a7d27c5df24f0a20037a746f90ceafd507b6f5490b8fb95eef262e28e",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/02-color.md": {
+      "path": "design-system/dgo-complete/docs/02-color.md",
+      "size": 16248,
+      "sha256": "7e2ed58c9b57ce00e739a48b2366440df19a8b0b08407c91ded3ecebdd5505cb",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/04-spacing-grid.md": {
+      "path": "design-system/dgo-complete/docs/04-spacing-grid.md",
+      "size": 8225,
+      "sha256": "306e652abc236645701297b2c3a9fa43bd09c7a2b67bc9298c2a7fdd584134d6",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/06-motion.md": {
+      "path": "design-system/dgo-complete/docs/06-motion.md",
+      "size": 10738,
+      "sha256": "28a68c4f2be10acbf38c53d6c1ed72a14f0a5905e7fea1f66f6d2e4e3a4a1caa",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/10-content-voice.md": {
+      "path": "design-system/dgo-complete/docs/10-content-voice.md",
+      "size": 21273,
+      "sha256": "731c3dc70be769e77ca423f0a704d00243367307c87f5b74e4a6009b9052fc3b",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/11-component-template.md": {
+      "path": "design-system/dgo-complete/docs/11-component-template.md",
+      "size": 13274,
+      "sha256": "28dc14b14e342dd52212b2da13b81a3d5b1a571b4a9ffec6eaf6f7be0bc2249f",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/12-anti-patterns.md": {
+      "path": "design-system/dgo-complete/docs/12-anti-patterns.md",
+      "size": 26631,
+      "sha256": "56576d368c93e9f8b8d98bc54156e6e64084539e70b2b8360ec7a43eaab74e4a",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/command-palette.md": {
+      "path": "design-system/dgo-complete/docs/components/command-palette.md",
+      "size": 33538,
+      "sha256": "88b545a061c261578250cc8bf0b73f393d54d84d4febd279a5707138f48254c3",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/skeleton.md": {
+      "path": "design-system/dgo-complete/docs/components/skeleton.md",
+      "size": 5471,
+      "sha256": "63e458e72d94da7efa57347e731e4a5146b9c740148434242b04e2f3a6b439a5",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/topbar.md": {
+      "path": "design-system/dgo-complete/docs/components/topbar.md",
+      "size": 6665,
+      "sha256": "cd4f6f5575bb3cc92742e4cd7514b03f64e8f4cc2f826799932409a9ffe07ee2",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/search.md": {
+      "path": "design-system/dgo-complete/docs/components/search.md",
+      "size": 13728,
+      "sha256": "700fcb66f6e933b045f24e6f188a1bbd0b74f76012eda48c738453ae3050773a",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/checkbox-radio.md": {
+      "path": "design-system/dgo-complete/docs/components/checkbox-radio.md",
+      "size": 14739,
+      "sha256": "5f98e4af9d29fa57f51d93ee16450f815d0bb5f14e53c71498fc3469d6860021",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/sidebar.md": {
+      "path": "design-system/dgo-complete/docs/components/sidebar.md",
+      "size": 16733,
+      "sha256": "59a477e2c9ae9a4b1e4040c74dbd0aefe3f3624efdd72b1b72b45ecad30ffbda",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/table.md": {
+      "path": "design-system/dgo-complete/docs/components/table.md",
+      "size": 26188,
+      "sha256": "3dd69b7920e83698fb9622b661df3e71c0b47fb1923e6355f1e3e63570c38f35",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/empty-state.md": {
+      "path": "design-system/dgo-complete/docs/components/empty-state.md",
+      "size": 5479,
+      "sha256": "32b1c2060e95754a645139062e21a296d6a1817e2894a982c65f0264ce9bad7d",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/tabs.md": {
+      "path": "design-system/dgo-complete/docs/components/tabs.md",
+      "size": 20175,
+      "sha256": "1dd495f251ef523f53d81057ad0005bdb91f4d818dc8c1366f6f36de504f5467",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/stepper-pagination.md": {
+      "path": "design-system/dgo-complete/docs/components/stepper-pagination.md",
+      "size": 15944,
+      "sha256": "904bc01016df4a485c9b1ca43eef9bcd1ce2217c5dc11f014318dcdcac165040",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/card.md": {
+      "path": "design-system/dgo-complete/docs/components/card.md",
+      "size": 6310,
+      "sha256": "520d088769569deb403043bb45cee1b00d32677ca79ee176f039124b953c39e4",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/badge.md": {
+      "path": "design-system/dgo-complete/docs/components/badge.md",
+      "size": 7954,
+      "sha256": "1987dc3abc90055f0ddc70f265d5f3d84d14c7f4897a3549f836ada837a89863",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/input.md": {
+      "path": "design-system/dgo-complete/docs/components/input.md",
+      "size": 23362,
+      "sha256": "6c50a6925c598f18127486699a250ba4f4897ba790a447b9387ab20558f6e357",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/toast.md": {
+      "path": "design-system/dgo-complete/docs/components/toast.md",
+      "size": 20035,
+      "sha256": "1b03702a1c464fc380d1519c4c6bd81ea0e9b5f431bbdec1d58c9031a24f205c",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/metric.md": {
+      "path": "design-system/dgo-complete/docs/components/metric.md",
+      "size": 6023,
+      "sha256": "29dabf27b1ac80c5b4ea43fe2085572404c04f7ae365a6c6dbe05a21a4c34a41",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/avatar.md": {
+      "path": "design-system/dgo-complete/docs/components/avatar.md",
+      "size": 6158,
+      "sha256": "81dddb315a0eaec59d4d1d58b9263b6d07639150475fcc1e539c6e37693147bd",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/switch.md": {
+      "path": "design-system/dgo-complete/docs/components/switch.md",
+      "size": 15632,
+      "sha256": "7562a350d77abffc08da449756bacc1eecfef3c973d8803f895277b0ebfc5712",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/modal.md": {
+      "path": "design-system/dgo-complete/docs/components/modal.md",
+      "size": 24381,
+      "sha256": "42ea8ee19dfec648cd6fba01a20c390e79b7ed56b88a27196458fe7f8a8f0f03",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/filter-bar.md": {
+      "path": "design-system/dgo-complete/docs/components/filter-bar.md",
+      "size": 5700,
+      "sha256": "6701dc8edddfdefa6722b6accf3ce99725223f748ea723bd8e968b4b2f65a662",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/alert.md": {
+      "path": "design-system/dgo-complete/docs/components/alert.md",
+      "size": 6374,
+      "sha256": "fd810b7577ec0cc5291ee4c5abfbf0a712ebf82631a9b95870268f1856ff7215",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/menu.md": {
+      "path": "design-system/dgo-complete/docs/components/menu.md",
+      "size": 18082,
+      "sha256": "43f41a661ed7b0604d0f172d42b85fc950bffbb7e55c3fcaf67188665672f1f7",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/button.md": {
+      "path": "design-system/dgo-complete/docs/components/button.md",
+      "size": 19789,
+      "sha256": "6aae29dc3654a96589f63b0fdfb911e47a97d717f36ded69922b9e71717d4836",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/select.md": {
+      "path": "design-system/dgo-complete/docs/components/select.md",
+      "size": 14211,
+      "sha256": "65dbe5b42de13bccff4d99a8a32d843f0f9c563ab5379356e55adc10a1a2c9d2",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/breadcrumb.md": {
+      "path": "design-system/dgo-complete/docs/components/breadcrumb.md",
+      "size": 7647,
+      "sha256": "23710f69fde685cce943c10ec092a3f698382c90ddb9324d4ac80f43ab54f278",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/kbd-code.md": {
+      "path": "design-system/dgo-complete/docs/components/kbd-code.md",
+      "size": 5899,
+      "sha256": "7dbcacf327e9599ccc313732f932a81a525ee4da50c92e07b37157f2e3da5590",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/progress.md": {
+      "path": "design-system/dgo-complete/docs/components/progress.md",
+      "size": 5922,
+      "sha256": "89597e4583fe03311ae72c060b8906db54d954fa9d218b38ea8536620e710d26",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "design-system/dgo-complete/docs/components/tooltip-popover.md": {
+      "path": "design-system/dgo-complete/docs/components/tooltip-popover.md",
+      "size": 21957,
+      "sha256": "d87f2dcd935580e7471f3075a3fb19e9b6b3f8d8b7f788617b544174337f3b2c",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "assets/dgo-logo.svg": {
+      "path": "assets/dgo-logo.svg",
+      "size": 644,
+      "sha256": "d15d7ba9af600bc39762f89ba999f4de7c602c9b91794aa618d21eb1be49fba7",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "assets/dgo-mark.svg": {
+      "path": "assets/dgo-mark.svg",
+      "size": 329,
+      "sha256": "b3bad232abeaac317833161de6a512cc8f4dfd88b272fe0ca1fd39716e8def23",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/FINAL_UI_PROVISIONING_TRACE.json": {
+      "path": "certification/FINAL_UI_PROVISIONING_TRACE.json",
+      "size": 16496,
+      "sha256": "b37559364a1cac6c1c9a16f197a17b1a5b446a85682c225641a606a432292b59",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/FINAL_FIERCE_COMPLETION_AUDIT_REPORT.md": {
+      "path": "certification/FINAL_FIERCE_COMPLETION_AUDIT_REPORT.md",
+      "size": 1245,
+      "sha256": "08f55fe3a46ea762e006a1203b2fae99f28348e7b8117bdb338e8f392bb00eb7",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/validation_console2.txt": {
+      "path": "certification/validation_console2.txt",
+      "size": 2270,
+      "sha256": "6acafadfdfed64c4e8e7170cb03ccaa2404961406498fc4d14b29897cd8e9612",
+      "extension": ".txt",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/validation_console3.txt": {
+      "path": "certification/validation_console3.txt",
+      "size": 2267,
+      "sha256": "94c234de1284fe319fb4ebc87cddd2680318e637f396fa871b6700ea05d3e243",
+      "extension": ".txt",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/UI_STATE_BEHAVIOUR_CERTIFICATION_REPORT.md": {
+      "path": "certification/UI_STATE_BEHAVIOUR_CERTIFICATION_REPORT.md",
+      "size": 977,
+      "sha256": "1b0f9f268195b6d446710e2e538be793ece88dd775173cee1ae9dc703f6013fb",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/FINAL_COMPLETION_AUDIT.json": {
+      "path": "certification/FINAL_COMPLETION_AUDIT.json",
+      "size": 928,
+      "sha256": "d8dbb50435de2f5b8cc9ee462faf249bd660dfd293441976405148da9659622a",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/ui-state-behaviour-validation-results.json": {
+      "path": "certification/ui-state-behaviour-validation-results.json",
+      "size": 2419,
+      "sha256": "407122c7b887ca5cc938b254f29ab364130955313af439ac2272992cd36bf7d8",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/FINAL_VALIDATION_RESULTS.json": {
+      "path": "certification/FINAL_VALIDATION_RESULTS.json",
+      "size": 2607,
+      "sha256": "c7328312c6f4b9d31b20311aee5a3b8bdedfb28ccaf2df21bdf1538d5e7fca13",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "certification/ui-provisioning-trace.json": {
+      "path": "certification/ui-provisioning-trace.json",
+      "size": 16465,
+      "sha256": "9ad4f7110ac353486f576a26c28976758accc12f4f63af2fd626f2c82f8108ab",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "scripts/serve.py": {
+      "path": "scripts/serve.py",
+      "size": 354,
+      "sha256": "573ead78ce75d7b381054a751e27f9bdaca8e852c9729125b09e951532fe796e",
+      "extension": ".py",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/app.css": {
+      "path": "styles/app.css",
+      "size": 19311,
+      "sha256": "a79eb2be4ad6cffc54a2c1a4602fa52d2c7bb4d8c7eaa38f015c3e7949cea841",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/tokens.css": {
+      "path": "styles/tokens.css",
+      "size": 912,
+      "sha256": "d11db765a216e853a075a661e6521631da9ccf85ec42b28269cf8f54eaab00ee",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/platform-authority.css": {
+      "path": "styles/revised-dgo/platform-authority.css",
+      "size": 10146,
+      "sha256": "e84ec865fcaa867a7c8a891aa4cffcb94d97a51be1ed75af770d9fb8e78a6f2e",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.theme-dark.css": {
+      "path": "styles/revised-dgo/tokens.theme-dark.css",
+      "size": 3096,
+      "sha256": "e5eed11e51d14bc2a20a00cde3feca1527733af3877924afd72971d86a1ca2bc",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.theme-light.css": {
+      "path": "styles/revised-dgo/tokens.theme-light.css",
+      "size": 753,
+      "sha256": "fd0c6c1fb18d32fad05aeb639193d241791790451d6ed97ce1516aa6e144addf",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.component.css": {
+      "path": "styles/revised-dgo/tokens.component.css",
+      "size": 5786,
+      "sha256": "d94ae4a79888097afb71a4ffe5433a115b04b8d720ef0ecbeea76823fa327d35",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.primitive.css": {
+      "path": "styles/revised-dgo/tokens.primitive.css",
+      "size": 8731,
+      "sha256": "2832cde866d657df070570deb1a6e3b57e5687d9f380f979f1fc86676da05dc2",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.density.css": {
+      "path": "styles/revised-dgo/tokens.density.css",
+      "size": 1285,
+      "sha256": "9fc3ded4c2802878c7292f08233a98e54def2c43ef016c3873b841bb1dfd7d8a",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.enhanced.css": {
+      "path": "styles/revised-dgo/tokens.enhanced.css",
+      "size": 1094,
+      "sha256": "77f3e301ea8222726947db3fd5305bfebaf47ca817b2ebacde0de5e0f453c102",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.theme-hc.css": {
+      "path": "styles/revised-dgo/tokens.theme-hc.css",
+      "size": 2597,
+      "sha256": "2b9a572e68eb3ce1b721749b213c98a592b7f016c92d509c4b7d8de0d33aed4f",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "styles/revised-dgo/tokens.semantic.css": {
+      "path": "styles/revised-dgo/tokens.semantic.css",
+      "size": 6781,
+      "sha256": "4bae3911a11c09f529ebaec9bffb75778bbc58ade4234cab94711f8555f8dfc8",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/module-lifecycle-refactor-contract.mjs": {
+      "path": "tests/module-lifecycle-refactor-contract.mjs",
+      "size": 364,
+      "sha256": "c8b102cf1b5599987ab334b81805347db7a167c2a73d379218b30f4bdf78594b",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/directorate-scope-contract.mjs": {
+      "path": "tests/directorate-scope-contract.mjs",
+      "size": 409,
+      "sha256": "c200da1e46ef12248a37fd19f4742b49d1ee7df369b799d88c682db6a90cc1a0",
+      "extension": ".mjs",
+      "imports": [
+        "../core/directorate-scope.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/regression-r11.3.mjs": {
+      "path": "tests/regression-r11.3.mjs",
+      "size": 1150,
+      "sha256": "841d6e90f3cba07244582b0fe65f9ef7a10d70719962546b2736ed5993933245",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/dispatch-closure-contract.mjs": {
+      "path": "tests/dispatch-closure-contract.mjs",
+      "size": 241,
+      "sha256": "ace4ba10db98c91670c4344996b60c328c895ac94e8c09a53fc49da1296897ee",
+      "extension": ".mjs",
+      "imports": [
+        "../core/dispatch-service.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/action-surface-contract.mjs": {
+      "path": "tests/action-surface-contract.mjs",
+      "size": 628,
+      "sha256": "cc93b5679c8b15f34f26234f4efd2092022d1d9a49eede677f531ee15175e5de",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/release-gate-contract.mjs": {
+      "path": "tests/release-gate-contract.mjs",
+      "size": 473,
+      "sha256": "3caa2b43eb3d251106a5accede8ebbea4592ae512b6f2e2f846bc0ea3db4c708",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/enterprise-domains-contract.mjs": {
+      "path": "tests/enterprise-domains-contract.mjs",
+      "size": 1029,
+      "sha256": "6e1cb869c069261e4ccd46dbe37c4d56430a1e51f4ec811fe3c453d283b7b2d6",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/archive-immutability-contract.mjs": {
+      "path": "tests/archive-immutability-contract.mjs",
+      "size": 292,
+      "sha256": "68d355d3168a6cb37f9fe7d35c60e3e91b5476e48ed603bc01a92125686f7468",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/correspondence-intake-contract.mjs": {
+      "path": "tests/correspondence-intake-contract.mjs",
+      "size": 336,
+      "sha256": "b43092154f350a2fc76233e138c308e7e4c964b3141f8602457cfcf97b69f25e",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/source-parity-round3-contract.mjs": {
+      "path": "tests/source-parity-round3-contract.mjs",
+      "size": 2084,
+      "sha256": "95c3516cd51e8a5fb81f3caacaac9f13e52655f50be64dd02db464dffea0de5b",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/archive-reopen-contract.mjs": {
+      "path": "tests/archive-reopen-contract.mjs",
+      "size": 262,
+      "sha256": "ac21cce19ffa4df1e428477d19d2d6f479150a2c1b2d9f131022aa8d5635a6aa",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/static-validation.mjs": {
+      "path": "tests/static-validation.mjs",
+      "size": 405,
+      "sha256": "30ff86513dff320149de40488bc0c435d2dec7bcfdece8437e977cfc0e923bfd",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/error-taxonomy-contract.mjs": {
+      "path": "tests/error-taxonomy-contract.mjs",
+      "size": 196,
+      "sha256": "a42f49174868a9287e03056603b471aff5a43bc678712f596486111df2e310df",
+      "extension": ".mjs",
+      "imports": [
+        "../core/errors.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/source-parity-round4-contract.mjs": {
+      "path": "tests/source-parity-round4-contract.mjs",
+      "size": 2079,
+      "sha256": "50552a6098187bed596f5af5a8fc4df24f990a6808a249882ba02e918cde6faa",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/data-selectors-contract.mjs": {
+      "path": "tests/data-selectors-contract.mjs",
+      "size": 253,
+      "sha256": "5a31366e167f0fb31bd1c662e2557ae95b1c571ee17565e213a7cd4945d99d4d",
+      "extension": ".mjs",
+      "imports": [
+        "../core/data-selectors.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/state-behaviour-contract.mjs": {
+      "path": "tests/state-behaviour-contract.mjs",
+      "size": 706,
+      "sha256": "0b9dd38160844fca5e429aa9ff0118d64d45dd6ca6c3d425f4caf47bd2b8f690",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/operations-action-contract.mjs": {
+      "path": "tests/operations-action-contract.mjs",
+      "size": 354,
+      "sha256": "b68d06a8d85393a9161b8f53cce9203493af442f363b77effb115a0ced082dfb",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/accessibility-contract.mjs": {
+      "path": "tests/accessibility-contract.mjs",
+      "size": 304,
+      "sha256": "29c7dbd138ae166253e54f664727a69e7c9045853911f43909ecf72f87ec390d",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/closure-gate-contract.mjs": {
+      "path": "tests/closure-gate-contract.mjs",
+      "size": 384,
+      "sha256": "b230845b2e33c6d59da03d49ba5e02c0c3324e381ed47624ec7d40a004374230",
+      "extension": ".mjs",
+      "imports": [
+        "../core/entity-store.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/assignment-lifecycle-contract.mjs": {
+      "path": "tests/assignment-lifecycle-contract.mjs",
+      "size": 347,
+      "sha256": "ef4d8ad1e81cd64a8f90cf71f1be4bf21f481c4a7977f9fe4c9dfe6a2d616bb6",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/destructive-action-confirmation-contract.mjs": {
+      "path": "tests/destructive-action-confirmation-contract.mjs",
+      "size": 746,
+      "sha256": "4bfdf75602ac5b753edad71690dce9a6b79339dae3f8c51ca5b8e72f51e3c735",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/lifecycle-transition-contract.mjs": {
+      "path": "tests/lifecycle-transition-contract.mjs",
+      "size": 264,
+      "sha256": "515c50a5cb28b534309d1b1c007bd43d4da9b03a14f07baab01e6b3e8cf74f9b",
+      "extension": ".mjs",
+      "imports": [
+        "../core/lifecycle.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/syntax-integrity-contract.mjs": {
+      "path": "tests/syntax-integrity-contract.mjs",
+      "size": 1120,
+      "sha256": "8289e9a82568b7d4c2bc5f06b333843790a62278205266188a6b097e30eef305",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/write-manager-contract.mjs": {
+      "path": "tests/write-manager-contract.mjs",
+      "size": 439,
+      "sha256": "23eb66d7d90fa144ffc69280155bc4ba869a054b8a7d52499190bcb445f9dd72",
+      "extension": ".mjs",
+      "imports": [
+        "../core/state.js",
+        "../core/write-manager.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/no-orphan-contract.mjs": {
+      "path": "tests/no-orphan-contract.mjs",
+      "size": 250,
+      "sha256": "ebf0fa98e582b9c1f63e59a9679a1758350fbe09aa4a7f66479a9685c73df3ba",
+      "extension": ".mjs",
+      "imports": [
+        "../core/entity-store.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/source-parity-hardening-contract.mjs": {
+      "path": "tests/source-parity-hardening-contract.mjs",
+      "size": 2020,
+      "sha256": "c60a7e319445dcd726846a0cd9834150347f05a5217108b59523434117d7b43f",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/audit-thread-contract.mjs": {
+      "path": "tests/audit-thread-contract.mjs",
+      "size": 246,
+      "sha256": "18c2d84daaea9215c169f54f92071c73b1a57043a5c01bc8625223f4d94dc850",
+      "extension": ".mjs",
+      "imports": [
+        "../core/audit-log.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/router-host-retention-contract.mjs": {
+      "path": "tests/router-host-retention-contract.mjs",
+      "size": 339,
+      "sha256": "1a924ade6a87f70fc97f17a495fd056c7fa603847d175db22a6816b2ecd66bc5",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/registry-lifecycle-contract.mjs": {
+      "path": "tests/registry-lifecycle-contract.mjs",
+      "size": 316,
+      "sha256": "3b3b6f8d9131460ea5b3cfe96d057e0189e8f60d6dc084d5dff563f238d64a06",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/cache-policy-contract.mjs": {
+      "path": "tests/cache-policy-contract.mjs",
+      "size": 433,
+      "sha256": "e2f172cfc7769c8622bb9d1525ccfc595c650c5dd4873995690c9264596e6881",
+      "extension": ".mjs",
+      "imports": [
+        "../config/cache-policy.config.js",
+        "../core/cache-manager.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/module-boundary-contract.mjs": {
+      "path": "tests/module-boundary-contract.mjs",
+      "size": 795,
+      "sha256": "baa68459cff2608ea799d3d05d0b5f9ff669697ba8e5e87dcb37326449e3936e",
+      "extension": ".mjs",
+      "imports": [
+        "../config/module-boundaries.config.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/idempotency-contract.mjs": {
+      "path": "tests/idempotency-contract.mjs",
+      "size": 294,
+      "sha256": "94085660d97f614f2d390815cffbedcb9e213b8af819f86cb8a688805f47e3f9",
+      "extension": ".mjs",
+      "imports": [
+        "../core/idempotency.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/entity-store-contract.mjs": {
+      "path": "tests/entity-store-contract.mjs",
+      "size": 692,
+      "sha256": "714f75dab2714b2d5abb69d308fc256765feccd737b2473c681c419375175460",
+      "extension": ".mjs",
+      "imports": [
+        "../core/entity-store.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/browser-certification.html": {
+      "path": "tests/browser-certification.html",
+      "size": 391,
+      "sha256": "46e522d9c5a5e81dd9ec0bc1abadbc67cd5b7a97388fac9420f556cd4bd71e5f",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/archive-access-contract.mjs": {
+      "path": "tests/archive-access-contract.mjs",
+      "size": 260,
+      "sha256": "d47f827b911cf4f8ec8031c76c88282b7d0d146cc93166f39d0dee8d3eb52e87",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/platform-provisioning-contract.mjs": {
+      "path": "tests/platform-provisioning-contract.mjs",
+      "size": 647,
+      "sha256": "75693d03690d94f82a5b26edba1a0be35ceb82b68c9c1a62ec5ecff492693a63",
+      "extension": ".mjs",
+      "imports": [
+        "../config/platform-provisioning.config.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/data-contract-integration.mjs": {
+      "path": "tests/data-contract-integration.mjs",
+      "size": 1081,
+      "sha256": "4bdfb5f0ad0871c719428ae9c11f1a4cad6ea9d15ae6c58adf79923a8d99776b",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/route-contract.mjs": {
+      "path": "tests/route-contract.mjs",
+      "size": 541,
+      "sha256": "863508c37bf548d7a0a6de8aef3e6cc816eff732533fe6a2ea52289fe2ed185a",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/direct-status-write-scan.mjs": {
+      "path": "tests/direct-status-write-scan.mjs",
+      "size": 922,
+      "sha256": "0c66f1564ff6a59e46b494b2e611d948b22a94423bdf3180c8718f659ba25a13",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/loading-state-contract.mjs": {
+      "path": "tests/loading-state-contract.mjs",
+      "size": 361,
+      "sha256": "5f592a196efdcf67b124d3b2ab1f994e8b2fb56128d2f047bfce6bddd49b4892",
+      "extension": ".mjs",
+      "imports": [
+        "../core/loading-state.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/source-parity-round2-contract.mjs": {
+      "path": "tests/source-parity-round2-contract.mjs",
+      "size": 1804,
+      "sha256": "4b92d233eeaa9bb0eeb9651333626830a976b03bd60d36f66d16ebe3681021ba",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/design-system-authority-contract.mjs": {
+      "path": "tests/design-system-authority-contract.mjs",
+      "size": 1279,
+      "sha256": "8cfa2ee251d7897d27b0719f05eada90ec5ea38f93e75f467b405518d4a80dbc",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/performance-budget-contract.mjs": {
+      "path": "tests/performance-budget-contract.mjs",
+      "size": 390,
+      "sha256": "eca94ba3364b1c77c91f4e6a8ca7717ac9161112abc82632077b7e6ca0112513",
+      "extension": ".mjs",
+      "imports": [
+        "../config/performance-budget.config.js",
+        "../core/performance-monitor.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/defect-review-fixes-contract.mjs": {
+      "path": "tests/defect-review-fixes-contract.mjs",
+      "size": 661,
+      "sha256": "982f44149f4b00c35e9ba3e404956213bcbbc3bd23b4b0945fddba0effd3c3a7",
+      "extension": ".mjs",
+      "imports": [
+        "../core/audit-log.js",
+        "../core/state.js",
+        "../core/ui.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/action-ownership-contract.mjs": {
+      "path": "tests/action-ownership-contract.mjs",
+      "size": 561,
+      "sha256": "2d37377d41d6075838c8be233320594ba35ce1e1ca1a8a871cb043b04b0f14d2",
+      "extension": ".mjs",
+      "imports": [
+        "../config/action-ownership.config.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/otp-handshake-contract.mjs": {
+      "path": "tests/otp-handshake-contract.mjs",
+      "size": 217,
+      "sha256": "3af3302ba2ffb3c11b10f67a181dbacb557d59ad9dd37d7435275aa2929cb85d",
+      "extension": ".mjs",
+      "imports": [
+        "../core/otp-service.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/review-approval-contract.mjs": {
+      "path": "tests/review-approval-contract.mjs",
+      "size": 321,
+      "sha256": "18ffa229a78e36c8b59f667a9f9314fa8c0a52578ea40adf884876ffbb53edef",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/ui-provisioning-contract.mjs": {
+      "path": "tests/ui-provisioning-contract.mjs",
+      "size": 543,
+      "sha256": "a3669524e090f424d834cf269f8d93f759f09992ba579ca4b237736b668e835c",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/dispatch-module-contract.mjs": {
+      "path": "tests/dispatch-module-contract.mjs",
+      "size": 296,
+      "sha256": "18e3ffa8ae5a30bec3e8253e753e9640e1ba6d1fd6c0d43d3c9d246cd03810ae",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/comment-immutability-contract.mjs": {
+      "path": "tests/comment-immutability-contract.mjs",
+      "size": 253,
+      "sha256": "cf905c500f9286b59cfe819cd15d0661c1da0c565efd64f46200ee2058d8a317",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/ui-selection-contract.mjs": {
+      "path": "tests/ui-selection-contract.mjs",
+      "size": 263,
+      "sha256": "86c8468a3de75f170a74a773e258fcc9586e0e30b8255f1c2b0740ddcc7dd501",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/archive-retention-contract.mjs": {
+      "path": "tests/archive-retention-contract.mjs",
+      "size": 253,
+      "sha256": "1a46ac380e95f9bb17f7f824be80705ad21f4cc3300d2f2ab79e77182af122ba",
+      "extension": ".mjs",
+      "imports": [
+        "../core/retention.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/audited-state-patch-contract.mjs": {
+      "path": "tests/audited-state-patch-contract.mjs",
+      "size": 414,
+      "sha256": "437566d60c5dd04e395ea0e7e09be02a1140a4f4253d8600cf00d3b37c507ac5",
+      "extension": ".mjs",
+      "imports": [
+        "../core/state.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/mount-simulation-contract.mjs": {
+      "path": "tests/mount-simulation-contract.mjs",
+      "size": 1408,
+      "sha256": "483d05d36c9ecc7002aa2ab1e925ddda48448e1239cc8edd95dd006f1ba89cf1",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/data-fetch-contract.mjs": {
+      "path": "tests/data-fetch-contract.mjs",
+      "size": 252,
+      "sha256": "6fa5e133764dfbe506961ce230f6c8a5e231526f8ad5add19013a6c3c2f0ad15",
+      "extension": ".mjs",
+      "imports": [
+        "../core/fetch-manager.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/viewport-containment-contract.mjs": {
+      "path": "tests/viewport-containment-contract.mjs",
+      "size": 868,
+      "sha256": "8e4cbc0f4ea681a8fed989138da9a3d05ed437f5d6774833371284aa184d97e9",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/endpoint-configuration-contract.mjs": {
+      "path": "tests/endpoint-configuration-contract.mjs",
+      "size": 1215,
+      "sha256": "18fd06e6c9ea64fa28b9de2b74b55a2bb9cd1a5aacceda1943b9944ad3899968",
+      "extension": ".mjs",
+      "imports": [
+        "../config/endpoints.config.js",
+        "../core/state.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/endpoint-security-contract.mjs": {
+      "path": "tests/endpoint-security-contract.mjs",
+      "size": 220,
+      "sha256": "f728924b0d25eb218b49b42029f16c542b5d11b02aee95a10a5dee7e30188fd5",
+      "extension": ".mjs",
+      "imports": [
+        "../core/api.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/run-all.sh": {
+      "path": "tests/run-all.sh",
+      "size": 2266,
+      "sha256": "c8e5597cd0201064e0fef53202705b81a6af604be281c64aa663f7bc2a748d14",
+      "extension": ".sh",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/performance-optimization-contract.mjs": {
+      "path": "tests/performance-optimization-contract.mjs",
+      "size": 560,
+      "sha256": "fd1fd45dced77e5bb8de643da357a3c84c71c22d5d273d4a851f4e48d8480905",
+      "extension": ".mjs",
+      "imports": [
+        "../core/render-budget.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/content-governance-contract.mjs": {
+      "path": "tests/content-governance-contract.mjs",
+      "size": 575,
+      "sha256": "14d368bc10328a1c20efb05213d3facc149aca35a6971a378e8ab84404fbcc2d",
+      "extension": ".mjs",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/operator-walkthrough-contract.mjs": {
+      "path": "tests/operator-walkthrough-contract.mjs",
+      "size": 390,
+      "sha256": "e156aed3902818fd44528204f073fc1dc7d1796107b9ac3a55274968b64dc40b",
+      "extension": ".mjs",
+      "imports": [
+        "../config/routes.config.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/flow-confirmation-contract.mjs": {
+      "path": "tests/flow-confirmation-contract.mjs",
+      "size": 431,
+      "sha256": "6837c934be2042c68e0d0285f84ac88cd7a7c86fa0d5e96398e149cd8ccf3af0",
+      "extension": ".mjs",
+      "imports": [
+        "../core/flow-confirmation.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/state-schema-provisioning-contract.mjs": {
+      "path": "tests/state-schema-provisioning-contract.mjs",
+      "size": 442,
+      "sha256": "5d23f91c1996ba59f469b2d4161996e786caddd623cde28cd6848e7312c18b4f",
+      "extension": ".mjs",
+      "imports": [
+        "../config/state-schema.config.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/archive-export-contract.mjs": {
+      "path": "tests/archive-export-contract.mjs",
+      "size": 356,
+      "sha256": "6c4cc77ddc037ef4ca3b47a8209a0c1d262691fee1b59bf1806a3877d3eb7677",
+      "extension": ".mjs",
+      "imports": [
+        "../core/export-bundle.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/action-runtime-provisioning-contract.mjs": {
+      "path": "tests/action-runtime-provisioning-contract.mjs",
+      "size": 503,
+      "sha256": "76e91815dfb8234ba4f8d6e9afe13bcc6e6302634080c38bfac59848a04bd074",
+      "extension": ".mjs",
+      "imports": [
+        "../core/action-runtime.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "tests/fixtures/fetch-all.sample.json": {
+      "path": "tests/fixtures/fetch-all.sample.json",
+      "size": 4645589,
+      "sha256": "f9dc2e4d953ba4be4d52171508472bedef8a434897548517f19b2cc57be2fda8",
+      "extension": ".json",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "docs/IMPLEMENTATION_REPORT.md": {
+      "path": "docs/IMPLEMENTATION_REPORT.md",
+      "size": 20537,
+      "sha256": "d4c96e67ed045fed54f3012761d1c2f0ac5ac85f98da9b80fa3006ef6521feb9",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "docs/CHANGELOG.md": {
+      "path": "docs/CHANGELOG.md",
+      "size": 539,
+      "sha256": "b0fa285ba67386792f63cfb61c6ffd2169cead92020aa06e11e7e2368c4c0072",
+      "extension": ".md",
+      "imports": [],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/metrics-service.js": {
+      "path": "core/metrics-service.js",
+      "size": 1201,
+      "sha256": "7712a703f6539eb370a15c0552bd066f6d3058b2870a83150fc0c1fd24bcb055",
+      "extension": ".js",
+      "imports": [
+        "./domain.js"
+      ],
+      "exports": [
+        "moduleMetrics",
+        "operationalMetrics"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/entity-store.js": {
+      "path": "core/entity-store.js",
+      "size": 8941,
+      "sha256": "a959a2cf10492e3d249f377a6461a9eda749b6100096fe8b404681b83812ea16",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./directorate-scope.js",
+        "./errors.js",
+        "./lifecycle.js"
+      ],
+      "exports": [
+        "Entities",
+        "all",
+        "archive",
+        "byReference",
+        "canClose",
+        "create",
+        "createDispatch",
+        "createReference",
+        "dedup",
+        "get",
+        "getArchive",
+        "hydrateFromState",
+        "lookupQuarantine",
+        "markArchived",
+        "quarantine",
+        "restoreSnapshot",
+        "snapshot",
+        "stats",
+        "transitionStatus",
+        "writeArchive"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/nitda-module-adapter.js": {
+      "path": "core/nitda-module-adapter.js",
+      "size": 6679,
+      "sha256": "6bb05878fefe9e7f2770c2f759e56c72601da59efd3805f59cf5c491b30028be",
+      "extension": ".js",
+      "imports": [
+        "./state.js"
+      ],
+      "exports": [
+        "installNitdaModuleAdapter"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/platform-provisioner.js": {
+      "path": "core/platform-provisioner.js",
+      "size": 2247,
+      "sha256": "a5797f729ef5defca98d13e90876965a201209a1f838f3842ecb71752cd5f943",
+      "extension": ".js",
+      "imports": [
+        "../config/platform-provisioning.config.js",
+        "../config/state-schema.config.js",
+        "./audit-log.js",
+        "./state.js"
+      ],
+      "exports": [
+        "PlatformProvisioner",
+        "allModules",
+        "ensure",
+        "moduleSpec",
+        "stateCoverage",
+        "validate"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/data-client.js": {
+      "path": "core/data-client.js",
+      "size": 2587,
+      "sha256": "a773a74d30e2e392462beba1fb4ff0e9e26297aa00d895c0c621784cd1e78a83",
+      "extension": ".js",
+      "imports": [
+        "../config/endpoints.config.js",
+        "../config/fetch-policy.config.js",
+        "./errors.js",
+        "./flow-confirmation.js",
+        "./loading-state.js",
+        "./pending-queue.js",
+        "./performance-monitor.js",
+        "./state.js"
+      ],
+      "exports": [
+        "DataClient",
+        "request",
+        "resolveUrl"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/cache-manager.js": {
+      "path": "core/cache-manager.js",
+      "size": 2893,
+      "sha256": "83267be2e54049aac5611a089efb32b05c8fd3e0986edbf528a4fdb845119fe6",
+      "extension": ".js",
+      "imports": [
+        "../config/cache-policy.config.js",
+        "./performance-monitor.js"
+      ],
+      "exports": [
+        "CacheManager",
+        "clear",
+        "get",
+        "hasFresh",
+        "invalidate",
+        "remember",
+        "set",
+        "stats"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/router.js": {
+      "path": "core/router.js",
+      "size": 1310,
+      "sha256": "c76e55f920b43b63307648ae415d2b3d5f975337f33d3c7a464d5af7e1c7c90b",
+      "extension": ".js",
+      "imports": [
+        "../config/app.config.js",
+        "../config/rbac.config.js",
+        "./state.js"
+      ],
+      "exports": [
+        "Router"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/ui-interactions.js": {
+      "path": "core/ui-interactions.js",
+      "size": 1185,
+      "sha256": "514681e77c4447135d2960ad0de6ef6cc9ce69b660d59f2bee9bd19c95b88d6a",
+      "extension": ".js",
+      "imports": [
+        "./state.js"
+      ],
+      "exports": [
+        "UIInteractions",
+        "bindSelectable",
+        "select",
+        "selected"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/action-authority.js": {
+      "path": "core/action-authority.js",
+      "size": 2078,
+      "sha256": "e8fd698f0cdee0250bd27a3d1f3aa264b93f7650cbc0dabaecd32114dda532e9",
+      "extension": ".js",
+      "imports": [
+        "../config/action-ownership.config.js",
+        "../config/module-boundaries.config.js",
+        "./audit-log.js",
+        "./state.js",
+        "./ui.js"
+      ],
+      "exports": [
+        "assertModuleAction",
+        "auditAction",
+        "boundaryNotice",
+        "executeOwnedAction"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/ui.js": {
+      "path": "core/ui.js",
+      "size": 2479,
+      "sha256": "f5d3b91ec500732139088083e48ea06644a722cbcf03ff7e351f0e6bbea0e33e",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "authorityCard",
+        "badge",
+        "chips",
+        "confirmAction",
+        "emptyState",
+        "esc",
+        "head",
+        "kpis",
+        "listItem",
+        "table",
+        "toast"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/boot.js": {
+      "path": "core/boot.js",
+      "size": 2637,
+      "sha256": "9066d6ea2c18149aa0f6f8b2c0d714cd5c56c090b978f72b6dcbc8a775e6588e",
+      "extension": ".js",
+      "imports": [
+        "./cache-manager.js",
+        "./data-loader.js",
+        "./loading-state.js",
+        "./nitda-module-adapter.js",
+        "./pending-queue.js",
+        "./performance-monitor.js",
+        "./platform-provisioner.js",
+        "./router.js",
+        "./state.js"
+      ],
+      "exports": [],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/contracts.js": {
+      "path": "core/contracts.js",
+      "size": 1634,
+      "sha256": "5eb5bec664b4862c4c440c4e958a6391cca2ae68f2cb765efb992b39694262ac",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "assertEnvelope",
+        "collection",
+        "responseMeta",
+        "unwrapActionResponse"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/write-manager.js": {
+      "path": "core/write-manager.js",
+      "size": 1583,
+      "sha256": "3ddbe6cc873d930517c8821999fe23a622efb70d3ca902b3d7357551cd2a6c3a",
+      "extension": ".js",
+      "imports": [
+        "./action-authority.js",
+        "./data-client.js",
+        "./idempotency.js",
+        "./pending-queue.js",
+        "./state.js",
+        "./ui.js"
+      ],
+      "exports": [
+        "WriteManager",
+        "backend",
+        "local",
+        "optimistic"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/domain.js": {
+      "path": "core/domain.js",
+      "size": 5186,
+      "sha256": "50adfe94bfda4b9d64f7d1136a0bdb5d6a3a3fbea4a346c407de90e95949771e",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "makeRef",
+        "normalize",
+        "normalizeCategory",
+        "normalizeComment",
+        "normalizeDepartment",
+        "normalizeDocument",
+        "normalizeEmail",
+        "normalizeTask",
+        "normalizeUser",
+        "status"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/action-runtime.js": {
+      "path": "core/action-runtime.js",
+      "size": 1505,
+      "sha256": "5decb7e6411cfc369ebef35ee3793ecbc45db3b948c22940772f6467d70a094a",
+      "extension": ".js",
+      "imports": [
+        "../config/platform-provisioning.config.js",
+        "./action-authority.js",
+        "./archive.js",
+        "./dispatch-service.js",
+        "./otp-service.js",
+        "./state.js"
+      ],
+      "exports": [
+        "ActionRuntime",
+        "actionsFor",
+        "canRun",
+        "run"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/query-store.js": {
+      "path": "core/query-store.js",
+      "size": 1059,
+      "sha256": "419ff32fa3fa6f0dd0aaaac61f0f3479ebd412174f6f37e09ac81d2f2fd6187f",
+      "extension": ".js",
+      "imports": [
+        "./cache-manager.js",
+        "./data-selectors.js"
+      ],
+      "exports": [
+        "QueryStore",
+        "dashboard",
+        "lookup",
+        "query",
+        "reference"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/context.js": {
+      "path": "core/context.js",
+      "size": 605,
+      "sha256": "3726d177789f8d9f1f920d22ea737edc608a71c590762345ba16431112238737",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "Context"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/archive.js": {
+      "path": "core/archive.js",
+      "size": 3254,
+      "sha256": "3e9aac5dd9ffb015869600570c82cce62666ea2292b6d207e0a006a9fb670c00",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./entity-store.js",
+        "./errors.js",
+        "./export-bundle.js",
+        "./retention.js"
+      ],
+      "exports": [
+        "ArchiveService",
+        "accessArchive",
+        "archiveReference",
+        "buildBundle",
+        "canArchive",
+        "exportArchive",
+        "reopenArchive"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/loading-state.js": {
+      "path": "core/loading-state.js",
+      "size": 2306,
+      "sha256": "681b1a63e66a03b8570d2c29788bac4e5d9b2c69fb159890056970fddd8455d5",
+      "extension": ".js",
+      "imports": [
+        "./state.js"
+      ],
+      "exports": [
+        "LoadingState",
+        "clear",
+        "error",
+        "get",
+        "isBusy",
+        "refreshing",
+        "snapshot",
+        "start",
+        "success"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/retention.js": {
+      "path": "core/retention.js",
+      "size": 970,
+      "sha256": "713e9a1f8f781de21dc3e987666b23ff09dcae0b5f71010d4fee6cf34ee9ea62",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "Retention",
+        "RetentionPolicy",
+        "calculate",
+        "classForRecord",
+        "dateFromYears"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/otp-service.js": {
+      "path": "core/otp-service.js",
+      "size": 1746,
+      "sha256": "5dee44f11f69b63712bbbf9b535c82fa77b7f808b950043f475aaaf4922c3e93",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./errors.js",
+        "./security-actions.js"
+      ],
+      "exports": [
+        "OtpService",
+        "requestOtp",
+        "verifyOtp",
+        "verifyOtpAndExecute"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/performance-monitor.js": {
+      "path": "core/performance-monitor.js",
+      "size": 1651,
+      "sha256": "ed42efdfe065493158c55b9c837400a8192e98be08f3ab9d945697cf5ad70289",
+      "extension": ".js",
+      "imports": [
+        "../config/performance-budget.config.js",
+        "./state.js"
+      ],
+      "exports": [
+        "PerformanceMonitor",
+        "events",
+        "measure",
+        "metrics",
+        "snapshot"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/pending-queue.js": {
+      "path": "core/pending-queue.js",
+      "size": 1941,
+      "sha256": "61e72cd29ff4f1341b56ba9300afa9f5d3ccfdebdee60f7a49eb385777431a7d",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./state.js"
+      ],
+      "exports": [
+        "PendingQueue",
+        "clear",
+        "enqueue",
+        "list",
+        "remove",
+        "retry",
+        "stats"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/enterprise-domain.js": {
+      "path": "core/enterprise-domain.js",
+      "size": 4061,
+      "sha256": "39137bfc2093221e96cd9d83dc1d1fe5b4accf52e0b9137986825eca3da443ef",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "CorrespondenceStates",
+        "OperationStates",
+        "RegistryStates",
+        "audit",
+        "createMovement",
+        "createRegistryFile",
+        "enrichCorrespondence",
+        "enrichOperation",
+        "reconcileEnterprise",
+        "registryNumber"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/directorate-scope.js": {
+      "path": "core/directorate-scope.js",
+      "size": 1616,
+      "sha256": "87b9d45ff61ad608a382e2b43d1b0ecfe82326f48ec5bf7bc050fbe15d1276aa",
+      "extension": ".js",
+      "imports": [
+        "../config/rbac.config.js"
+      ],
+      "exports": [
+        "canReadRecord",
+        "deriveDirectorate",
+        "personaScope"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/export-bundle.js": {
+      "path": "core/export-bundle.js",
+      "size": 1157,
+      "sha256": "839ada6100df75c9a49e2a6a7d35a75d57704b3f2e1d3c71fc641862c0c42132",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "ExportBundle",
+        "createArchiveHash",
+        "createArchiveJson",
+        "createArchiveManifest",
+        "createEvidenceIndex"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/flow-confirmation.js": {
+      "path": "core/flow-confirmation.js",
+      "size": 2275,
+      "sha256": "10c7705dd4373225842e42ba510b02f495f21263f14a735cf599512331cdd339",
+      "extension": ".js",
+      "imports": [
+        "./ui.js"
+      ],
+      "exports": [
+        "confirmFlowExecution",
+        "isFlowEndpoint",
+        "requiresInputPreview"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/api.js": {
+      "path": "core/api.js",
+      "size": 1668,
+      "sha256": "7533c47182057e43af08f1030c5ef2f82334f6c1d85cf8c87cb19dca197313aa",
+      "extension": ".js",
+      "imports": [
+        "../config/endpoints.config.js",
+        "./audit-log.js",
+        "./contracts.js",
+        "./data-client.js",
+        "./state.js"
+      ],
+      "exports": [
+        "ObsidianActionAliases",
+        "invoke",
+        "invokeData",
+        "invokeObsidianAction",
+        "resolveEndpointUrl"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/state.js": {
+      "path": "core/state.js",
+      "size": 2576,
+      "sha256": "42720a12691e53b3e64f972ce79a34aadf054ac2ee3a304ccac69914ff5dd2a8",
+      "extension": ".js",
+      "imports": [
+        "../config/app.config.js",
+        "../config/endpoints.config.js"
+      ],
+      "exports": [
+        "State"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/fetch-manager.js": {
+      "path": "core/fetch-manager.js",
+      "size": 1531,
+      "sha256": "ca7ff9a6e8ef3e9f54972698319c05407c3428d7afda3767e10874a2a1e83eff",
+      "extension": ".js",
+      "imports": [
+        "../config/fetch-policy.config.js",
+        "./cache-manager.js",
+        "./data-client.js",
+        "./loading-state.js"
+      ],
+      "exports": [
+        "FetchManager",
+        "clearInflight",
+        "fetch",
+        "refresh",
+        "snapshotInflight"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/audit-log.js": {
+      "path": "core/audit-log.js",
+      "size": 1431,
+      "sha256": "6e793c2467cc503cf733dfb71be13ecf1c736e0bfa706b1494ce619033e38464",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "AuditLog",
+        "byReference",
+        "hydrateFromState",
+        "query",
+        "record",
+        "snapshot"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/data-reconciler.js": {
+      "path": "core/data-reconciler.js",
+      "size": 955,
+      "sha256": "957bf33e091a98bc9bc00838639b9e68d751586bba2bac8222dd38fcd94c7a4a",
+      "extension": ".js",
+      "imports": [
+        "./enterprise-domain.js",
+        "./entity-store.js",
+        "./state.js"
+      ],
+      "exports": [
+        "DataReconciler",
+        "apply",
+        "hydrate",
+        "mergeById"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/ui-state.js": {
+      "path": "core/ui-state.js",
+      "size": 820,
+      "sha256": "7be0bc26d647a11807ba48c33305f6b92ea41e15b3cdc75a4589e31db53c8c35",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "UIState",
+        "pageSlice",
+        "pager"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/errors.js": {
+      "path": "core/errors.js",
+      "size": 1853,
+      "sha256": "ab71605176d2305450f1a1e5264a2931d711971c310c2e74002426ddd7e4d685",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "ErrorClass",
+        "ObsidianError",
+        "createClosureError",
+        "createError",
+        "createScopeError",
+        "createValidationError",
+        "normalizeError"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/render-budget.js": {
+      "path": "core/render-budget.js",
+      "size": 1119,
+      "sha256": "7f7a766a09e372d8d3b60bf51f41b405dd073a8219994619b5240552351c72b7",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "RenderBudget",
+        "capRows",
+        "duplicateSummary",
+        "hasMore",
+        "memoizeBySignature"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/security-actions.js": {
+      "path": "core/security-actions.js",
+      "size": 1138,
+      "sha256": "e033198cac18e587eca9fa968d8dc29562bda323677355b2fb9317189c1d54a1",
+      "extension": ".js",
+      "imports": [
+        "./api.js",
+        "./flow-confirmation.js"
+      ],
+      "exports": [
+        "ObsidianActionAliases",
+        "invokeObsidianAction"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/idempotency.js": {
+      "path": "core/idempotency.js",
+      "size": 1039,
+      "sha256": "bc52389d38d313724f36e0c5e7710394dc0851b2122bfa599aedb19435e02687",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "Idempotency",
+        "bucket",
+        "clearExpired",
+        "key",
+        "remember",
+        "seen"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/browser-certification.js": {
+      "path": "core/browser-certification.js",
+      "size": 366,
+      "sha256": "e3fca31275dc909ed69622114c994c260be0c609bf23de44c1bba3cd96535e92",
+      "extension": ".js",
+      "imports": [
+        "../config/browser-certification.config.js",
+        "./router.js"
+      ],
+      "exports": [
+        "certify"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/lifecycle.js": {
+      "path": "core/lifecycle.js",
+      "size": 2405,
+      "sha256": "8046c53b0695c954f879bcca942f62eba257d2623808f6ed23d33009badb8445",
+      "extension": ".js",
+      "imports": [
+        "./errors.js"
+      ],
+      "exports": [
+        "LifecycleTransitions",
+        "assertTransitionAllowed",
+        "canTransition",
+        "validateGate"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/data-loader.js": {
+      "path": "core/data-loader.js",
+      "size": 4190,
+      "sha256": "de4a1f1895e684cdaa1b23c91f006d44767c29d4dddcfc719473e1ea6e1dc86e",
+      "extension": ".js",
+      "imports": [
+        "./api.js",
+        "./contracts.js",
+        "./domain.js",
+        "./enterprise-domain.js",
+        "./entity-store.js",
+        "./fetch-manager.js",
+        "./loading-state.js",
+        "./platform-provisioner.js",
+        "./state.js"
+      ],
+      "exports": [
+        "applyFetchAll",
+        "loadRuntimeData",
+        "parseFetchAll"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/dispatch-service.js": {
+      "path": "core/dispatch-service.js",
+      "size": 2880,
+      "sha256": "9f49befffc9905de47a1eebb44b0b31cbf06cc08e510021b2c6f333275fb95de",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./entity-store.js",
+        "./errors.js",
+        "./idempotency.js",
+        "./security-actions.js"
+      ],
+      "exports": [
+        "DispatchService",
+        "canDispatch",
+        "dispatchOutbound",
+        "getReceipt",
+        "markDispatchFailed",
+        "markNoDispatch",
+        "prepareDispatch"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/report-export-service.js": {
+      "path": "core/report-export-service.js",
+      "size": 1199,
+      "sha256": "adc083e887a87bba14fe1fecd7810681a2c47e9ffbf7616048019fe8b188d0cf",
+      "extension": ".js",
+      "imports": [
+        "./action-authority.js",
+        "./state.js"
+      ],
+      "exports": [
+        "ReportExportService"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/data-selectors.js": {
+      "path": "core/data-selectors.js",
+      "size": 1969,
+      "sha256": "91e1800a29d216af5422fca4cf33e2ba5961c3e449b811da4301a7cb8c1839a7",
+      "extension": ".js",
+      "imports": [
+        "./domain.js",
+        "./state.js"
+      ],
+      "exports": [
+        "Selectors",
+        "activities",
+        "approvals",
+        "byReference",
+        "comments",
+        "dispatches",
+        "dueSoonTasks",
+        "openTasks",
+        "overdueTasks",
+        "paginate",
+        "registryFiles",
+        "search",
+        "state",
+        "tasks"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    },
+    "core/governed-actions.js": {
+      "path": "core/governed-actions.js",
+      "size": 748,
+      "sha256": "26e0d26360dfad98d88ed9841386d3dbd002d925a1a90101ffccb7f0e5b2840d",
+      "extension": ".js",
+      "imports": [
+        "./audit-log.js",
+        "./entity-store.js",
+        "./state.js"
+      ],
+      "exports": [
+        "actor",
+        "auditAction",
+        "boundaryNotice",
+        "executeOwnedAction",
+        "governedTransition",
+        "hydrateGovernance"
+      ],
+      "hasSyntaxError": false,
+      "isRouteModule": false,
+      "hasMountExport": false
+    }
+  }
+}

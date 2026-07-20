@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Typography" subtitle="Outfit display + Verdana body" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .type-sample {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--dgo-border);
+    }
+    .type-sample:last-child {
+      border-bottom: none;
+    }
+    .type-label {
+      font-size: 11px;
+      color: var(--dgo-ink-500);
+      margin-bottom: 8px;
+      font-family: var(--dgo-font-mono);
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="type-sample">
+    <div class="type-label">Display (42px / Outfit Bold)</div>
+    <h1 style="font-size: var(--dgo-fs-display); font-family: var(--dgo-font-display); font-weight: var(--dgo-fw-bold); margin: 0; color: var(--dgo-ink-900);">
+      Digital Operations Dashboard
+    </h1>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">H1 (32px / Outfit Bold)</div>
+    <h1 style="margin: 0;">Operational Excellence</h1>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">H2 (24px / Outfit Bold)</div>
+    <h2 style="margin: 0;">Task Management</h2>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">H3 (18px / Outfit Bold)</div>
+    <h3 style="margin: 0;">Recent Activity</h3>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">Body (14px / Verdana)</div>
+    <p style="margin: 0; max-width: 500px;">
+      DGO Digital Ops provides a unified platform for managing inter-agency workflows, bulk communications, and operational reporting across NITDA's digital infrastructure.
+    </p>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">Caption (11px / Verdana)</div>
+    <small>Last updated: 2 minutes ago</small>
+  </div>
+</body>
+</html>

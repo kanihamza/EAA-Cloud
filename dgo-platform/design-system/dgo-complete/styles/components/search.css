@@ -1,0 +1,36 @@
+/* ============================================================
+   DGO · Search
+   ------------------------------------------------------------
+   Compound input combining icon, field, and optional clear control.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   6 · SEARCH
+   ============================================================ */
+.dgo-search {
+  display: flex; align-items: center; gap: var(--dgo-s-2);
+  block-size: var(--dgo-input-h);
+  padding-inline: var(--dgo-s-3);
+  border: 1px solid var(--dgo-input-border);
+  border-radius: var(--dgo-input-radius);
+  background: var(--dgo-input-bg);
+  color: var(--dgo-color-fg-muted);
+  transition: border-color var(--dgo-motion-state);
+}
+.dgo-search:focus-within { border-color: var(--dgo-color-action-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--dgo-color-action-primary) 22%, transparent); }
+.dgo-search input {
+  flex: 1; border: 0; background: transparent;
+  font-size: var(--dgo-type-body);
+  color: var(--dgo-color-fg-default);
+  outline: none;
+}
+

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="DGO App Shell" subtitle="Full application scaffold with routing, sidebar, header, pages" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGO Digital Ops — Application Shell</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--dgo-font-body); background: var(--dgo-surface-alt); overflow: hidden; }
+    
+    .app-shell {
+      display: flex;
+      height: 100vh;
+    }
+    
+    .app-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .app-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: var(--dgo-space-6);
+    }
+
+    .page-header {
+      margin-bottom: var(--dgo-space-6);
+    }
+
+    .page-title {
+      font-family: var(--dgo-font-display);
+      font-size: var(--dgo-fs-h1);
+      font-weight: var(--dgo-fw-bold);
+      color: var(--dgo-ink-900);
+      margin: 0 0 8px 0;
+    }
+
+    .page-subtitle {
+      font-size: var(--dgo-fs-body);
+      color: var(--dgo-ink-500);
+      margin: 0;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: var(--dgo-space-12) var(--dgo-space-6);
+      color: var(--dgo-ink-500);
+    }
+
+    .empty-state-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      opacity: 0.3;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--dgo-fs-body-sm);
+      color: var(--dgo-ink-500);
+      margin-bottom: 16px;
+    }
+
+    .breadcrumb a {
+      color: var(--dgo-primary);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--dgo-accent);
+    }
+  </style>
+  <template id="__bundler_thumbnail" data-bg-color="#FAF9F9">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#FAF9F9"/>
+      <!-- dark green sidebar -->
+      <rect x="0" y="0" width="300" height="800" fill="#0B2A1F"/>
+      <circle cx="70" cy="80" r="16" fill="none" stroke="#17B255" stroke-width="5"/>
+      <circle cx="70" cy="80" r="5" fill="#17B255"/>
+      <rect x="100" y="72" width="120" height="16" rx="4" fill="rgba(255,255,255,0.85)"/>
+      <!-- nav items -->
+      <g fill="rgba(255,255,255,0.16)">
+        <rect x="36" y="180" width="228" height="40" rx="8" fill="#05583B"/>
+        <rect x="36" y="234" width="228" height="40" rx="8"/>
+        <rect x="36" y="288" width="228" height="40" rx="8"/>
+        <rect x="36" y="342" width="228" height="40" rx="8"/>
+        <rect x="36" y="396" width="228" height="40" rx="8"/>
+      </g>
+      <!-- header bar -->
+      <rect x="300" y="0" width="900" height="96" fill="#FFFFFF"/>
+      <rect x="348" y="36" width="220" height="24" rx="6" fill="#1B1A1A"/>
+      <rect x="1060" y="32" width="92" height="32" rx="8" fill="#05583B"/>
+      <!-- content cards -->
+      <rect x="348" y="160" width="804" height="150" rx="12" fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2"/>
+      <rect x="348" y="340" width="390" height="300" rx="12" fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2"/>
+      <rect x="762" y="340" width="390" height="300" rx="12" fill="#FFFFFF" stroke="#E8E6E7" stroke-width="2"/>
+      <text x="750" y="730" text-anchor="middle" font-family="Outfit, system-ui, sans-serif" font-size="34" font-weight="800" fill="#05583B" letter-spacing="-0.5">DGO Digital Ops</text>
+    </svg>
+  </template>
+</head>
+<body class="dgo">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function DGOLogo({ inverse = false }) {
+      return (
+        <div className={`dgo-mark ${inverse ? 'on-dark' : ''}`}>
+          <div className="word">
+            DG<span className="o-orbit"></span>
+          </div>
+          <div className="sub">DIGITAL OPS</div>
+        </div>
+      );
+    }
+
+    function Sidebar({ activeRoute, onNavigate }) {
+      const navItems = [
+        { id: 'dashboard', label: 'Dashboard', icon: 'layout-dashboard' },
+        { id: 'tasks', label: 'Tasks', icon: 'check-square', badge: '23' },
+        { id: 'messages', label: 'Messages', icon: 'mail', badge: '12' },
+        { id: 'reports', label: 'Reports', icon: 'file-text' },
+        { id: 'users', label: 'Users', icon: 'users' },
+        { id: 'settings', label: 'Settings', icon: 'settings' }
+      ];
+
+      return (
+        <div className="dgo-sidebar">
+          <div className="dgo-sidebar-brand">
+            <DGOLogo inverse />
+            <div className="dgo-endorse" style={{ marginTop: '12px', color: 'rgba(255,255,255,0.5)' }}>
+              An initiative of NITDA
+            </div>
+          </div>
+
+          <nav className="dgo-nav">
+            {navItems.map(item => (
+              <a
+                key={item.id}
+                href="#"
+                className={`dgo-nav-item ${activeRoute === item.id ? 'active' : ''}`}
+                onClick={(e) => { e.preventDefault(); onNavigate(item.id); }}
+              >
+                <i data-lucide={item.icon} style={{ width: 20, height: 20 }}></i>
+                <span>{item.label}</span>
+                {item.badge && (
+                  <span className="dgo-pill dgo-pill-action" style={{ marginLeft: 'auto', fontSize: '10px', padding: '2px 6px' }}>
+                    {item.badge}
+                  </span>
+                )}
+              </a>
+            ))}
+          </nav>
+
+          <div style={{ marginTop: 'auto', paddingTop: 'var(--dgo-space-6)', borderTop: '1px solid var(--dgo-border-on-green)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontSize: '13px' }}>
+              <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--dgo-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600, fontSize: '12px' }}>
+                AU
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 600, fontSize: '13px' }}>Admin User</div>
+                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>System Admin</div>
+              </div>
+              <button className="dgo-btn dgo-btn-ghost dgo-btn-icon" style={{ padding: '4px' }} onClick={() => onNavigate('settings')}>
+                <i data-lucide="chevron-down" style={{ width: 16, height: 16, color: 'rgba(255,255,255,0.7)' }}></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function Header({ title, subtitle }) {
+      return (
+        <div className="dgo-header">
+          <div>
+            <h1 style={{ margin: 0, fontSize: 'var(--dgo-fs-h2)', fontFamily: 'var(--dgo-font-display)', fontWeight: 'var(--dgo-fw-bold)' }}>
+              {title}
+            </h1>
+            {subtitle && (
+              <p style={{ margin: '4px 0 0 0', fontSize: 'var(--dgo-fs-body-sm)', color: 'var(--dgo-ink-500)' }}>
+                {subtitle}
+              </p>
+            )}
+          </div>
+          <div style={{ display: 'flex', gap: 'var(--dgo-space-2)', alignItems: 'center' }}>
+            <button className="dgo-btn dgo-btn-ghost dgo-btn-icon">
+              <i data-lucide="bell" style={{ width: 20, height: 20 }}></i>
+            </button>
+            <button className="dgo-btn dgo-btn-ghost dgo-btn-icon">
+              <i data-lucide="search" style={{ width: 20, height: 20 }}></i>
+            </button>
+            <button className="dgo-btn dgo-btn-primary">
+              <i data-lucide="plus" style={{ width: 16, height: 16 }}></i>
+              New Task
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Page Components
+    function DashboardPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Dashboard</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">Dashboard</h1>
+            <p className="page-subtitle">Welcome back, here's what's happening today</p>
+          </div>
+          <div className="dgo-card">
+            <p>Dashboard content goes here. Replace with actual widgets, stats, and recent activity.</p>
+          </div>
+        </div>
+      );
+    }
+
+    function TasksPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Tasks</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">Tasks</h1>
+            <p className="page-subtitle">Manage and track all operational tasks</p>
+          </div>
+          <div className="empty-state">
+            <i data-lucide="check-square" className="empty-state-icon"></i>
+            <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', color: 'var(--dgo-ink-700)' }}>No tasks yet</h3>
+            <p style={{ margin: 0 }}>Create your first task to get started</p>
+            <button className="dgo-btn dgo-btn-primary" style={{ marginTop: '16px' }}>
+              <i data-lucide="plus" style={{ width: 16, height: 16 }}></i>
+              Create Task
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    function MessagesPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Messages</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">Messages</h1>
+            <p className="page-subtitle">Internal communications and bulk messaging</p>
+          </div>
+          <div className="empty-state">
+            <i data-lucide="mail" className="empty-state-icon"></i>
+            <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', color: 'var(--dgo-ink-700)' }}>Inbox empty</h3>
+            <p style={{ margin: 0 }}>You're all caught up!</p>
+          </div>
+        </div>
+      );
+    }
+
+    function ReportsPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Reports</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">Reports</h1>
+            <p className="page-subtitle">Operational analytics and export tools</p>
+          </div>
+          <div className="dgo-card">
+            <p>Reports interface goes here. Add charts, filters, and export options.</p>
+          </div>
+        </div>
+      );
+    }
+
+    function UsersPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Users</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">User Management</h1>
+            <p className="page-subtitle">Manage team members and permissions</p>
+          </div>
+          <div className="dgo-card">
+            <p>User management interface goes here. Add user list, roles, and permissions.</p>
+          </div>
+        </div>
+      );
+    }
+
+    function SettingsPage() {
+      return (
+        <div>
+          <div className="breadcrumb">
+            <a href="#">Home</a>
+            <i data-lucide="chevron-right" style={{ width: 14, height: 14 }}></i>
+            <span>Settings</span>
+          </div>
+          <div className="page-header">
+            <h1 className="page-title">Settings</h1>
+            <p className="page-subtitle">System configuration and preferences</p>
+          </div>
+          <div className="dgo-card">
+            <p>Settings interface goes here. Add tabs for general, notifications, security, etc.</p>
+          </div>
+        </div>
+      );
+    }
+
+    // Main App
+    function App() {
+      const [route, setRoute] = useState('dashboard');
+
+      useEffect(() => {
+        lucide.createIcons();
+      }, [route]);
+
+      const pages = {
+        dashboard: { component: DashboardPage, title: 'Dashboard' },
+        tasks: { component: TasksPage, title: 'Tasks' },
+        messages: { component: MessagesPage, title: 'Messages' },
+        reports: { component: ReportsPage, title: 'Reports' },
+        users: { component: UsersPage, title: 'Users' },
+        settings: { component: SettingsPage, title: 'Settings' }
+      };
+
+      const CurrentPage = pages[route].component;
+
+      return (
+        <div className="app-shell">
+          <Sidebar activeRoute={route} onNavigate={setRoute} />
+          <div className="app-main">
+            <Header title={pages[route].title} />
+            <div className="app-content">
+              <CurrentPage />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* ============================================================
+   DGO · Tabs
+   ------------------------------------------------------------
+   Horizontal segmented navigation with active indicator.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   15 · TABS
+   ============================================================ */
+.dgo-tabs { display: flex; flex-direction: column; gap: var(--dgo-s-5); }
+.dgo-tabs__list {
+  display: flex; gap: var(--dgo-s-1);
+  border-block-end: 1px solid var(--dgo-color-border-default);
+}
+.dgo-tabs__tab {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-2);
+  padding: var(--dgo-s-3) var(--dgo-s-4);
+  font-size: var(--dgo-type-body);
+  font-weight: var(--dgo-wt-500);
+  color: var(--dgo-color-fg-muted);
+  border: 0; background: transparent;
+  border-block-end: var(--dgo-tabs-indicator-h) solid transparent;
+  margin-block-end: -1px;
+  cursor: pointer;
+  transition: color var(--dgo-motion-state), border-color var(--dgo-motion-state);
+}
+.dgo-tabs__tab:hover { color: var(--dgo-color-fg-default); }
+.dgo-tabs__tab[aria-selected="true"] {
+  color: var(--dgo-color-action-primary);
+  border-block-end-color: var(--dgo-tabs-indicator);
+  font-weight: var(--dgo-wt-600);
+}
+

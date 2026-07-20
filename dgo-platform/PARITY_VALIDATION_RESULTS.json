@@ -1,0 +1,24 @@
+{
+  "schema": "parity-validation-results/v1",
+  "validationCommand": "bash tests/run-all.sh",
+  "validationReturnCode": 0,
+  "bootImportCheck": {
+    "checked": 23,
+    "failed": 0
+  },
+  "newTest": "tests/source-parity-reminder-contract.mjs (fails against pre-change orchestrator, passes after)",
+  "realBrowserVerification": {
+    "tool": "headless Chromium",
+    "pageErrors": 0,
+    "reminderControlRendered": true,
+    "reminderAtSetOnTask": true,
+    "notificationCreated": true,
+    "auditRecorded": true
+  },
+  "noRegression": {
+    "routesContract": "passed",
+    "endpointContract": "passed (route contract passed: 22 + endpoint contracts)",
+    "stateSchema": "passed",
+    "allExistingContracts": "passed"
+  }
+}

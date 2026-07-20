@@ -1,0 +1,83 @@
+{
+  "schema": "source-to-current-parity-matrix/v1",
+  "matrix": [
+    {
+      "featureId": "SRC-ASSIGN-SINGLE",
+      "classification": "covered by stronger equivalent",
+      "currentEvidence": "modules/single-assignment.js: supporting assignee ('Supporting assignee'), CC ('Copy to'), category/subcategory/DSU cascade, ack-due<=task-due validation, confirmAction preview, governed invoke('SINGLE_ASSIGNMENT'), State audit",
+      "why": "Current adds governance (confirmation, audit, RBAC via governed-actions) the SPA lacks."
+    },
+    {
+      "featureId": "SRC-ASSIGN-BULK",
+      "classification": "covered by stronger equivalent",
+      "currentEvidence": "modules/bulk-assignment.js: confirmation modal + preview (verified prior pass)",
+      "why": "Governed bulk path with confirm."
+    },
+    {
+      "featureId": "SRC-REASSIGN",
+      "classification": "covered by equivalent",
+      "currentEvidence": "single-assignment.js assignment type 'reassignment'; core/lifecycle.js reassign transition",
+      "why": "Same capability, governed."
+    },
+    {
+      "featureId": "SRC-EMAIL-FETCH",
+      "classification": "covered by equivalent",
+      "currentEvidence": "modules/correspondence.js emailDesk (capRows over s.emails)",
+      "why": "Email intake workbench present."
+    },
+    {
+      "featureId": "SRC-EMAIL-TO-TASK",
+      "classification": "covered by equivalent",
+      "currentEvidence": "modules/correspondence.js convertEmail() -> governed correspondence; then assignment -> task pipeline",
+      "why": "Multi-step governed pipeline (email->correspondence->assignment->task) supersedes the one-shot SPA action; preserves audit/RBAC."
+    },
+    {
+      "featureId": "SRC-FLAG-DG",
+      "classification": "covered by stronger equivalent",
+      "currentEvidence": "modules/registry.js routing action options FOR_ACTION/FOR_ATTENTION/FOR_REVIEW/FOR_DG_ATTENTION with official minute + movement + audit",
+      "why": "Registry routing records an auditable official minute, stronger than a lightweight flag."
+    },
+    {
+      "featureId": "SRC-FLAG-FOLLOWUP",
+      "classification": "covered by equivalent",
+      "currentEvidence": "registry routing actions + comments module; UNC/INT are category/routing codes (makeRef default 'UNC')",
+      "why": "Flag semantics carried by routing/category codes."
+    },
+    {
+      "featureId": "SRC-REMINDER",
+      "classification": "present but inactive -> IMPLEMENTED",
+      "currentEvidence": "BEFORE: config/dynamic-actions.config.js DynamicActions.setReminder contract existed but imported by NO module (verified: zero importers) and no reminder UI existed. AFTER: modules/orchestrator.js consumes the contract and surfaces a governed 'Set reminder' action (dueAt validation, confirmation, payload preview, audit meta, governed invoke('DYNAMIC_ACTIONS'))",
+      "why": "Genuine gap: source had a working reminder; current had contract-without-UI. Implemented tailored governed equivalent."
+    },
+    {
+      "featureId": "SRC-GETDOCS",
+      "classification": "covered by equivalent",
+      "currentEvidence": "core/data-loader.js loadRuntimeData; endpoints GET_DOCS/FETCH_ACTIVITIES/REFERENCE_DATA",
+      "why": "Governed data client."
+    },
+    {
+      "featureId": "SRC-PREVIEW",
+      "classification": "covered by stronger equivalent",
+      "currentEvidence": "core/flow-confirmation.js central payload preview + redaction for all endpoint writes",
+      "why": "Central vs per-screen."
+    },
+    {
+      "featureId": "SRC-TELEMETRY",
+      "classification": "covered by stronger equivalent",
+      "currentEvidence": "core/audit-log.js (cap 5000) + State buildPatchAudit (cap 1000)",
+      "why": "Central capped audit."
+    },
+    {
+      "featureId": "SRC-TIMEOUT",
+      "classification": "covered by equivalent",
+      "currentEvidence": "core/data-client.js / fetch-manager.js timeout + pending-queue.js",
+      "why": "Governed fetch with pending queue."
+    },
+    {
+      "featureId": "SRC-ESCAPING",
+      "classification": "covered by equivalent",
+      "currentEvidence": "core/ui.js esc() used across modules",
+      "why": "Central escaping."
+    }
+  ]
+}

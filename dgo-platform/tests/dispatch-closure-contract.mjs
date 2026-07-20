@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict'; import { DispatchService } from '../core/dispatch-service.js'; assert.ok(DispatchService.dispatchOutbound); assert.ok(DispatchService.markNoDispatch); console.log('dispatch-closure-contract passed');

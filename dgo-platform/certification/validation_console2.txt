@@ -1,0 +1,67 @@
+accessibility-contract.mjs contract scaffold passed
+archive-access-contract.mjs contract scaffold passed
+archive-export-contract passed
+archive-immutability-contract.mjs contract scaffold passed
+archive-reopen-contract.mjs contract scaffold passed
+archive-retention-contract passed
+assignment-lifecycle-contract.mjs contract scaffold passed
+audit-thread-contract passed
+closure-gate-contract passed
+comment-immutability-contract.mjs contract scaffold passed
+content governance contracts passed
+correspondence-intake-contract.mjs contract scaffold passed
+fetchAll sample contract: PASS {
+  activities: 300,
+  tracking: 300,
+  comments: 2,
+  users: 793,
+  categories: 45,
+  departments: 50,
+  emails: 50,
+  approvals: 0
+}
+design-system authority contract passed
+direct-status-write-scan passed
+directorate-scope-contract passed
+dispatch-closure-contract passed
+dispatch-module-contract.mjs contract scaffold passed
+endpoint configuration contract passed: 17
+endpoint-security-contract passed
+enterprise domain contracts passed
+entity-store-contract passed
+error-taxonomy-contract passed
+idempotency-contract passed
+lifecycle-transition-contract passed
+module-lifecycle-refactor-contract.mjs contract scaffold passed
+no-orphan-contract passed
+operations-action-contract.mjs contract scaffold passed
+operator-walkthrough-contract.mjs contract scaffold passed
+otp-handshake-contract passed
+registry-lifecycle-contract.mjs contract scaffold passed
+R11.3 regression contracts: PASS
+release-gate-contract.mjs contract scaffold passed
+review-approval-contract.mjs contract scaffold passed
+route contract passed: 22
+state-behaviour-contract passed
+static validation passed
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+23 !== 22
+
+    at file:///mnt/data/DGO_R11_6_OBSIDIAN_FULL_IMPLEMENTATION/tests/ui-provisioning-contract.mjs:5:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:633:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 23,
+  expected: 22,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

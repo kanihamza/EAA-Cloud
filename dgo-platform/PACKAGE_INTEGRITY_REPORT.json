@@ -1,0 +1,11 @@
+{
+  "schema": "package-integrity-report/v1",
+  "package": "DGO_R11_6_OBSIDIAN_BASELINE_REPAIRED_RUNTIME.zip",
+  "sha256": "5cd71fcedcc5108016b9db083f50873bcfa1e46f761ed7d1e35387245e65a301",
+  "sha256FileMatches": true,
+  "zipIntegrityCheck": "unzip -t",
+  "zipIntegrityResult": "No errors detected in compressed data",
+  "fileCountInZip": 347,
+  "directoryEntriesInZip": 32,
+  "notes": "347 files = 346 original files + 1 new test file (tests/destructive-action-confirmation-contract.mjs). All other files preserved; 7 files modified in place (see IMPLEMENTATION_TRACE.json changedFiles). This sha256 was computed on the final package after all evidence artifacts (DEFECT_REGISTRY.json/.md, VALIDATION_RESULTS.json, BOOT_HEALTH_REPORT.md, CURRENT_FILE_INVENTORY.json, CURRENT_CAPABILITY_REGISTRY.json, IMPLEMENTATION_REPORT.md, IMPLEMENTATION_TRACE.json) were written into the package root, so it is the true final-package hash."
+}

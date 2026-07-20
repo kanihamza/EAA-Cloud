@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Elevation" subtitle="5 elevation levels with green tint" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevation</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: #f5f5f5;
+    }
+    .shadow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .shadow-item {
+      background: white;
+      padding: 24px;
+      border-radius: var(--dgo-radius-md);
+      text-align: center;
+    }
+    .shadow-label {
+      font-size: 12px;
+      color: var(--dgo-ink-500);
+      font-family: var(--dgo-font-mono);
+      margin-top: 8px;
+    }
+    .shadow-desc {
+      font-size: 10px;
+      color: var(--dgo-ink-400);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <h2 style="margin: 0 0 16px 0; font-size: 18px; color: var(--dgo-ink-900);">Elevation (Green-tinted Shadows)</h2>
+  
+  <div class="shadow-grid">
+    <div class="shadow-item" style="box-shadow: var(--dgo-shadow-xs);">
+      <div class="shadow-label">xs</div>
+      <div class="shadow-desc">Subtle lift</div>
+    </div>
+    <div class="shadow-item" style="box-shadow: var(--dgo-shadow-sm);">
+      <div class="shadow-label">sm</div>
+      <div class="shadow-desc">Cards, dropdowns</div>
+    </div>
+    <div class="shadow-item" style="box-shadow: var(--dgo-shadow-md);">
+      <div class="shadow-label">md</div>
+      <div class="shadow-desc">Elevated cards</div>
+    </div>
+    <div class="shadow-item" style="box-shadow: var(--dgo-shadow-lg);">
+      <div class="shadow-label">lg</div>
+      <div class="shadow-desc">Modals, popovers</div>
+    </div>
+    <div class="shadow-item" style="box-shadow: var(--dgo-shadow-xl);">
+      <div class="shadow-label">xl</div>
+      <div class="shadow-desc">Large overlays</div>
+    </div>
+  </div>
+
+  <p style="margin-top: 24px; font-size: 12px; color: var(--dgo-ink-500); max-width: 500px;">
+    All shadows use green-tinted <code>rgba(5, 88, 59, *)</code> to feel branded rather than generic gray.
+  </p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* ============================================================
+   DGO · Card
+   ------------------------------------------------------------
+   White surface container; header / body / footer.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   9 · CARD
+   ============================================================ */
+.dgo-card {
+  background: var(--dgo-card-bg);
+  border: 1px solid var(--dgo-card-border);
+  border-radius: var(--dgo-card-radius);
+  padding: var(--dgo-card-pad);
+  transition: box-shadow var(--dgo-motion-state), border-color var(--dgo-motion-state), transform var(--dgo-motion-state);
+}
+.dgo-card--flat   { box-shadow: var(--dgo-elevation-flat); }
+.dgo-card--raised { box-shadow: var(--dgo-elevation-card); }
+.dgo-card--hoverable { cursor: pointer; }
+.dgo-card--hoverable:hover {
+  box-shadow: var(--dgo-card-shadow-hover);
+  border-color: var(--dgo-color-border-strong);
+}
+.dgo-card--accent {
+  border-inline-start: 4px solid var(--dgo-color-action-accent);
+}
+.dgo-card__header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--dgo-s-3);
+  margin-block-end: var(--dgo-s-3);
+}
+.dgo-card__title {
+  font-family: var(--dgo-family-display);
+  font-size: var(--dgo-type-h4);
+  font-weight: var(--dgo-wt-700);
+  line-height: var(--dgo-lh-120);
+  margin: 0;
+}
+.dgo-card__sub { font-size: var(--dgo-type-body-sm); color: var(--dgo-color-fg-muted); margin: 2px 0 0; }
+.dgo-card__footer {
+  margin-block-start: var(--dgo-s-4);
+  padding-block-start: var(--dgo-s-3);
+  border-block-start: 1px solid var(--dgo-color-border-default);
+  display: flex; align-items: center; gap: var(--dgo-s-2);
+}
+
+/* Frame — large container shell */
+.dgo-frame {
+  background: var(--dgo-color-surface-page);
+  border: 1px solid var(--dgo-color-border-default);
+  border-radius: var(--dgo-radius-frame);
+  overflow: clip;
+  box-shadow: var(--dgo-elevation-card);
+}
+

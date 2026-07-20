@@ -1,0 +1,28 @@
+/* ============================================================
+   DGO · Topbar
+   ------------------------------------------------------------
+   Application top bar / app header chrome.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   14 · TOPBAR
+   ============================================================ */
+.dgo-topbar {
+  display: flex; align-items: center; gap: var(--dgo-s-4);
+  block-size: var(--dgo-topbar-h);
+  padding-inline: var(--dgo-s-5);
+  background: var(--dgo-topbar-bg);
+  border-block-end: 1px solid var(--dgo-topbar-border);
+  position: sticky; inset-block-start: 0;
+  z-index: var(--dgo-z-sticky);
+}
+

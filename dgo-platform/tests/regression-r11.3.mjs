@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const settings=read('modules/settings.js'),bulk=read('modules/bulk-assignment.js'),state=read('core/state.js'),hc=read('styles/revised-dgo/tokens.theme-hc.css'),router=read('core/router.js'),corr=read('modules/correspondence.js'),shell=read('shared/shell.js');
+assert.match(settings,/esc\(s\.profile\.name\)/);assert.match(settings,/\.\.\.State\.get\(\)\.settings/);assert.match(state,/endpoints:\{\.\.\.DefaultEndpointSettings/);assert.match(bulk,/split\(\/\[\\s,;\]\+\//);assert.match(bulk,/AppConfig\.maxBulkAssign/);assert.match(hc,/high-contrast/);assert.doesNotMatch(hc,/data-theme="hc"/);assert.match(router,/canAccess/);assert.match(router,/generation/);assert.doesNotMatch(shell,/navEl\.addEventListener\('pointerdown', collapse\)/);assert.match(shell,/disconnectedCallback/);console.log('R11.3 regression contracts: PASS');
+const loader=read('core/data-loader.js'),boot=read('core/boot.js');assert.match(loader,/FETCH_ALL/);assert.match(loader,/FETCH_ACTIVITIES/);assert.match(boot,/loadRuntimeData/);

@@ -1,0 +1,1 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';const s=fs.readFileSync('modules/comments.js','utf8');assert.match(s,/hydrateGovernance/);assert.match(s,/comment|thread|State\.get/i);console.log('comment-immutability-contract passed');

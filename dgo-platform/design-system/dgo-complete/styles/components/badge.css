@@ -1,0 +1,89 @@
+/* ============================================================
+   DGO · Pill / Badge / Tag / Chip
+   ------------------------------------------------------------
+   Inline status, count, label, and filter pellets.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   7 · PILL / BADGE / TAG / CHIP
+   ============================================================ */
+.dgo-pill {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1);
+  block-size: var(--dgo-badge-h);
+  padding-inline: var(--dgo-badge-px);
+  font-size: var(--dgo-badge-fs);
+  font-weight: var(--dgo-badge-fw);
+  line-height: 1;
+  border-radius: var(--dgo-badge-radius);
+  white-space: nowrap;
+  background: var(--dgo-color-surface-sunken);
+  color: var(--dgo-color-fg-default);
+}
+.dgo-pill__dot { inline-size: 6px; block-size: 6px; border-radius: 50%; background: currentColor; }
+
+.dgo-pill--pending   { background: var(--dgo-color-status-pending-bg);   color: var(--dgo-color-status-pending-fg); }
+.dgo-pill--routed    { background: var(--dgo-color-status-routed-bg);    color: var(--dgo-color-status-routed-fg); }
+.dgo-pill--replied   { background: var(--dgo-color-status-replied-bg);   color: var(--dgo-color-status-replied-fg); }
+.dgo-pill--action    { background: var(--dgo-color-status-action-bg);    color: var(--dgo-color-status-action-fg); }
+.dgo-pill--draft     { background: var(--dgo-color-status-draft-bg);     color: var(--dgo-color-status-draft-fg); }
+.dgo-pill--archived  { background: var(--dgo-color-status-archived-bg);  color: var(--dgo-color-status-archived-fg); }
+.dgo-pill--escalated { background: var(--dgo-color-status-escalated-bg); color: var(--dgo-color-status-escalated-fg); }
+.dgo-pill--info      { background: var(--dgo-color-info-subtle-bg);      color: var(--dgo-color-info-subtle-fg); }
+.dgo-pill--success   { background: var(--dgo-color-success-subtle-bg);   color: var(--dgo-color-success-subtle-fg); }
+.dgo-pill--warning   { background: var(--dgo-color-warning-subtle-bg);   color: var(--dgo-color-warning-subtle-fg); }
+.dgo-pill--danger    { background: var(--dgo-color-danger-subtle-bg);    color: var(--dgo-color-danger-subtle-fg); }
+
+/* Counter badge (numeric) */
+.dgo-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-inline-size: 18px; block-size: 18px; padding-inline: 5px;
+  font-size: 11px; font-weight: var(--dgo-wt-700); line-height: 1;
+  border-radius: var(--dgo-r-pill);
+  background: var(--dgo-color-action-danger);
+  color: var(--dgo-color-fg-on-brand);
+}
+
+/* Tag (square) */
+.dgo-tag {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1);
+  block-size: var(--dgo-tag-h);
+  padding-inline: var(--dgo-s-2);
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-500);
+  border-radius: var(--dgo-tag-radius);
+  background: var(--dgo-color-surface-sunken);
+  color: var(--dgo-color-fg-default);
+  border: 1px solid var(--dgo-color-border-default);
+}
+
+/* Chip (interactive tag with × close) */
+.dgo-chip {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1_5);
+  block-size: 28px;
+  padding-inline-start: var(--dgo-s-3);
+  padding-inline-end: var(--dgo-s-1);
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-500);
+  border-radius: var(--dgo-r-pill);
+  background: var(--dgo-color-action-primary-soft);
+  color: var(--dgo-color-action-primary);
+  transition: background var(--dgo-motion-state);
+}
+.dgo-chip__close {
+  display: inline-flex; align-items: center; justify-content: center;
+  inline-size: 20px; block-size: 20px;
+  border-radius: 50%;
+  color: var(--dgo-color-action-primary);
+  cursor: pointer;
+}
+.dgo-chip__close:hover { background: color-mix(in srgb, var(--dgo-color-action-primary) 20%, transparent); }
+

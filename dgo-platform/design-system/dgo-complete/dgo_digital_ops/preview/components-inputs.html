@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Form Inputs" subtitle="Text, select, textarea, checkbox, radio" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Inputs</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: var(--dgo-font-body);
+      background: white;
+    }
+    .demo {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="demo">
+    <div class="dgo-field">
+      <label>Task Title</label>
+      <input type="text" class="dgo-input" placeholder="Enter task title">
+      <span class="helper">Brief description of the task</span>
+    </div>
+
+    <div class="dgo-field">
+      <label>Department</label>
+      <select class="dgo-select">
+        <option>Select department</option>
+        <option>Finance</option>
+        <option>Operations</option>
+        <option>Technical</option>
+      </select>
+    </div>
+
+    <div class="dgo-field">
+      <label>Description</label>
+      <textarea class="dgo-textarea" placeholder="Enter detailed description"></textarea>
+    </div>
+
+    <div class="dgo-field has-error">
+      <label>Email</label>
+      <input type="email" class="dgo-input" value="invalid-email">
+      <span class="error">Please enter a valid email address</span>
+    </div>
+
+    <label class="dgo-checkbox">
+      <input type="checkbox">
+      Send notification to assigned user
+    </label>
+
+    <label class="dgo-radio">
+      <input type="radio" name="priority">
+      High Priority
+    </label>
+  </div>
+</body>
+</html>

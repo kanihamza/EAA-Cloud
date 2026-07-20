@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="DGO Email Templates" subtitle="3 responsive email templates for tasks and announcements" -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGO Email Templates</title>
+  <link rel="stylesheet" href="../../tokens.css">
+  <link rel="stylesheet" href="../../components.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: var(--dgo-font-body);
+      background: var(--dgo-surface-alt);
+    }
+    .template-grid {
+      display: grid;
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .template {
+      background: white;
+      border: 1px solid var(--dgo-border);
+      border-radius: var(--dgo-radius-lg);
+      overflow: hidden;
+    }
+    .template-header {
+      padding: 16px 20px;
+      background: var(--dgo-surface-muted);
+      border-bottom: 1px solid var(--dgo-border);
+    }
+    .template-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dgo-ink-900);
+    }
+    .template-desc {
+      margin: 4px 0 0 0;
+      font-size: 12px;
+      color: var(--dgo-ink-500);
+    }
+    .template-body {
+      padding: 0;
+    }
+    .email-preview {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      font-family: Verdana, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .email-header {
+      background: #05583B;
+      padding: 24px;
+      text-align: center;
+    }
+    .email-logo {
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .email-tagline {
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .email-content {
+      padding: 32px 24px;
+    }
+    .email-greeting {
+      margin: 0 0 16px 0;
+      color: #1B1A1A;
+      font-weight: 600;
+    }
+    .email-body {
+      margin: 0 0 24px 0;
+      color: #373435;
+    }
+    .email-cta {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #05583B;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin: 8px 0;
+    }
+    .email-meta {
+      padding: 16px 24px;
+      background: #FAF9F9;
+      border-top: 1px solid #E8E6E7;
+      font-size: 12px;
+      color: #5F5C5D;
+    }
+    .email-footer {
+      padding: 24px;
+      background: #F5F4F4;
+      text-align: center;
+      font-size: 11px;
+      color: #5F5C5D;
+      border-top: 3px solid #17B255;
+    }
+    .email-footer strong {
+      color: #373435;
+      display: block;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body class="dgo">
+  <div class="template-grid">
+    
+    <!-- Single Task Template -->
+    <div class="template">
+      <div class="template-header">
+        <h3 class="template-title">Single Task Assignment</h3>
+        <p class="template-desc">Individual task notification with action required</p>
+      </div>
+      <div class="template-body">
+        <div class="email-preview">
+          <div class="email-header">
+            <div class="email-logo">DG●</div>
+            <div class="email-tagline">DIGITAL OPS</div>
+          </div>
+          <div class="email-content">
+            <p class="email-greeting">Dear John Adebayo,</p>
+            <p class="email-body">
+              You have been assigned a new task that requires your attention.
+            </p>
+            <div style="background: #FAF9F9; padding: 16px; border-left: 3px solid #17B255; margin: 16px 0; border-radius: 4px;">
+              <div style="font-weight: 600; color: #1B1A1A; margin-bottom: 8px;">Task #00423: Review Q2 Budget Report</div>
+              <div style="font-size: 13px; color: #5F5C5D; margin-bottom: 4px;"><strong>Department:</strong> Finance Division</div>
+              <div style="font-size: 13px; color: #5F5C5D; margin-bottom: 4px;"><strong>Priority:</strong> High</div>
+              <div style="font-size: 13px; color: #5F5C5D;"><strong>Due Date:</strong> May 20, 2026</div>
+            </div>
+            <p class="email-body">
+              Please review the attached documentation and provide your feedback by the due date.
+            </p>
+            <a href="#" class="email-cta">View Task Details</a>
+          </div>
+          <div class="email-meta">
+            <strong>Task ID:</strong> #00423<br>
+            <strong>Assigned by:</strong> System Administrator<br>
+            <strong>Date:</strong> May 14, 2026 at 10:30 AM
+          </div>
+          <div class="email-footer">
+            <strong>DGO Digital Ops</strong>
+            An initiative of NITDA<br>
+            National Information Technology Development Agency<br>
+            No. 28, Port Harcourt Crescent, Area 11, Garki, Abuja
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bulk Message Template -->
+    <div class="template">
+      <div class="template-header">
+        <h3 class="template-title">Bulk Announcement</h3>
+        <p class="template-desc">Agency-wide announcements and updates</p>
+      </div>
+      <div class="template-body">
+        <div class="email-preview">
+          <div class="email-header">
+            <div class="email-logo">DG●</div>
+            <div class="email-tagline">DIGITAL OPS</div>
+          </div>
+          <div class="email-content">
+            <p class="email-greeting">Dear Team,</p>
+            <div style="background: #E6EEEB; padding: 20px; border-radius: 8px; margin: 16px 0; text-align: center;">
+              <div style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; color: #05583B; margin-bottom: 8px;">
+                System Maintenance Notice
+              </div>
+              <div style="font-size: 13px; color: #5F5C5D;">Scheduled Downtime: May 20, 2026</div>
+            </div>
+            <p class="email-body">
+              This is to inform all staff that scheduled system maintenance will be conducted on <strong>Sunday, May 20, 2026</strong> from <strong>2:00 AM to 6:00 AM</strong>.
+            </p>
+            <p class="email-body">
+              During this period, the DGO Digital Ops platform and related services will be temporarily unavailable. Please ensure all pending tasks are completed before the maintenance window.
+            </p>
+            <p class="email-body">
+              We apologize for any inconvenience this may cause and appreciate your understanding.
+            </p>
+            <div style="margin: 24px 0; padding: 16px; background: #FDF1DF; border-left: 3px solid #E1A100; border-radius: 4px;">
+              <div style="font-weight: 600; color: #7A5800; margin-bottom: 4px;">Action Required</div>
+              <div style="font-size: 13px; color: #5F5C5D;">Save all work and log out before 2:00 AM on May 20.</div>
+            </div>
+          </div>
+          <div class="email-footer">
+            <strong>DGO Digital Ops</strong>
+            An initiative of NITDA<br>
+            This message was sent to 247 recipients
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status Update Template -->
+    <div class="template">
+      <div class="template-header">
+        <h3 class="template-title">Task Status Update</h3>
+        <p class="template-desc">Automated notifications for task progress</p>
+      </div>
+      <div class="template-body">
+        <div class="email-preview">
+          <div class="email-header">
+            <div class="email-logo">DG●</div>
+            <div class="email-tagline">DIGITAL OPS</div>
+          </div>
+          <div class="email-content">
+            <p class="email-greeting">Dear Sarah Okafor,</p>
+            <p class="email-body">
+              The status of your task has been updated.
+            </p>
+            <div style="background: #FAF9F9; padding: 16px; border-radius: 8px; margin: 16px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <div style="font-weight: 600; color: #1B1A1A;">Task #00421: Update Security Policy</div>
+                <div style="background: rgba(23,178,85,0.15); color: #119143; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 600;">
+                  COMPLETED
+                </div>
+              </div>
+              <div style="font-size: 13px; color: #5F5C5D; line-height: 1.8;">
+                <div><strong>Updated by:</strong> John Adebayo (Operations Team)</div>
+                <div><strong>Completion Date:</strong> May 14, 2026 at 3:45 PM</div>
+                <div><strong>Comments:</strong> Policy document reviewed and approved by legal team. Ready for implementation.</div>
+              </div>
+            </div>
+            <a href="#" class="email-cta">View Task History</a>
+          </div>
+          <div class="email-footer">
+            <strong>DGO Digital Ops</strong>
+            An initiative of NITDA<br>
+            You're receiving this because you're assigned to this task
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width: 800px; margin: 48px auto; padding: 24px; background: white; border: 1px solid var(--dgo-border); border-radius: var(--dgo-radius-lg);">
+    <h2 style="margin: 0 0 16px 0; font-size: 18px; color: var(--dgo-ink-900);">Email Template Guidelines</h2>
+    <ul style="margin: 0; padding-left: 20px; line-height: 1.8; color: var(--dgo-ink-700); font-size: 13px;">
+      <li><strong>Header:</strong> Always use Deep Green (#05583B) background with white DGO logo</li>
+      <li><strong>Width:</strong> Max 600px for optimal rendering across email clients</li>
+      <li><strong>Fonts:</strong> Use web-safe Verdana for body text; inline font styles only</li>
+      <li><strong>CTAs:</strong> Primary action buttons use Deep Green with 8px radius</li>
+      <li><strong>Footer:</strong> Include NITDA endorsement and contact information</li>
+      <li><strong>Accent Line:</strong> 3px Smart Green border-top on footer for brand consistency</li>
+    </ul>
+  </div>
+</body>
+</html>

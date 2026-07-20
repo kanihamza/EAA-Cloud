@@ -1,0 +1,50 @@
+/* ============================================================
+   DGO · Menu & Dropdown
+   ------------------------------------------------------------
+   Click-anchored action lists.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   20 · MENU / DROPDOWN
+   ============================================================ */
+.dgo-menu {
+  background: var(--dgo-color-surface-raised);
+  border: 1px solid var(--dgo-color-border-default);
+  border-radius: var(--dgo-radius-card);
+  padding: var(--dgo-s-1);
+  box-shadow: var(--dgo-popover-shadow);
+  min-inline-size: 200px;
+}
+.dgo-menu__item {
+  display: flex; align-items: center; gap: var(--dgo-s-2);
+  padding: var(--dgo-s-2) var(--dgo-s-3);
+  border-radius: var(--dgo-r-6);
+  font-size: var(--dgo-type-body-sm);
+  color: var(--dgo-color-fg-default);
+  text-decoration: none;
+  cursor: pointer;
+}
+.dgo-menu__item:hover, .dgo-menu__item:focus-visible {
+  background: var(--dgo-color-surface-sunken);
+  outline: none;
+}
+.dgo-menu__item--danger { color: var(--dgo-color-action-danger); }
+.dgo-menu__item--danger:hover { background: var(--dgo-color-danger-subtle-bg); }
+.dgo-menu__sep { block-size: 1px; background: var(--dgo-color-border-default); margin: var(--dgo-s-1) 0; }
+.dgo-menu__label {
+  font-size: var(--dgo-type-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--dgo-tr-wide);
+  color: var(--dgo-color-fg-muted);
+  padding: var(--dgo-s-2) var(--dgo-s-3) var(--dgo-s-1);
+}
+

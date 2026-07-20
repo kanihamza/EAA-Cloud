@@ -1,0 +1,12 @@
+export const FetchPolicy = Object.freeze({
+  defaults: { timeoutMs:45000, retry:1, dedupe:true, staleWhileRevalidate:true, cacheTtlMs:300000, backgroundRefresh:false },
+  endpoints: {
+    FETCH_ALL: { timeoutMs:60000, retry:1, dedupe:true, staleWhileRevalidate:true, cacheTtlMs:600000, payloadBudgetBytes:6500000 },
+    FETCH_ACTIVITIES: { timeoutMs:45000, retry:1, dedupe:true, staleWhileRevalidate:true, cacheTtlMs:300000, payloadBudgetBytes:2500000 },
+    AI_CHAT: { timeoutMs:45000, retry:0, dedupe:false, staleWhileRevalidate:false, cacheTtlMs:0, payloadBudgetBytes:500000 },
+    DYNAMIC_ACTIONS: { timeoutMs:45000, retry:0, dedupe:false, staleWhileRevalidate:false, cacheTtlMs:0, payloadBudgetBytes:1000000 },
+    OTP_GENERATE: { timeoutMs:20000, retry:0, dedupe:false, staleWhileRevalidate:false, cacheTtlMs:0 },
+    OTP_VERIFY: { timeoutMs:20000, retry:0, dedupe:false, staleWhileRevalidate:false, cacheTtlMs:0 }
+  }
+});
+export function fetchPolicyFor(key){ return Object.freeze({ ...FetchPolicy.defaults, ...(FetchPolicy.endpoints[key]||{}) }); }

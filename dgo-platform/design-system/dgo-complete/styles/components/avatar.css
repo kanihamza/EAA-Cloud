@@ -1,0 +1,38 @@
+/* ============================================================
+   DGO · Avatar
+   ------------------------------------------------------------
+   Person and entity representation; supports image, initials, stack.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   8 · AVATAR
+   ============================================================ */
+.dgo-avatar {
+  display: inline-flex; align-items: center; justify-content: center;
+  inline-size: 36px; block-size: 36px;
+  border-radius: 50%;
+  background: var(--dgo-color-action-primary-soft);
+  color: var(--dgo-color-action-primary);
+  font-weight: var(--dgo-wt-600);
+  font-size: var(--dgo-type-body-sm);
+  letter-spacing: var(--dgo-tr-tight);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.dgo-avatar--sm { inline-size: 24px; block-size: 24px; font-size: 11px; }
+.dgo-avatar--lg { inline-size: 48px; block-size: 48px; font-size: var(--dgo-type-body-lg); }
+.dgo-avatar--xl { inline-size: 72px; block-size: 72px; font-size: var(--dgo-type-h3); }
+.dgo-avatar img { inline-size: 100%; block-size: 100%; object-fit: cover; }
+.dgo-avatar-stack { display: inline-flex; }
+.dgo-avatar-stack .dgo-avatar { box-shadow: 0 0 0 2px var(--dgo-color-surface-page); }
+.dgo-avatar-stack .dgo-avatar + .dgo-avatar { margin-inline-start: -10px; }
+

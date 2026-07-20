@@ -1,0 +1,109 @@
+/* ============================================================
+   DGO · Input & Textarea
+   ------------------------------------------------------------
+   Single-line and multi-line text controls with label, help, and error affordances.
+
+   Layer:        dgo-component
+   Namespace:    .dgo-* (BEM)
+   Depends on:   tokens/tokens.primitive.css
+                 tokens/tokens.semantic.css
+                 tokens/tokens.component.css
+                 tokens/tokens.density.css
+                 styles/base.css
+   No hard-coded colors, sizes, or durations — every value is a var().
+   ============================================================ */
+
+/* ============================================================
+   2 · INPUT / TEXTAREA
+   ============================================================ */
+.dgo-input,
+.dgo-textarea,
+.dgo-select__field {
+  display: block;
+  inline-size: 100%;
+  block-size: var(--dgo-input-h);
+  padding-inline: var(--dgo-input-px);
+  padding-block: 0;
+  font-family: var(--dgo-family-sans);
+  font-size: var(--dgo-type-body);
+  color: var(--dgo-color-fg-default);
+  background: var(--dgo-input-bg);
+  border: 1px solid var(--dgo-input-border);
+  border-radius: var(--dgo-input-radius);
+  transition: border-color var(--dgo-motion-state), box-shadow var(--dgo-motion-state), background-color var(--dgo-motion-state);
+}
+.dgo-input::placeholder,
+.dgo-textarea::placeholder { color: var(--dgo-input-placeholder); }
+
+.dgo-input:hover:not(:disabled),
+.dgo-textarea:hover:not(:disabled),
+.dgo-select__field:hover:not(:disabled) { border-color: var(--dgo-input-border-hover); }
+
+.dgo-input:focus-visible,
+.dgo-textarea:focus-visible,
+.dgo-select__field:focus-visible {
+  outline: none;
+  border-color: var(--dgo-input-border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dgo-color-action-primary) 22%, transparent);
+}
+
+.dgo-input:disabled,
+.dgo-textarea:disabled,
+.dgo-select__field:disabled {
+  background: var(--dgo-input-bg-disabled);
+  color: var(--dgo-color-fg-disabled);
+  cursor: not-allowed;
+}
+
+.dgo-input[aria-invalid="true"],
+.dgo-textarea[aria-invalid="true"],
+.dgo-select__field[aria-invalid="true"] { border-color: var(--dgo-input-border-error); }
+
+.dgo-textarea {
+  block-size: auto;
+  min-block-size: calc(var(--dgo-input-h) * 2.5);
+  padding-block: var(--dgo-s-2);
+  resize: vertical;
+  line-height: var(--dgo-lh-150);
+}
+
+/* Form field wrapper */
+.dgo-field { display: flex; flex-direction: column; gap: var(--dgo-s-1_5); }
+.dgo-field__label {
+  font-size: var(--dgo-type-body-sm);
+  font-weight: var(--dgo-wt-600);
+  color: var(--dgo-color-fg-default);
+}
+.dgo-field__label--req::after { content: " *"; color: var(--dgo-color-action-danger); }
+.dgo-field__help { font-size: var(--dgo-type-caption); color: var(--dgo-color-fg-muted); }
+.dgo-field__error {
+  font-size: var(--dgo-type-caption);
+  color: var(--dgo-color-danger-subtle-fg);
+  display: flex; align-items: center; gap: var(--dgo-s-1);
+}
+
+/* Input with leading/trailing affordance */
+.dgo-input-group {
+  display: flex; align-items: stretch;
+  border: 1px solid var(--dgo-input-border);
+  border-radius: var(--dgo-input-radius);
+  background: var(--dgo-input-bg);
+  overflow: hidden;
+}
+.dgo-input-group:focus-within {
+  border-color: var(--dgo-input-border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dgo-color-action-primary) 22%, transparent);
+}
+.dgo-input-group > .dgo-input,
+.dgo-input-group > .dgo-select__field {
+  border: 0; border-radius: 0;
+}
+.dgo-input-group > .dgo-input:focus-visible { box-shadow: none; }
+.dgo-input-group__addon {
+  display: inline-flex; align-items: center; gap: var(--dgo-s-1);
+  padding-inline: var(--dgo-s-3);
+  color: var(--dgo-color-fg-muted);
+  background: var(--dgo-color-surface-sunken);
+  font-size: var(--dgo-type-body-sm);
+}
+
