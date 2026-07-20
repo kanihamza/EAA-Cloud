@@ -12,4 +12,13 @@ export const table = (cols, rows, rowAttr) => rows.length
   : emptyState('No records', 'Nothing to show for the current filter.');
 export const listItem = (r, active, title, meta, id) => `<div class="list-item dgo-card ${active?'active':''}" data-ref="${esc(id)}"><h4>${esc(title)}</h4><div class="meta">${esc(meta)}</div></div>`;
 
+// R11.6.2 master-detail view switching. On narrow viewports a data-md split shows one
+// view at a time; mdBack() renders the portrait-only return control, mdSwitch() computes
+// the attribute, and resetDetailScroll() pins the detail pane back to its top whenever a
+// new row is selected (each pane is an independent scroll region on desktop).
+export const mdBack = (label='Back to list') => `<button type="button" class="btn ghost md-back" data-md-back>← ${esc(label)}</button>`;
+export const mdSwitch = view => `data-md="${view==='detail'?'detail':'list'}"`;
+export const resetDetailScroll = el => { const d=el?.querySelector?.('[data-md]>*:last-child'); if(d&&typeof d.scrollTo==='function')d.scrollTo(0,0); };
+export const resetWorkspaceScroll = () => { const m=typeof document!=='undefined'?document.querySelector('main'):null; if(m)m.scrollTop=0; };
+
 export const authorityCard = (role, owns=[], excludes=[]) => `<section class="panel boundary-note"><div class="eyebrow">Module Authority</div><p><b>${esc(role)}</b></p><p class="meta">Owns: ${esc((owns||[]).join(', '))}</p><p class="meta">Does not own: ${esc((excludes||[]).join(', '))}</p></section>`;

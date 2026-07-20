@@ -1,3 +1,30 @@
+# R11.6.2 View Behaviour, Pane Independence & Panel Separation
+
+## View switching (defects 1 & 2)
+- Master-detail workspaces (activities, correspondence, registry, approvals, dispatch, acknowledgment, orchestrator, response-tracking, lookup, executive) now carry an explicit `data-md` view state. On portrait/narrow viewports exactly one view shows at a time: the queue (`list`) or the selected record (`detail`) with a dedicated back control; row selection switches to the detail view instead of rendering below the fold.
+- On desktop, selecting a row resets the detail pane's scroll position so the new record always opens at its top.
+- The router resets workspace scroll on every route change; tab-style view switches (correspondence tracker/emails/log-new, FastTrack sub-views) also reset scroll.
+
+## Pane scrolling independence (defect 3)
+- Each side of a split (and each column of the DG/CEO tri-pane) is now its own bounded scroll region on desktop: scrolling the item list no longer drags the detail pane along, and the detail of the selected item stays in place while browsing long queues.
+
+## Panel separation with visibility logic (defect 4)
+- Detail columns are now `panel-stack`s of independent panels instead of one merged panel:
+  activities (Work Record / Update Work State [reveal-on-request] / Work Journal), registry
+  (File Jacket / Minute & Route form [reveal-on-request] / Custody Chain), correspondence
+  (Record Details / Triage & Disposition [reveal-on-request] / Linked Tasks / Threads),
+  executive (Details / AI Preview / Linked Tasks / Threads / Audit Trail / EA Routing),
+  dispatch (Record / Execute Dispatch [only when eligible] / Closure [only after dispatch]),
+  approvals (Request / Decision or Decision Record), orchestrator (Record / Actions /
+  Reminder), acknowledgment (Notice / Receipt Actions), response-tracking (Trace Details /
+  Minute Sheet), lookup (Details / per-type action or form or message-body panels).
+- Forms are hidden until requested via explicit toggles (`Update work state`, `Minute / Route file`, `Triage / Update`) and close on save/cancel.
+
+## New contract
+- `view-pane-contract` — asserts data-md switching, back controls, selection→detail behaviour, scroll-reset wiring, panel-stack separation, reveal-on-request toggles, independent-pane CSS and router scroll reset.
+
+---
+
 # R11.6.1 Modules & Workspace Review (Obsidian hardened baseline)
 
 ## Sectioning, responsiveness and state management

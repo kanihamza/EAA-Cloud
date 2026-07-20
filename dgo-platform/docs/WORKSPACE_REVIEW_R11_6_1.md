@@ -47,3 +47,18 @@ and user journeys. Every defect below was resolved in this pass; the full contra
   `theme-token-contract` (asserts token definitions and per-theme overrides; bans off-brand hexes),
   `journey-provisioning-contract` (nav/route agreement; dispatch gate + records; acknowledgment remind; approvals history; uniform UIState adoption).
 - Mount simulation confirms all 23 route modules render non-empty sectioned output without error.
+
+---
+
+# Addendum — R11.6.2 View Behaviour, Pane Independence & Panel Separation
+
+Platform-wide trace of four reported defect classes; every occurrence resolved.
+
+| # | Defect (as reported) | Root cause found | Resolution |
+|---|----------------------|------------------|------------|
+| V1 | Poor view-switching logic, most prominent in portrait mode | Splits collapsed to a single stacked column on narrow viewports; both "views" rendered at once with no navigation between them; workspace scroll position leaked across route/tab changes | `data-md` one-view-at-a-time model on all 10 master-detail workspaces with portrait back controls; router resets scroll on route change; tab switches (correspondence, FastTrack) reset scroll |
+| V2 | Row selection doesn't switch to the expected view | Selection only re-rendered the (off-screen) detail; no view transition, no scroll reset | Row selection sets `md:'detail'` (portrait switches view) and `resetDetailScroll()` opens the record at its top on desktop |
+| V3 | Scrolling one pane scrolls another; detail pane doesn't stay fixed | The main workspace was the single scroll container for both columns | Each split/tri-pane column is its own bounded scroll region (`--pane-max`), so the queue and the detail scroll independently and the selected record stays in view |
+| V4 | Sections merged into one panel (details fused with forms) | Detail markup concatenated record info, edit forms, journals and routing forms into one `.panel` | Detail columns rebuilt as `panel-stack`s of independent panels; edit/minute/triage forms are separate panels revealed only on request (toggle), with cancel/save closing them; conditional panels (dispatch execution, closure, EA routing, decision record) carry their own visibility criteria |
+
+Verification: full suite passes (117 checks) including the new `view-pane-contract`; all 23 modules still mount and render sectioned output in simulation.

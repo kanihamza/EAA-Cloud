@@ -101,3 +101,34 @@ tr.row-active>td{background:var(--sunken)}
 /* R11.6.1 workspace review: responsive refinements. */
 @media(max-width:1280px) and (min-width:1001px){.dg-layout{grid-template-columns:minmax(260px,1fr) minmax(0,1.6fr)}.dg-layout .panel-actions{grid-column:1/-1}}
 @media(max-width:560px){.recip-input-row input{min-width:0;flex:1}.toolbar select{max-width:none}.action-ribbon{padding:6px}.actions{grid-template-columns:1fr}}
+
+/* R11.6.2 pane independence & view switching.
+   Defect 3: sections/panes must scroll independently — on desktop each side of a
+   master-detail split (and the DG/CEO tri-pane) is its own bounded scroll region,
+   so scrolling the item list never drags the detail pane along (and vice versa).
+   Defect 1/2: on portrait/narrow viewports a split shows ONE view at a time —
+   data-md="list" shows the queue, data-md="detail" shows the selected record with
+   an explicit back control; row selection switches the view. Splits without
+   selection semantics carry no data-md and keep stacked flow. */
+.panel-stack{display:flex;flex-direction:column;gap:10px;min-width:0}
+.panel-stack>.panel{min-height:0;flex:0 0 auto}
+.md-back{display:none}
+.split{--pane-max:calc(100dvh - var(--ministry) - var(--header) - var(--footer) - 28px)}
+.dg-layout{--pane-max:calc(100dvh - var(--ministry) - var(--header) - var(--footer) - 28px)}
+@media(min-width:901px){
+  .split>*{max-height:var(--pane-max);overflow-y:auto;overflow-x:hidden;min-height:0}
+}
+@media(min-width:1001px){
+  .dg-layout>*{max-height:var(--pane-max);overflow-y:auto;overflow-x:hidden;min-height:0}
+}
+@media(max-width:900px){
+  .md-back{display:inline-flex;margin-bottom:8px}
+  .split[data-md="detail"]>*:first-child{display:none}
+  .split[data-md="list"]>*:last-child{display:none}
+}
+@media(max-width:1000px){
+  .dg-layout .md-back{display:inline-flex;margin-bottom:8px}
+  .dg-layout[data-md="detail"]>.panel-inbox{display:none}
+  .dg-layout[data-md="list"]>#panel-details{display:none}
+  .dg-layout[data-md="list"]>.panel-actions{display:none}
+}

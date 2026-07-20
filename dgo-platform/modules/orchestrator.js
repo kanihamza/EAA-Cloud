@@ -1,6 +1,6 @@
 import { hydrateGovernance, governedTransition, actor } from '../core/governed-actions.js';
 import { State } from '../core/state.js';
-import { head, esc, table, toast, confirmAction } from '../core/ui.js';
+import { head, esc, table, toast, confirmAction, mdBack, mdSwitch, resetDetailScroll } from '../core/ui.js';
 import { capRows, RenderBudget } from '../core/render-budget.js';
 import { invoke } from '../core/api.js';
 import { dynamicActionContract } from '../config/dynamic-actions.config.js';
@@ -13,16 +13,17 @@ function exportCsv(list) {
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'orchestrator.csv'; a.click();
 }
 function render(el) {
-  const s = State.get(); const u = UIState.get('orchestrator', { q: '', selected: null }); const list = rows(s, u.q); const sel = list.find(t => t.id === u.selected) || null;
+  const s = State.get(); const u = UIState.get('orchestrator', { q: '', selected: null, md: 'list' }); const list = rows(s, u.q); const sel = list.find(t => t.id === u.selected) || null;
   el.innerHTML = `<div class="workspace">${head('Task Orchestrator', 'Cross-linked task lens — status, ownership and downstream routing.')}
     <div class="toolbar"><input data-q placeholder="Search tasks" value="${esc(u.q)}"><div><button class="btn ghost" data-export>Export CSV</button></div></div>
-    <div class="split"><div class="panel">${table([
+    <div class="split" ${mdSwitch(sel?u.md:'list')}><div class="panel">${table([
       { key: 'referenceId', label: 'Reference' }, { key: 'title', label: 'Title' }, { key: 'assignedTo', label: 'Assigned To' },
       { key: 'priority', label: 'Priority' }, { key: 'status', label: 'Status' }], capRows(list, RenderBudget.tableRows), r => `data-id="${esc(r.id)}" class="row-link ${sel && sel.id === r.id ? 'row-active' : ''}"`)}</div>
-    <div class="detail-col panel">${sel ? detail(sel) : '<div class="empty"><h2>Select a task</h2><p>Choose a task row to inspect and update it.</p></div>'}</div></div></div>`;
+    <div class="detail-col panel-stack">${sel ? detail(sel) : '<section class="panel"><div class="empty"><h2>Select a task</h2><p>Choose a task row to inspect and update it.</p></div></section>'}</div></div></div>`;
   {let timer;el.querySelector('[data-q]').oninput=e=>{const value=e.target.value,pos=e.target.selectionStart;clearTimeout(timer);timer=setTimeout(()=>{UIState.set('orchestrator',{q:value});render(el);const input=el.querySelector('[data-q]');input?.focus();input?.setSelectionRange(pos,pos)},150)}}
   el.querySelector('[data-export]').onclick = () => list.length ? exportCsv(list) : toast('Nothing to export', 'error');
-  el.querySelectorAll('tbody tr').forEach(tr => tr.onclick = () => { UIState.set('orchestrator', { selected: tr.dataset.id }); render(el); });
+  el.querySelectorAll('tbody tr').forEach(tr => tr.onclick = () => { UIState.set('orchestrator', { selected: tr.dataset.id, md: 'detail' }); render(el); resetDetailScroll(el); });
+  el.querySelector('[data-md-back]')?.addEventListener('click', () => { UIState.set('orchestrator', { md: 'list' }); render(el); });
   const upd = el.querySelector('[data-mark-done]'); if (upd) upd.onclick = async () => {
     if (!await confirmAction({ title: 'Mark task completed', body: `<p><b>${esc(sel.title)}</b></p>` })) return;
     State.patch({ tracking: s.tracking.map(x => x.id === sel.id ? { ...x, status: 'Completed' } : x) }, { module: 'orchestrator', action: 'task:complete', ref: sel.referenceId || sel.id });
@@ -44,8 +45,8 @@ function render(el) {
   };
 }
 function detail(t) {
-  return `<div class="meta">${esc(t.referenceId || '—')}</div><h2>${esc(t.title)}</h2>
-    <p class="meta">Assigned to: ${esc(t.assignedTo || 'Unassigned')} · Priority: ${esc(t.priority || 'normal')} · Status: ${esc(t.status)}</p>
-    <div class="form-row">${t.status !== 'Completed' ? '<button class="btn" data-mark-done>Mark Completed</button>' : ''}<button class="btn ghost" data-open-comments>Open Comments</button></div>
-    <div class="form-row" data-reminder-row>${t.reminderAt ? `<span class="pill">Reminder: ${esc(t.reminderAt)}</span>` : ''}<label class="sr-reminder">Reminder date<input type="date" data-reminder-due aria-label="Reminder date" value="${esc(t.reminderAt || '')}"></label><button class="btn ghost" data-set-reminder>Set reminder</button></div>`;
+  return `${mdBack('Back to tasks')}<section class="panel"><div class="eyebrow panel-eyebrow">Task Record</div><div class="meta">${esc(t.referenceId || '—')}</div><h2>${esc(t.title)}</h2>
+    <p class="meta">Assigned to: ${esc(t.assignedTo || 'Unassigned')} · Priority: ${esc(t.priority || 'normal')} · Status: ${esc(t.status)}</p></section>
+    <section class="panel"><div class="eyebrow panel-eyebrow">Task Actions</div><div class="form-row">${t.status !== 'Completed' ? '<button class="btn" data-mark-done>Mark Completed</button>' : ''}<button class="btn ghost" data-open-comments>Open Comments</button></div></section>
+    <section class="panel"><div class="eyebrow panel-eyebrow">Reminder</div><div class="form-row" data-reminder-row>${t.reminderAt ? `<span class="pill">Reminder: ${esc(t.reminderAt)}</span>` : ''}<label class="sr-reminder">Reminder date<input type="date" data-reminder-due aria-label="Reminder date" value="${esc(t.reminderAt || '')}"></label><button class="btn ghost" data-set-reminder>Set reminder</button></div></section>`;
 }
