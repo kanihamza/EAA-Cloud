@@ -1,6 +1,6 @@
-import { hydrateGovernance, governedTransition, actor } from '../core/governed-actions.js';
+import { hydrateGovernance, executeOwnedAction } from '../core/governed-actions.js';
 import { State } from '../core/state.js';
-import { head, esc, toast, confirmAction, badge, chips, mdBack, mdSwitch, resetDetailScroll } from '../core/ui.js';
+import { head, esc, toast, confirmAction, badge, chips, mdBack, mdSwitch, resetDetailScroll,fmtDate,fmtDateTime} from '../core/ui.js';
 import { UIState } from '../core/ui-state.js';
 export async function mount(el){hydrateGovernance();render(el); }
 function pending(s) { return s.approvals.filter(a => a["status"] === 'pending'); }
@@ -23,7 +23,7 @@ function render(el) {
   const form = el.querySelector('form.new-approval'); if (form) form.onsubmit = e => {
     e.preventDefault(); const d = Object.fromEntries(new FormData(form));
     const rec = { id: crypto.randomUUID(), ref: d.ref || ('APR-' + Date.now()), title: d.title, from: s.profile.name, summary: d.summary, ts: new Date().toISOString(), status: 'pending' };
-    State.patch({ approvals: [rec, ...s.approvals] }, { module: 'approvals', action: 'approval:create', ref: rec.ref });
+    executeOwnedAction('approvals', 'create-approval', () => State.patch({ approvals: [rec, ...s.approvals] }, { module: 'approvals', action: 'approval:create', ref: rec.ref }), { ref: rec.ref });
     UIState.set('approvals', { creating: false, selected: rec.id }); toast('Approval request submitted', 'success'); render(el);
   };
   ['approve', 'reject'].forEach(kind => {
@@ -33,7 +33,7 @@ function render(el) {
       if (kind === 'reject' && !comment.trim()) { toast('A reason is required to reject', 'error'); return; }
       if (!await confirmAction({ title: kind === 'approve' ? 'Confirm approval' : 'Confirm rejection', body: `<p><b>${esc(sel.title)}</b></p><p>Minute: ${esc(comment || '—')}</p><p>Signed: ${signed ? 'Yes' : 'No'}</p>` })) return;
       const decidedStatus = kind === 'approve' ? 'approved' : 'rejected';
-      State.patch({ approvals: s.approvals.map(a => a.id === sel.id ? { ...a, status: decidedStatus, minute: comment, signed, decidedBy: s.profile.email, decidedAt: new Date().toISOString() } : a) }, { module: 'approvals', action: kind === 'approve' ? 'approval:approve' : 'approval:reject', ref: sel.ref || sel.id });
+      await executeOwnedAction('approvals', kind === 'approve' ? 'approve' : 'reject', () => State.patch({ approvals: s.approvals.map(a => a.id === sel.id ? { ...a, status: decidedStatus, minute: comment, signed, decidedBy: s.profile.email, decidedAt: new Date().toISOString() } : a) }, { module: 'approvals', action: kind === 'approve' ? 'approval:approve' : 'approval:reject', ref: sel.ref || sel.id }), { ref: sel.ref || sel.id });
       UIState.set('approvals', { selected: null }); toast(kind === 'approve' ? 'Approved' : 'Rejected', kind === 'approve' ? 'success' : 'error'); render(el);
     };
   });
@@ -41,12 +41,12 @@ function render(el) {
 function detail(a) {
   const isPending = a.status === 'pending';
   return `${mdBack('Back to approvals')}<section class="panel"><div class="eyebrow panel-eyebrow">Approval Request</div><div class="meta">${esc(a.ref || '—')} · ${badge(isPending ? 'Pending' : a.status === 'approved' ? 'Approved' : 'Rejected', a.status === 'approved' ? 'ok' : a.status === 'rejected' ? 'danger' : '')}</div><h2>${esc(a.title)}</h2>
-    <p class="meta">Submitted by ${esc(a.from || '—')} · ${esc(String(a.ts).slice(0, 10))}</p>
+    <p class="meta">Submitted by ${esc(a.from || '—')} · ${esc(fmtDate(a.ts))}</p>
     <p>${esc(a.summary || 'No summary provided.')}</p></section>
     ${isPending ? `<section class="panel"><div class="eyebrow panel-eyebrow">Decision</div><label class="wide">Minute<textarea id="ap-comment" rows="3" placeholder="Record a minute for this decision"></textarea></label>
     <label class="check-inline"><input type="checkbox" id="ap-sign"> Digitally sign this decision</label>
     <div class="form-row"><button class="btn" data-approve>Approve</button><button class="btn ghost" data-reject>Reject</button></div></section>`
-    : `<section class="panel"><div class="eyebrow panel-eyebrow">Decision Record</div><dl class="detail-grid"><dt>Decision</dt><dd>${esc(a.status)}</dd><dt>Decided by</dt><dd>${esc(a.decidedBy || '—')}</dd><dt>Decided at</dt><dd>${esc(String(a.decidedAt || '').slice(0, 16).replace('T', ' ') || '—')}</dd><dt>Signed</dt><dd>${a.signed ? 'Yes' : 'No'}</dd><dt>Minute</dt><dd>${esc(a.minute || '—')}</dd></dl></section>`}`;
+    : `<section class="panel"><div class="eyebrow panel-eyebrow">Decision Record</div><dl class="detail-grid"><dt>Decision</dt><dd>${esc(a.status)}</dd><dt>Decided by</dt><dd>${esc(a.decidedBy || '—')}</dd><dt>Decided at</dt><dd>${esc(fmtDateTime(a.decidedAt || '') || '—')}</dd><dt>Signed</dt><dd>${a.signed ? 'Yes' : 'No'}</dd><dt>Minute</dt><dd>${esc(a.minute || '—')}</dd></dl></section>`}`;
 }
 function createForm() {
   return `<form class="grid new-approval"><h2 class="grid-title">New Approval Request</h2>

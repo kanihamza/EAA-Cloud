@@ -1,4 +1,4 @@
-import { hydrateGovernance, governedTransition, actor } from '../core/governed-actions.js';
+import { hydrateGovernance, executeOwnedAction } from '../core/governed-actions.js';
 import { State } from '../core/state.js';
 import { head, esc, toast, confirmAction } from '../core/ui.js';
 import { UIState } from '../core/ui-state.js';
@@ -36,7 +36,7 @@ function render(el) {
     if (!d.email.includes('@')) { toast('Enter a valid email address', 'error'); return; }
     const rec = { id: editing?.id || crypto.randomUUID(), fullName: d.fullName, email: d.email, directorate: d.directorate, role: d.role, status: d.status, createdAt: editing?.createdAt || new Date().toISOString() };
     const list = editing ? s.users.map(x => x.id === rec.id ? rec : x) : [...s.users, rec];
-    State.patch({ users: list }, { module: 'user-admin', action: editing ? 'user:update' : 'user:create', ref: rec.email });
+    executeOwnedAction('user-admin', editing ? 'update-user' : 'create-user', () => State.patch({ users: list }, { module: 'user-admin', action: editing ? 'user:update' : 'user:create', ref: rec.email }), { ref: rec.email });
     UIState.set('user-admin', { editing: null }); toast('Saved ' + rec.email, 'success'); render(el);
   };
   el.querySelector('[data-clear]').onclick = () => { UIState.set('user-admin', { editing: null }); render(el); };
@@ -44,7 +44,7 @@ function render(el) {
   el.querySelectorAll('[data-disable]').forEach(b => b.onclick = async () => {
     const x = s.users.find(y => y.id === b.dataset.disable); if (!x) return;
     if (!await confirmAction({ title: 'Disable user', body: `<p>Revoke platform access for <b>${esc(x.fullName || x.email)}</b>?</p>` })) return;
-    State.patch({ users: s.users.map(y => y.id === x.id ? { ...y, status: 'disabled' } : y) }, { module: 'user-admin', action: 'user:disable', ref: x.id });
+    await executeOwnedAction('user-admin', 'disable-user', () => State.patch({ users: s.users.map(y => y.id === x.id ? { ...y, status: 'disabled' } : y) }, { module: 'user-admin', action: 'user:disable', ref: x.id }), { ref: x.id });
     toast('Disabled ' + x.email, 'error'); render(el);
   });
 }

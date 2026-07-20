@@ -22,10 +22,11 @@ export const PlatformProvisioning = Object.freeze({
     "stateKeys": [
       "activities",
       "tracking",
-      "approvals",
+      "correspondence",
+      "notifications",
       "dispatches",
-      "pending",
-      "runtime"
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -58,7 +59,15 @@ export const PlatformProvisioning = Object.freeze({
     "stateKeys": [
       "activities",
       "tracking",
+      "correspondence",
+      "operations",
       "registryFiles",
+      "escalations",
+      "comments",
+      "approvals",
+      "users",
+      "audit",
+      "profile",
       "selectedId"
     ],
     "behaviours": [
@@ -99,12 +108,13 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "correspondence",
       "activities",
+      "correspondence",
       "emails",
-      "categories",
-      "departments",
-      "audit"
+      "audit",
+      "pending",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -141,11 +151,17 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
+      "correspondence",
+      "operations",
       "registryFiles",
       "fileMovements",
       "registryMinutes",
-      "activities",
-      "audit"
+      "comments",
+      "users",
+      "departments",
+      "audit",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -178,11 +194,17 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "tracking",
       "activities",
+      "tracking",
+      "correspondence",
+      "comments",
       "users",
+      "categories",
       "departments",
-      "audit"
+      "emails",
+      "audit",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -219,11 +241,10 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "tracking",
       "activities",
-      "users",
-      "departments",
-      "audit"
+      "audit",
+      "runtime",
+      "settings"
     ],
     "behaviours": [
       "load",
@@ -256,10 +277,12 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
+      "activities",
       "tracking",
+      "escalations",
       "notifications",
-      "slas",
-      "audit"
+      "emails",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -293,7 +316,9 @@ export const PlatformProvisioning = Object.freeze({
     "stateKeys": [
       "tracking",
       "notifications",
-      "audit"
+      "pending",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -333,9 +358,10 @@ export const PlatformProvisioning = Object.freeze({
     "enabled": true,
     "stateKeys": [
       "tracking",
+      "notifications",
       "comments",
-      "operations",
-      "audit"
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -368,10 +394,12 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "tracking",
       "activities",
+      "tracking",
       "comments",
-      "audit"
+      "pending",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -404,10 +432,11 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "comments",
-      "tracking",
       "activities",
-      "audit"
+      "tracking",
+      "comments",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -445,9 +474,8 @@ export const PlatformProvisioning = Object.freeze({
     "enabled": true,
     "stateKeys": [
       "approvals",
-      "tracking",
-      "comments",
-      "audit"
+      "pending",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -480,10 +508,17 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "approvals",
+      "activities",
       "tracking",
-      "escalations",
-      "audit"
+      "correspondence",
+      "comments",
+      "approvals",
+      "users",
+      "departments",
+      "emails",
+      "audit",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -522,9 +557,9 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "dispatches",
       "tracking",
-      "audit"
+      "dispatches",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -560,14 +595,8 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "registryFiles",
-      "fileMovements",
-      "registryMinutes",
-      "tracking",
-      "comments",
-      "approvals",
-      "dispatches",
-      "audit"
+      "audit",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -601,11 +630,13 @@ export const PlatformProvisioning = Object.freeze({
     "enabled": true,
     "stateKeys": [
       "activities",
-      "correspondence",
       "tracking",
-      "registryFiles",
       "comments",
-      "audit"
+      "approvals",
+      "emails",
+      "pending",
+      "profile",
+      "selectedId"
     ],
     "behaviours": [
       "load",
@@ -640,12 +671,9 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "activities",
-      "tracking",
-      "registryFiles",
-      "approvals",
-      "dispatches",
-      "audit"
+      "comments",
+      "pending",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -678,10 +706,9 @@ export const PlatformProvisioning = Object.freeze({
     "enabled": true,
     "stateKeys": [
       "activities",
-      "tracking",
-      "approvals",
       "dispatches",
-      "slas"
+      "users",
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -713,10 +740,7 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "activities",
-      "tracking",
-      "correspondence",
-      "comments"
+      "correspondence"
     ],
     "behaviours": [
       "load",
@@ -747,9 +771,10 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "runtime",
+      "operations",
+      "audit",
       "pending",
-      "settings"
+      "runtime"
     ],
     "behaviours": [
       "load",
@@ -787,9 +812,12 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
+      "activities",
+      "audit",
+      "pending",
+      "runtime",
       "settings",
-      "profile",
-      "audit"
+      "profile"
     ],
     "behaviours": [
       "load",
@@ -823,10 +851,16 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "runtime",
-      "settings",
+      "activities",
+      "tracking",
+      "comments",
+      "users",
+      "categories",
+      "departments",
+      "emails",
       "pending",
-      "audit"
+      "runtime",
+      "settings"
     ],
     "behaviours": [
       "load",
@@ -860,8 +894,7 @@ export const PlatformProvisioning = Object.freeze({
     ],
     "enabled": true,
     "stateKeys": [
-      "users",
-      "audit"
+      "users"
     ],
     "behaviours": [
       "load",

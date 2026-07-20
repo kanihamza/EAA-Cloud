@@ -1,9 +1,11 @@
 import { hydrateGovernance } from '../core/governed-actions.js';
 import { State } from '../core/state.js';
 import { status } from '../core/domain.js';
-import { head, esc, toast, confirmAction } from '../core/ui.js';
+import { head, esc, toast, confirmAction,fmtDate} from '../core/ui.js';
 import { invoke } from '../core/api.js';
 import { UIState } from '../core/ui-state.js';
+import { statRow } from '../core/ui.js';
+import { normalizeReportRows, filterByDateRange, reportSummary, exportHtmlDoc } from '../core/report-export-service.js';
 
 const allTemplates = ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10'];
 let activeTemplates = new Set(['M1','M4','M6']);
@@ -13,14 +15,11 @@ const daysAgo = n => { const d=new Date(); d.setDate(d.getDate()-n); return d.to
 let filters = { dgoStart: daysAgo(14), dgoEnd: today(), gtqStart: daysAgo(14), gtqEnd: today(), source:'DGO' };
 function syncLocal(){const u=UIState.get('reports',{templates:[...activeTemplates],...filters});activeTemplates=new Set(u.templates);filters={dgoStart:u.dgoStart,dgoEnd:u.dgoEnd,gtqStart:u.gtqStart,gtqEnd:u.gtqEnd,source:u.source};}
 const val = x => typeof x === 'object' && x ? (x.Value || x.value || '') : (x || '');
-const rowDate = r => String(r.created || r.Created || r.due || r.DueDate || '').slice(0,10);
+const rowDate = r => fmtDate(r.created || r.Created || r.due || r.DueDate || '');
 const inRange = (r,start,end) => { const d=rowDate(r); return !d || (!start || d>=start) && (!end || d<=end); };
-const normalizeRows = s => [
-  ...s.activities.map(a=>({type:'Activity',id:a.id,title:a.title,created:a.created,category:a.category,assignedTo:a.assignedTo,status:status(a),ack:a.assignmentStatus,due:a.dueDate||'',link:a.attachmentLink||a.link||'#',comments:a.description||''})),
-  ...s.tracking.map(t=>({type:'Task',id:t.id,title:t.title,created:t.created||t.start||'',category:t.category||t.priority||'Task',assignedTo:t.assignedTo,status:t.status,ack:t.ack||t.acknowledgementStatus,due:t.due,link:t.link||'#',comments:t.description||''}))
-];
-function summary(rows){return {total:rows.length,completed:rows.filter(r=>/treated|completed|processed/i.test(val(r.status))).length,pending:rows.filter(r=>/pending|assigned|active|not started|in progress/i.test(val(r.status))).length,overdue:rows.filter(r=>r.due&&new Date(r.due)<new Date()&&!/treated|completed|processed/i.test(val(r.status))).length};}
-const statCards = xs => `<div class="kpis dgo-report-kpis">${xs.map(x=>`<div class="kpi"><small>${esc(x[0])}</small><b>${esc(x[1])}</b></div>`).join('')}</div>`;
+const normalizeRows = s => normalizeReportRows(s);
+const summary = rows => reportSummary(rows);
+const statCards = xs => statRow(xs,'dgo-report-kpis');
 function templateButton(t){const on=activeTemplates.has(t);return `<button class="chip ${on?'active':''}" data-template="${t}" aria-pressed="${on}">${on?'✓ ':''}${t}</button>`;}
 function tableRows(rows){return rows.map(r=>`<tr><td>${esc(r.title||'')}</td><td>${esc(rowDate(r))}</td><td>${esc(r.category||'')}</td><td>${esc(r.assignedTo||'')}</td><td>${esc(r.due||'')}</td><td>${esc(val(r.status)||'Pending')}</td><td>${esc(val(r.ack)||'Pending')}</td><td><a href="${esc(r.link||'#')}" target="_blank" rel="noreferrer">View</a></td></tr>`).join('') || '<tr><td colspan="8">No records for this range.</td></tr>';}
 function buildTemplate(id,rows,s){const sum=summary(rows); if(id==='M1')return `<section class="report-template"><h2>Document Summary</h2><p><b>From:</b> ${esc(s.profile.name)} · <b>Department:</b> ${esc(s.profile.persona)}</p><div class="tablewrap"><table><thead><tr><th>Title</th><th>Created</th><th>Category</th><th>Assigned</th><th>Due</th><th>Status</th><th>Ack</th><th>Link</th></tr></thead><tbody>${tableRows(rows)}</tbody></table></div></section>`;
@@ -29,7 +28,7 @@ if(id==='M3')return `<section class="report-template compact"><h2>Minimal View</
 if(['M4','M7'].includes(id))return `<section class="report-template"><h2>Activity Summary</h2><div class="tablewrap"><table><thead><tr><th>Activity</th><th>Department</th><th>Start Date</th><th>Status</th><th>Remarks</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.title)}</td><td>${esc(r.category)}</td><td>${esc(rowDate(r))}</td><td>${esc(val(r.status))}</td><td>${esc(r.comments)}</td></tr>`).join('')||'<tr><td colspan="5">No records.</td></tr>'}</tbody></table></div></section>`;
 if(['M5','M6'].includes(id))return `<section class="report-template"><h2>${id==='M5'?'Task Table':'Progress Matrix'}</h2><div class="tablewrap"><table><thead><tr><th>Title</th><th>Date Created</th><th>Category</th><th>Assigned To</th><th>Due Date</th><th>Progress</th><th>Acknowledgment Status</th><th>Link</th></tr></thead><tbody>${tableRows(rows)}</tbody></table></div></section>`;
 return `<section class="report-template extended"><h2>Extended Report ${esc(id)}</h2>${buildTemplate('M2',rows,s)}${buildTemplate('M4',rows,s)}</section>`;}
-function updateRows(s){const all=normalizeRows(s); const start=filters.source==='DGO'?filters.dgoStart:filters.gtqStart; const end=filters.source==='DGO'?filters.dgoEnd:filters.gtqEnd; lastReportRows=all.filter(r=>inRange(r,start,end)); return lastReportRows;}
+function updateRows(s){const all=normalizeRows(s); const start=filters.source==='DGO'?filters.dgoStart:filters.gtqStart; const end=filters.source==='DGO'?filters.dgoEnd:filters.gtqEnd; lastReportRows=filterByDateRange(all,start,end); return lastReportRows;}
 function reportHtml(s,rows){return `<!doctype html><html><head><meta charset="utf-8"><title>NITDA Management Report</title></head><body><h1>NITDA Management Report</h1>${[...activeTemplates].map(t=>buildTemplate(t,rows,s)).join('')}</body></html>`;}
 export async function mount(el){hydrateGovernance();render(el);}
 function render(el){syncLocal();const s=State.get(); const rows=updateRows(s); const sum=summary(rows); el.innerHTML=`<div class="workspace">${head('Reports','NITDA management reports, GTQ/DGO date ranges and multi-template report views.')}
@@ -40,6 +39,6 @@ el.querySelector(`[data-filter="source"]`).value=filters.source; el.querySelecto
 el.querySelectorAll('[data-template]').forEach(b=>b.onclick=()=>{activeTemplates.has(b.dataset.template)?activeTemplates.delete(b.dataset.template):activeTemplates.add(b.dataset.template); UIState.set('reports',{templates:[...activeTemplates]}); render(el);});
 el.querySelector('[data-all]').onclick=()=>{UIState.set('reports',{templates:[...allTemplates]}); render(el);}; el.querySelector('[data-none]').onclick=()=>{UIState.set('reports',{templates:[]}); render(el);};
 el.querySelector('[data-print]').onclick=()=>rows.length?print():toast('No report data to print','error');
-el.querySelector('[data-html]').onclick=()=>{if(!rows.length)return toast('No report data to download','error'); const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([reportHtml(s,rows)],{type:'text/html'})); a.download='nitda-management-report.html'; a.click();};
+el.querySelector('[data-html]').onclick=()=>{if(!rows.length)return toast('No report data to download','error'); exportHtmlDoc('nitda-management-report.html','NITDA Management Report',[...activeTemplates].map(t=>buildTemplate(t,rows,s)).join(''));};
 const send=async subject=>{const preview={subject,source:filters.source,rows:rows.length,templates:[...activeTemplates],recipient:s.profile.email}; if(!await confirmAction({title:'Confirm report email',body:`<p>Review report email payload before backend execution.</p><pre class="preview-box">${esc(JSON.stringify(preview,null,2))}</pre>`,confirmText:'Send report',cancelText:'Cancel'}))return; try{await invoke('EMAIL',{subject,summary:summary(rows),templates:[...activeTemplates],html:reportHtml(s,rows)});toast('Report email sent','success')}catch{toast('Endpoint unavailable; report action queued locally','error')}};
 el.querySelector('[data-email]').onclick=()=>send('DGO Report'); el.querySelector('[data-email-gtq]').onclick=()=>send('GTQ Report'); el.querySelector('[data-email-dual]').onclick=()=>send('Dual Report');}

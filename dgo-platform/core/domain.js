@@ -1,3 +1,4 @@
+import { normalizePriority } from '../config/priority.config.js';
 const first = (...values) => values.find(v => v !== undefined && v !== null && v !== '');
 const text = (...values) => String(first(...values) ?? '').trim();
 const id = (...values) => text(...values) || crypto.randomUUID();
@@ -6,6 +7,11 @@ const iso = value => { const d=new Date(value); return Number.isNaN(d.getTime())
 const stripHtml = value => text(value).replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/\s+/g,' ').trim().slice(0,2000);
 
 export const status = a => text(a?.status,a?.Status?.Value,a?.Status) || 'Not Treated';
+// Canonical status classifiers — the single source for "is this done / pending" and badge
+// tone across modules (previously five divergent regex classifiers).
+export const isComplete = v => /treated|completed|processed|acknowledged|closed|archived|dispatched|accepted|approved/i.test(String(v||''));
+export const isPendingStatus = v => /pending|assigned|active|not started|in progress|awaiting|logged|received/i.test(String(v||''));
+export const statusTone = v => { const x=String(v||''); if(/overdue|declined|reject|breach|blocked|escalat|failed|disabled/i.test(x)) return 'danger'; if(isComplete(x)) return 'ok'; return 'warn'; };
 export const normalizeDocument = a => ({
   id:id(a.id,a.ID), sourceId:first(a.ID,a.id), entityType:'document',
   title:text(a.title,a.Title)||'Untitled', created:iso(first(a.created,a.Created))||new Date().toISOString(),
@@ -22,7 +28,7 @@ export const normalizeTask = t => ({
   referenceId:text(t.referenceId,t.RefIDD,t.Reference_ID), assignedTo:text(t.assignedTo,t.AssignedTo,t.Assigned),
   assigned:text(t.Assigned), assignedToDsu:text(t.AssignedToDSU,t.DSULookUp), supportingDsu:text(t.CoAssigneeDSU),
   thirdAssignee:text(t._x0033_rdAssigned), routedTo:text(t.RoutedToDSU), classification:text(t.Classification),
-  priority:text(t.priority,t.Priority)||'normal', progress:text(t.Progress), status:text(t.status,t.Status,t.Progress)||'Pending',
+  priority:normalizePriority(text(t.priority,t.Priority)), progress:text(t.Progress), status:text(t.status,t.Status,t.Progress)||'Pending',
   startDate:iso(first(t.StartDate,t.startDate)), due:iso(first(t.DueDate,t.due,t.dueDate)), ack:text(t.AcknowledgementDue,t.ack),
   author:text(t.AuthorTitle), editorEmail:text(t.EditorEmail)
 });

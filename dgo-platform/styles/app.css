@@ -132,3 +132,7 @@ tr.row-active>td{background:var(--sunken)}
   .dg-layout[data-md="list"]>#panel-details{display:none}
   .dg-layout[data-md="list"]>.panel-actions{display:none}
 }
+
+/* R11.6.3 notification surface. */
+[data-notifs]{position:relative}
+.notif-count{position:absolute;top:1px;right:1px;min-width:14px;height:14px;border-radius:99px;background:var(--danger);color:#fff;font:700 8px var(--sans);display:inline-flex;align-items:center;justify-content:center;padding:0 3px;line-height:1}

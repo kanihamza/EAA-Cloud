@@ -3,7 +3,7 @@ import { AuditLog } from './audit-log.js';
 import { assertTransitionAllowed, validateGate } from './lifecycle.js';
 import { createValidationError, createClosureError } from './errors.js';
 const _store=new Map(), _byRef=new Map(), _archive=new Map(), _quarantine=new Map(), _dedupIndex=new Map(), _raw=new Map();
-const HYDRATION_MAP={activities:'document',correspondence:'correspondence',tracking:'task',operations:'operation',comments:'comment',approvals:'approval',dispatches:'dispatch',registryFiles:'registryFile',fileMovements:'movement',registryMinutes:'minute',emails:'email',escalations:'escalation',notifications:'notification',slas:'sla'};
+const HYDRATION_MAP={activities:'document',correspondence:'correspondence',tracking:'task',operations:'operation',comments:'comment',approvals:'approval',dispatches:'dispatch',registryFiles:'registryFile',fileMovements:'movement',registryMinutes:'minute',emails:'email',escalations:'escalation',notifications:'notification'};
 const CHILD_TYPES=new Set(['task','operation','comment','approval','dispatch','movement','minute','auditEvent']);
 const TERMINAL={task:['action_complete','closed','cancelled','Completed','Closed'],operation:['action_complete','closed','cancelled','Completed','Closed'],approval:['approved','approved_with_edit','rejected','escalated'],dispatch:['dispatched','no_dispatch','closed'],comment:['closed','archived']};
 const uid=p=>`${p}-${crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)}`; const clone=v=>structuredClone(v); const freeze=v=>Object.freeze(clone(v));

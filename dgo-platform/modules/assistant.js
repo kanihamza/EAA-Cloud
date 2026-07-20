@@ -1,4 +1,5 @@
-import { hydrateGovernance, governedTransition, actor, executeOwnedAction } from '../core/governed-actions.js';
+import { hydrateGovernance, executeOwnedAction } from '../core/governed-actions.js';
+import { QueryStore } from '../core/query-store.js';
 import { head, esc, confirmAction, toast } from '../core/ui.js';
 import { invokeData } from '../core/api.js';
 let messages = [], sending = false;
@@ -18,7 +19,8 @@ async function submit(el) {
   if (!await confirmAction({ title: 'Send to Assistant', body: `<p>${esc(text)}</p><p class="meta">This is sent to the AI_CHAT flow endpoint.</p>` })) return;
   messages.push({ role: 'user', content: text }); sending = true; render(el);
   try {
-    const res = await executeOwnedAction('assistant','ask',()=>invokeData('AI_CHAT', { messages, scoped:true }),{meta:{promptLength:text.length}});
+    const context = await QueryStore.dashboard().catch(()=>null);
+    const res = await executeOwnedAction('assistant','ask',()=>invokeData('AI_CHAT', { messages, scoped:true, context }),{meta:{promptLength:text.length}});
     messages.push({ role: 'assistant', content: res?.reply || res?.message || (typeof res==='string'?res:'No reply was returned by the AI flow.') });
     toast('Assistant response received','success');
   } catch (error) { messages.push({ role: 'assistant', content: 'The AI flow could not complete the request. Review Diagnostics or retry. ' + (error?.message||'') }); toast('Assistant request failed','error'); }

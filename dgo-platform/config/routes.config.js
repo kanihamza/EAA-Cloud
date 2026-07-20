@@ -18,7 +18,7 @@ export const Routes = [
     "label": "Correspondence",
     "group": "PHASE 1 — INTAKE",
     "kind": "workspace",
-    "kpi": false
+    "kpi": true
   },
   {
     "path": "response-tracking",
@@ -81,7 +81,7 @@ export const Routes = [
     "label": "Registry",
     "group": "PHASE 1 — INTAKE",
     "kind": "workspace",
-    "kpi": false
+    "kpi": true
   },
   {
     "path": "comments",
@@ -154,5 +154,5 @@ export const Routes = [
     "kpi": false
   }
 ,
-  { "path": "archive", "label": "Archive", "group": "PHASE 6 — ARCHIVE", "kind": "workspace", "kpi": false }
+  { "path": "archive", "label": "Archive", "group": "PHASE 6 — ARCHIVE", "kind": "workspace", "kpi": true }
 ];

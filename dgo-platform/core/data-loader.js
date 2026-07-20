@@ -14,3 +14,19 @@ export function parseFetchAll(response){const data=assertEnvelope(response,'fetc
 function mergeById(current=[],incoming=[]){const map=new Map(current.map(x=>[String(x.id),x]));for(const row of incoming)map.set(String(row.id),{...(map.get(String(row.id))||{}),...row});return[...map.values()]}
 export function applyFetchAll(response,{replace=true}={}){const parsed=parseFetchAll(response),current=State.get(),patch={};for(const key of Object.keys(specs))patch[key]=replace?parsed.patch[key]:mergeById(current[key],parsed.patch[key]);Object.assign(patch,reconcileEnterprise({...current,...patch}));patch.runtime={...(current.runtime||{}),source:'FETCH_ALL',contract:parsed.meta,lastWarnings:parsed.warnings,lastCounts:parsed.counts};State.patch(patch);Entities.hydrateFromState(State.get());PlatformProvisioner.ensure();return parsed}
 export async function loadRuntimeData({force=false,replace=true}={}){const current=State.get();if(activeLoad)return activeLoad;const inflight=(async()=>{try{const response=(await FetchManager.fetch('FETCH_ALL',{force,requestedAt:new Date().toISOString()},{force,cacheNamespace:'FETCH_ALL'})).data;const parsed=applyFetchAll(response,{replace});const result={ok:true,key:'FETCH_ALL',at:new Date().toISOString(),counts:parsed.counts,meta:parsed.meta,warnings:parsed.warnings};State.patch({runtime:{...State.get().runtime,loading:false,lastLoad:result,lastError:null}});return result}catch(primary){try{const response=(await FetchManager.fetch('FETCH_ACTIVITIES',{force,requestedAt:new Date().toISOString()},{force,cacheNamespace:'FETCH_ACTIVITIES'})).data;const data=assertEnvelope(response);const rows=Array.isArray(data)?data:collection(data,'activities','docs','items','records','value');const activities=rows.map(normalizeDocument);if(!activities.length)throw new Error('FETCH_ACTIVITIES returned no records');State.patch({activities,runtime:{...State.get().runtime,loading:false,lastLoad:{ok:true,key:'FETCH_ACTIVITIES',at:new Date().toISOString(),counts:{activities:activities.length},fallbackReason:primary.message},lastError:null}});Entities.hydrateFromState(State.get());PlatformProvisioner.ensure();return State.get().runtime.lastLoad}catch(fallback){const message=`FETCH_ALL: ${primary.message}; FETCH_ACTIVITIES: ${fallback.message}`;State.patch({runtime:{...State.get().runtime,loading:false,lastLoad:{ok:false,at:new Date().toISOString(),message},lastError:message}});throw new Error(message)}}})();activeLoad=inflight.finally(()=>{activeLoad=null});State.patch({runtime:{...(current.runtime||{}),loading:true,lastError:null}});return activeLoad}
+
+// R11.6.3 sync façade: the single implementation behind every sync trigger in the
+// platform (shell, Operator HUD, Diagnostics, Executive, Correspondence, Statistics,
+// FastTrack ribbon, Lookup direct). mode 'full' refreshes the whole runtime dataset;
+// mode 'endpoint' routes a scoped governed request. Both record one audit vocabulary.
+export async function requestSync({source='workspace',mode='full',endpoint='DYNAMIC_ACTIONS',payload={}}={}){
+  const meta={module:source,action:'sync:request',ref:mode==='full'?'FETCH_ALL':endpoint};
+  if(mode==='full'){
+    const result=await loadRuntimeData({force:true});
+    State.patch({},{...meta,event:'audit:sync-request'});
+    return result;
+  }
+  const res=await invoke(endpoint,{...payload,source});
+  State.patch({},{...meta,event:'audit:sync-request'});
+  return res;
+}

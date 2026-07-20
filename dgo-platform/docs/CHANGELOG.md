@@ -1,3 +1,64 @@
+# R11.6.3 Consolidation — Full Resolution of the Duplication/Redundancy Assessment
+
+Every finding in docs/DUPLICATION_REDUNDANCY_ASSESSMENT_R11_6_2.md is now implemented and
+contract-locked. Nothing deferred.
+
+## Canonical domain layer (A-series)
+- `acknowledgeTask()`, `updateTaskState()`, `setCorrespondenceStatus()`, `createTask()` in
+  core/enterprise-domain.js — acknowledgment/response-tracking, activities/orchestrator/lookup,
+  correspondence/executive and all four task-creation surfaces now share one transition each;
+  the two historical acknowledgment field models are written in lockstep.
+- Canonical priority scale (config/priority.config.js) with alias normalization on ingest;
+  all five legacy vocabularies (P1..P4, Medium, UPPERCASE, mixed-case) eliminated from
+  module sources; badges use `priorityLabel`/`priorityTone`.
+- Shared report engine + exporters in core/report-export-service.js (normalized rows,
+  summary math, group counts, CSV/JSON/HTML download); Reports, Statistics, Orchestrator,
+  Response-Tracking, Correspondence and Executive all export through it.
+- One sync façade `requestSync()` behind every sync trigger (shell, Operator HUD, Executive,
+  Correspondence, Statistics, FastTrack ribbon, Lookup direct) with one audit vocabulary.
+- Annotation convergence: lookup task notes now land in the shared comments store
+  (`type:'task-update'`); write-only embedded task comment arrays removed.
+
+## Write-only collections surfaced (B-series)
+- Notifications: shell bell with unread badge + side-pane inbox (open/dismiss/clear,
+  mark-read); Home shows unread count. Producers finally have a consumer.
+- Escalations: FastTrack Escalations queue view with resolve action; escalation levels are
+  numeric and escalating writes real escalation records.
+- Dispatches: Home stat + Statistics dispatch-channel breakdown.
+- Dead `slas` collection removed from state schema, initial state, entity hydration map and
+  provisioning; document flags now render in Lookup detail and Home queue badges.
+
+## Governance made real, orphans wired or retired (C-series)
+- All 16 ceremonial `governedTransition`/`actor` imports removed; 17 mutating workspaces now
+  execute through `executeOwnedAction` with 30+ registered entries in action-ownership.config.
+- Bulk assignment enforces the provisioned OTP gate above 25 records via ActionRuntime →
+  OtpService (backend path with graceful offline challenge fallback) — giving action-runtime
+  and otp-service their first real consumers.
+- write-manager + idempotency wired into dispatch backend sends and retry; data-reconciler
+  powers settings import (fixing stale enterprise projections after import); metrics-service
+  and data-ops summaries render in Operator HUD; query-store feeds assistant context;
+  ui-interactions hosts the shared debounced input; shared/generic-module.js deleted.
+- routes.config `kind`/`kpi` metadata now drives the content-governance contract.
+
+## Shared logic + boundary delineation (D/E-series)
+- One classifier family (`isComplete`/`isPendingStatus`/`statusTone`) and one lineage
+  heuristic (`relatedTasks`/`relatedEmails` in data-selectors) replace five status regex
+  sets and three email-matching implementations.
+- `statRow`, `fmtDate`, `fmtDateTime`, `debouncedInput` shared helpers adopted platform-wide.
+- Operator HUD = live operations (sync, queues, inventory, data-ops, live metrics);
+  Diagnostics = certification (checks, governance/provisioning health) — duplicated panels
+  removed, cross-links added.
+- Registry archive now constitutes the immutable evidence bundle via ArchiveService.
+- Dispatch sends/retries go to the backend idempotently with a queued-retry surface.
+- Home quick actions derive from routes.config.
+
+## Enforcement
+- `provisioning-drift-contract` — declared stateKeys must match actual module references.
+- `consolidation-contract` — locks every A–E resolution above.
+- Full suite: 119 checks pass; boot import 23/23.
+
+---
+
 # R11.6.2 View Behaviour, Pane Independence & Panel Separation
 
 ## View switching (defects 1 & 2)
