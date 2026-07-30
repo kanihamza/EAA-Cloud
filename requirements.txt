@@ -1,0 +1,8 @@
+# Runtime dependencies for the PDF stamping tool (scripts/stamp_pdf.py).
+# Both are permissively licensed and free — the tool has no paid/API cost.
+pypdf>=4.0
+reportlab>=4.0
+
+# Dependencies for the existing Power Apps YAML validator (scripts/validate_yaml.py).
+pyyaml>=6.0
+jsonschema>=4.0
