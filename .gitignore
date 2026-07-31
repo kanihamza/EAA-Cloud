@@ -1,0 +1,22 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+wheelhouse/
+
+# Stamped PDF output produced by scripts/stamp_pdf.py default naming
+*-stamped.pdf
+
+# OS metadata
+.DS_Store
+Thumbs.db
