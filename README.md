@@ -5,6 +5,10 @@ This repository contains small, self-hosted utilities:
 1. **PDF stamping** — add a reference / tracking ID to scanned PDF documents.
 2. **Power Apps YAML validation** — validate Power Apps YAML against a schema.
 
+> **Full specification:** see **[DOCUMENTATION.md](DOCUMENTATION.md)** for the complete
+> requirements, parameter reference, positioning formulas, error catalogue, exit codes,
+> API reference, operational procedures and security specification.
+
 ## PDF stamping (scanned documents)
 
 `scripts/stamp_pdf.py` stamps a reference or tracking ID onto a PDF. It is a
